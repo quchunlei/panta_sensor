@@ -1,0 +1,159 @@
+#* General *#
+general:                       
+   run_localization: false  #flag to control using localization algorithm or not
+
+#* Localization *#
+localization:
+  common:
+    grid_map: map.gridmap #the name of gridmap file
+    rsmap: map.rsmap  #the name of rsmap file
+    localization_mode: 0 #0: Use GPS message to initialize
+                        #4: Use input xzy coordinate to initialize
+    pose_guess_0: 0 # x
+    pose_guess_1: 0 # y
+    pose_guess_2: 0 # z
+
+#* Preprocessing *#
+preprocessing:
+  odom:
+    speed_unit: 0             # input speed unit 0:m/s 1:km/h 2:mph, output is m/s
+
+#* LiDAR & Sensors *#
+sensor:
+  lidar:
+    common:
+      msg_source: 0           # 0--not use Lidar
+                              # 1--lidar packet message come from sensor driver (when online testing)
+                              # 2--lidar packet message come from ROS
+                              # 3--lidar points message come from ROS
+                              # 4--lidar packet message come from Proto
+                              # 5--lidar points message come from Proto
+      send_packets_ros: true    #if true, the original lidar packets message will be sent out through ROS
+      send_points_ros: true     #if true, the original lidar points message will be sent out through ROS
+      send_packets_proto: false  #if true, the original lidar packets message will be sent out through Proto
+      send_points_proto: false   #if true, the original lidar points message will be sent out through Proto
+
+    lidar:
+      - driver:
+          include: ../system_config/sensor_config/lidar/middle_lidar/lidar.yaml
+        ros:
+          ros_recv_points_topic: /middle/rslidar_points  # if message source=3, this should be set to the topic of the points
+          ros_recv_packets_topic: /middle/rslidar_packets # if message source=2, this should be set to the topic of packets
+          ros_send_points_topic: /middle/rslidar_points  # the Ros topic to send points
+          ros_send_packets_topic: /middle/rslidar_packets # the Ros topic to send packets
+        proto:
+          points_send_port: 60021
+          points_recv_port: 60021
+          points_send_ip: 127.0.0.1
+          msop_send_port: 60022
+          msop_recv_port: 60022
+          difop_send_port: 60023
+          difop_recv_port: 60023
+          packets_send_ip: 127.0.0.1
+      - driver:
+          include: ../system_config/sensor_config/lidar/left_lidar/lidar.yaml
+        ros:
+          ros_recv_points_topic: /left/rslidar_points
+          ros_recv_packets_topic: /left/rslidar_packets
+          ros_send_points_topic: /left/rslidar_points
+          ros_send_packets_topic: /left/rslidar_packets
+        proto:
+          points_send_port: 60024
+          points_recv_port: 60024
+          points_send_ip: 127.0.0.1
+          msop_send_port: 60025
+          msop_recv_port: 60025
+          difop_send_port: 60026
+          difop_recv_port: 60026
+          packets_send_ip: 127.0.0.1
+      - driver:
+          include: ../system_config/sensor_config/lidar/right_lidar/lidar.yaml
+        ros:
+          ros_recv_points_topic: /right/rslidar_points
+          ros_recv_packets_topic: /right/rslidar_packets
+          ros_send_points_topic: /right/rslidar_points
+          ros_send_packets_topic: /right/rslidar_packets
+        proto:
+          points_send_port: 60027
+          points_recv_port: 60027
+          points_send_ip: 127.0.0.1
+          msop_send_port: 60028
+          msop_recv_port: 60028
+          difop_send_port: 60029
+          difop_recv_port: 60029
+          packets_send_ip: 127.0.0.1
+
+  imu:
+    common:
+      msg_source: 1            #0--not use Imu, 1--message come from sensor driver, 2--message come from ROS,3--message come from protobuf(UDP)
+      send_msg_ros: true      #if true, the original Imu message will be sent out through ROS
+      send_msg_proto: false    #if true, the original Imu message will be sent out through Proto
+    ros:
+      ros_recv_topic: /imu/data    
+      ros_send_topic: /imu/data 
+    proto:
+      proto_send_port: 60011
+      proto_send_ip: 127.0.0.1
+      proto_recv_port: 60011
+  gnss:
+    common:
+      msg_source: 1           #0--not use Gnss, 1--message come from sensor driver, 2--message come from ROS,3--message come from protobuf(UDP)
+      send_msg_ros: true     #if true, the original Gnss message will be sent out through ROS
+      send_msg_proto: false   #if true, the original Gnss message will be sent out through Proto
+    ros:
+      ros_recv_topic: /navsat/fix     
+      ros_send_topic: /navsat/fix
+    proto:
+      proto_send_port: 60012
+      proto_send_ip: 127.0.0.1
+      proto_recv_port: 60012
+  odom:
+    common:
+      msg_source: 0          #0--not use Odom, 1--message come from sensor driver, 2--message come from ROS,3--message come from protobuf(UDP)
+      send_msg_ros: true     #if true, the original Odom message will be sent out through ROS
+      send_msg_proto: false   #if true, the original Odom message will be sent out through Proto
+    ros:
+      ros_recv_topic: /speed
+      ros_send_topic: /speed
+    proto:
+      proto_send_port: 60013
+      proto_send_ip: 127.0.0.1
+      proto_recv_port: 60013
+
+#* Result *#
+result_sender:
+  ros:
+    localization:         #send localization result through ROS                                
+      send_pos_ros: true     
+      send_map_ros: true
+      send_path_ros: true   
+    pointcloud:           #send fusion points result through ROS                            
+      send_uncompensated_cloud_ros: true                      
+      send_compensated_cloud_ros: true                     
+  proto:
+    localization:       #send localization result through Proto (UDP) 
+      send_pos_proto: true                           
+      send_pos_proto_port: 60001                    
+      send_pos_proto_ip: 127.0.0.1            
+    pointcloud:           #send fusion pointcloud result through Proto (UDP)                                         
+      send_uncompensated_cloud_proto: true             
+      send_compensated_cloud_proto: true                          
+      uncompensated_cloud_proto_port: 60030          
+      compensated_cloud_proto_port: 60031
+      cloud_proto_ip: 127.0.0.1   
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+

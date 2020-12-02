@@ -1,0 +1,13 @@
+device_type: TL740D         #@type: string @brief: the device type  ***DO NOT EDIT!***
+auto_scan_port: false        #@type: bool @brief: if true, the program will search the port automatically and connect to correct device
+port_name: /dev/ttyUSB1     #@type: string @brief: only used when auto_scan_port is set to false. will connect to target port
+baudrate: 115200            #@type: int @brief: baudrate of device
+frame_id: /imu              #@type: string @brief: the frame id of the message
+do_reconnect: true          #@type: bool @brief: if true, the program will try to reconnect to device when disconnect
+reconnect_interval: 1       #@type: int @unit: sec 
+                            #@brief: the intervals between each reconnection, only used when do_reconnect is set to true
+reconnect_attempts: 3       #@type: int @brief: the max reconnection times, only used when do_reconnect is set to true 
+warning_gyro_z: 3.14        #@type: double @unit: rads/sec 
+                            #@brief: the maximum threshold angular velocity in z direction, if the real angular velocity is larger than this value, the error code will be shown
+timeout: 0.1                #@type: double @unit: sec
+                            #@brief: the maximum threshold time for program to detect device disconnection

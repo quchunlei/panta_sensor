@@ -1,0 +1,23 @@
+#All the Lidars will share a same common config file
+#The size of the config file list is the number of the Lidar
+common:
+    msg_source: 0            #@type: int  @detail: 0--not use Lidar, 1--lidar packet message come from sensor driver
+                             #                     2--lidar packet message come from ROS,3--lidar points message come from ROS
+    send_packets_ros: false     #@type: bool @detail: if true, the original lidar packets message will be sent out through ROS
+    send_points_ros: false     #@type: bool @detail: if true, the original lidar points message will be sent out through ROS
+
+lidar:
+  - driver:
+      include: ../sensor_config/lidar/middle_lidar/lidar.yaml
+      
+    ros:
+      ros_recv_points_topic: /rslidar_points
+      ros_recv_packets_topic: /rslidar_packets
+      ros_send_points_topic: /rslidar_points
+      ros_send_packets_topic: /rslidar_packets
+  
+
+
+  
+
+

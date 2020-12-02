@@ -1,0 +1,51 @@
+#@brief: ROS transmission configuration
+ros:
+  localization:                                            
+    send_pos_ros: false                            #@type: bool @detail: if true, the localization algorithm result will be sent through ROS
+    send_pos_ros_topic: /rs_pose          #@type: string @detail: the ROS publisher topic
+    send_map_ros: false
+    send_map_ros_topic: /rs_map   
+    send_path_ros: false   
+    send_path_ros_topic: /rs_path
+  perception:                                              
+    send_obstacle_ros: false                       #@type: bool @detail: if true, the perception algorithm result will be sent through ROS
+    send_obstacle_ros_topic: /rs_obstacle          #@type: string @detail: the ROS publisher topic
+    send_freespace_ros: false
+    send_freespace_ros_topic: /rs_freespace
+    send_freespace_ros_range: 100
+    send_groundpoint_ros: false
+    send_groundpoint_ros_topic: /rs_groundpoints
+    
+  pointcloud:                                               
+    send_uncompensated_cloud_ros: false                      #@type: bool @detail: if true, the fusion point cloud without motion compensated will be sent through ROS
+    send_compensated_cloud_ros: false                        #@type: bool @detail: if true, the fusion point cloud with motion compensated will be sent through ROS
+    uncompensated_cloud_ros_topic: /rs_uncompensated_fusion #@type: string @detail: the ROS publisher topic
+    compensated_cloud_ros_topic: /rs_compensated_fusion     #@type: string @detail: the ROS publisher topic
+  sensor: 
+    send_processed_imu_ros: false 
+    processed_imu_ros_topic: /rs_imu_processed
+
+proto:
+  localization:
+    send_pos_proto: false                          #@type: bool @detail: if true, the localization algorithm result will be sent through Protobuf(UDP)
+    send_pos_proto_port: 60001                    #@type: uint_16 @detail: port number
+    send_pos_proto_ip: 127.0.0.1               #@type: string @detail: IP address
+  perception:
+    send_obstacle_proto: false                      #@type: bool @detail: if true, the perception algorithm result will be sent through Protobuf(UDP)
+    send_obstacle_proto_port: 60000               #@type: uint_16 @detail: port number
+    send_obstacle_proto_ip: 127.0.0.1          #@type: string @detail: IP address
+    perception_device_num: 0
+  pointcloud:                                               
+    send_uncompensated_cloud_proto: false           
+    send_compensated_cloud_proto: false                        
+    uncompensated_cloud_proto_port: 60030          
+    compensated_cloud_proto_port: 60031 
+    cloud_proto_ip: 127.0.0.1           
+
+                      
+
+
+
+
+
+

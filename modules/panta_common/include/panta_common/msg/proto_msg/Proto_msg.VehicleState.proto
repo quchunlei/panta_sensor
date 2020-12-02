@@ -1,0 +1,24 @@
+syntax="proto2";
+package Proto_msg;
+message VehicleState
+{ 
+ optional double timestamp = 1; 
+ optional uint32 seq=2;
+ optional string parent_frame_id=3;
+ optional string frame_id=4;
+ optional uint32 status=5;
+ repeated double origin=6;
+ repeated double pos=7;
+ repeated double pos_cov=8;
+ repeated double orien=9;
+ repeated double orien_cov=10;
+ repeated double angular_vel=11;
+ repeated double angular_vel_cov=12;
+ repeated double linear_vel=13;
+ repeated double linear_vel_cov=14;
+ repeated double acc=15;
+ repeated double acc_cov=16;
+
+}
+
+

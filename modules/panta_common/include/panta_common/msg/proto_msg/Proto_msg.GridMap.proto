@@ -1,0 +1,18 @@
+syntax="proto2";
+package Proto_msg;
+message GridMap
+{ 
+ optional double timestamp = 1; 
+ optional uint32 seq=2;
+ optional string parent_frame_id=3;
+ optional string frame_id=4;
+ optional uint32 width=5;
+ optional uint32 height=6;
+ optional float resolution=7;
+ repeated float origin=8;
+ repeated float orientation=9;
+ repeated float grids=10;
+
+}
+
+

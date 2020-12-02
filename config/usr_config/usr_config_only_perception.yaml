@@ -1,0 +1,100 @@
+#* General *#
+general:                   
+  run_perception: true    #flag to control using perception algorithm or not
+
+#* Perception *#
+perception:
+  common:
+    with_debug_info: true # enable debug info output or not
+
+#* LiDAR & Sensors *#
+sensor:
+  lidar:
+    common:
+      msg_source: 1          # 0--not use Lidar
+                              # 1--lidar packet message come from sensor driver (when online testing)
+                              # 2--lidar packet message come from ROS
+                              # 3--lidar points message come from ROS
+                              # 4--lidar packet message come from Proto
+                              # 5--lidar points message come from Proto
+      send_packets_ros: true    #if true, the original lidar packets message will be sent out through ROS
+      send_points_ros: true     #if true, the original lidar points message will be sent out through ROS
+      send_packets_proto: false  #if true, the original lidar packets message will be sent out through Proto
+      send_points_proto: false   #if true, the original lidar points message will be sent out through Proto
+
+    lidar:
+      - driver:
+          include: ../system_config/sensor_config/lidar/middle_lidar/lidar.yaml
+        ros:
+          ros_recv_points_topic: /middle/rslidar_points  # if message source=3, this should be set to the topic of the points
+          ros_recv_packets_topic: /middle/rslidar_packets # if message source=2, this should be set to the topic of packets
+          ros_send_points_topic: /middle/rslidar_points  # the Ros topic to send points
+          ros_send_packets_topic: /middle/rslidar_packets # the Ros topic to send packets
+        proto:
+          points_send_port: 60021  
+          points_recv_port: 60021
+          points_send_ip: 127.0.0.1
+          msop_send_port: 60022
+          msop_recv_port: 60022
+          difop_send_port: 60023
+          difop_recv_port: 60023
+          packets_send_ip: 127.0.0.1
+
+      - driver:
+          include: ../system_config/sensor_config/lidar/left_lidar/lidar.yaml
+        ros:
+          ros_recv_points_topic: /left/rslidar_points
+          ros_recv_packets_topic: /left/rslidar_packets
+          ros_send_points_topic: /left/rslidar_points
+          ros_send_packets_topic: /left/rslidar_packets
+        proto:
+          points_send_port: 60024
+          points_recv_port: 60024
+          points_send_ip: 127.0.0.1
+          msop_send_port: 60025
+          msop_recv_port: 60025
+          difop_send_port: 60026
+          difop_recv_port: 60026
+          packets_send_ip: 127.0.0.1
+      - driver:
+          include: ../system_config/sensor_config/lidar/right_lidar/lidar.yaml
+        ros:
+          ros_recv_points_topic: /right/rslidar_points
+          ros_recv_packets_topic: /right/rslidar_packets
+          ros_send_points_topic: /right/rslidar_points
+          ros_send_packets_topic: /right/rslidar_packets
+        proto:
+          points_send_port: 60027
+          points_recv_port: 60027
+          points_send_ip: 127.0.0.1
+          msop_send_port: 60028
+          msop_recv_port: 60028
+          difop_send_port: 60029
+          difop_recv_port: 60029
+          packets_send_ip: 127.0.0.1
+  
+#* Result *#
+result_sender:
+  ros:
+    perception:           #send perception result through ROS                                   
+      send_obstacle_ros: true
+      send_groundpoint_ros: true                          
+      send_freespace_ros: true
+    pointcloud:           #send fusion points result through ROS                            
+      send_uncompensated_cloud_ros: true                      
+  proto:
+    perception:          #send perception result through Proto (UDP) 
+      send_obstacle_proto: true                   
+      send_obstacle_proto_port: 60000               
+      send_obstacle_proto_ip: 127.0.0.1      
+    pointcloud:           #send fusion pointcloud result through Proto (UDP)                                         
+      send_uncompensated_cloud_proto: true             
+      uncompensated_cloud_proto_port: 60030          
+      cloud_proto_ip: 127.0.0.1   
+ 
+
+
+
+
+
+

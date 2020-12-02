@@ -1,0 +1,13 @@
+syntax="proto2";
+package Proto_msg;
+message Odom
+{ 
+ optional double timestamp = 1; 
+ optional uint32 seq=2;
+ optional string parent_frame_id=3;
+ optional string frame_id=4;
+ repeated double linear_vel=12;
+ repeated double linear_vel_cov=13;
+}
+
+

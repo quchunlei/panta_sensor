@@ -1,0 +1,12 @@
+# parameters.yaml is the root yaml file, don't delete it
+
+RSLocalization:
+  name: ErkfSensorFusion
+  # each observer corresponds to a sensor used in multi-sensor fusion
+  Observers: 
+    - include: ../localization_config/default_config/Observer/ProbabilityHistogramObserver.yaml
+    #- include: ../localization_config/default_config/Observer/ImuObserver.yaml
+    - include: ../localization_config/default_config/Observer/ImuOdomObserver.yaml
+
+MapServer: 
+  include: ../localization_config/default_config/grid_map_server.yaml

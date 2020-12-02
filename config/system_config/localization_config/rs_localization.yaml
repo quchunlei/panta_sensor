@@ -1,0 +1,12 @@
+common:
+  localization_mode: 0 #0: use gps 2: ust GPS coordinate 4: use xyz coordinate
+  localization_with_motion_compensation: true
+  send_localization_freq: 30   #unit: hz
+  grid_map: map.gridmap
+  rsmap: map.rsmap
+  map_frame_id: map
+  pose_guess_0: 0
+  pose_guess_1: 0
+  pose_guess_2: 0
+Default:
+  include: ../localization_config/default_config/default.yaml 

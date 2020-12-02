@@ -1,0 +1,5 @@
+type: GridMapServer 
+
+subsample_cnt: 4
+resolution: 0.15
+map_type: Lossy

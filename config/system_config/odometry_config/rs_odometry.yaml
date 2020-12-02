@@ -1,0 +1,35 @@
+common: # common args before invoke the perception algorithm core
+  with_debug_info: false # enable debug info output or not
+  map_frame_id: map
+
+algorithm: # true perception algorithm args
+  msf_config:
+    init_position:
+      x: 0.
+      y: 0.
+      z: 0.
+    init_quaternion:
+      w: 1.
+      x: 0.
+      y: 0.
+      z: 0.
+    sigma_a_n: 0.019
+    sigma_w_n: 0.015
+    sigma_a_b: 0.0001
+    sigma_w_b: 0.0002
+  registration_config:
+    transformation_epsilon: 0.01
+    max_iterations: 60
+    resolution: 1.
+    step_size: 0.1
+    voxel_sample_size: 0.5
+    kernel_range: 60.
+    kernel_max_z: 5.
+    kernel_min_z: -2.
+    key_dis_thre: 1.
+    key_yaw_thre: 10.
+    submap_num: 5
+
+
+
+

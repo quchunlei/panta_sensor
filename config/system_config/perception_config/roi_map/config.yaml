@@ -1,0 +1,9 @@
+cell_grid_rows: 1
+cell_grid_cols: 1
+roi_cell_size: 0.1
+roi_img_size: 250
+roi_range:
+  xmin: -100
+  xmax: 100
+  ymin: -100
+  ymax: 100

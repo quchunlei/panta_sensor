@@ -1,0 +1,87 @@
+#******************************************************************************
+ # Copyright 2017 RoboSense All rights reserved.
+ # Suteng Innovation Technology Co., Ltd. www.robosense.ai
+
+ # This software is provided to you directly by RoboSense and might
+ # only be used to access RoboSense LiDAR. Any compilation,
+ # modification, exploration, reproduction and redistribution are
+ # restricted without RoboSense's prior consent.
+
+ # THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESSED OR IMPLIED
+ # WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ # OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ # DISCLAIMED. IN NO EVENT SHALL ROBOSENSE BE LIABLE FOR ANY DIRECT,
+ # INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ # (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ # SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ # HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ # STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+ # IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ # POSSIBILITY OF SUCH DAMAGE.
+
+
+###############################################################
+#####################   DO NOT EDIT !!!!  #####################
+###############################################################
+
+
+#@brief: gerneral config parameters
+general:
+  use_ros: true             #@type: bool @detail: flag to control using ROS functions or not
+                            #                       if ture, you can send or receive messages through ROS (different messages need to be config in their own yaml file  separatedly)                       
+  use_proto: true          #@type: bool @detail: flag to control using Proto functions or not
+                            #                       if ture, you can send or receive messages through proto (different messages need to be config in their own yaml file separatedly)                     
+  run_localization: false  #@type: bool @detail: flag to control using localization algorithm or not
+  run_perception: false    #@type: bool @detail: flag to control using perception algorithm or not
+
+#@brief: config file for rs_sdk_demo
+result_sender:
+  include: ../result_sender_config/result_sender.yaml
+
+#@brief: config file for rs_preprocessing
+preprocessing:
+  include: ../preprocessing_config/rs_preprocessing.yaml
+
+#@brief: config file for rs_localization
+localization:
+  include: ../localization_config/rs_localization.yaml
+
+#@brief: config file for rs_perception
+perception:
+  include: ../perception_config/rs_perception.yaml
+
+#@brief: config file for rs_odometry
+odometry:
+  include: ../odometry_config/rs_odometry.yaml
+
+  #@brief: config file for rs_sensor
+sensor:
+  #@brief: config file for Imu message
+  imu:
+    include: ../sensor_config/other_sensors/rs_imu.yaml
+
+#@brief: config file for Gnss message
+  gnss:
+    include: ../sensor_config/other_sensors/rs_gnss.yaml
+
+#@brief: config file for Odom message
+  odom:
+    include: ../sensor_config/other_sensors/rs_odom.yaml
+
+#@brief: config file for Lidar message
+  lidar:
+    include: ../sensor_config/lidar/rs_lidar.yaml
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+

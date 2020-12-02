@@ -1,0 +1,24 @@
+# yaml
+name: ProbabilityHistogramObserver # observer must specify a predefined name
+type: Correction # observer type: Prediction or Correction
+
+debug: false
+
+point_cloud_range: 200 
+point_filter_grid_size: 3
+point_filter_max_count: 3000
+
+map_coarse_level: 4
+init_pos_search_range: 63
+init_angle_search_samples: 270
+
+fine_search_range: 31
+coarse_search_range: 4   #For measuring angle
+
+probability_beta: 3
+second_max_ratio: 0.95
+offset_search_radius: 8
+
+height_noise: 1e-5 # 0.2 
+angle_noise_coeff: 1e-7
+pos_noise_coeff: 1e-6

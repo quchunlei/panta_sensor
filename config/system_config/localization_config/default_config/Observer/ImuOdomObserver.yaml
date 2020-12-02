@@ -1,0 +1,11 @@
+# yaml
+name: ImuOdomObserver # observer must specify a predefined name
+type: Prediction # observer type: Prediction or Correction
+
+gyro_noise_sigma: 1e-3
+gyro_bias_sigma: 1e-6
+
+vel_noise: 1e-2
+
+odom_bias: 1 # the ratio of true velocity over measured velocity
+

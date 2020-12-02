@@ -1,0 +1,21 @@
+syntax="proto2";
+package Proto_msg;
+message Gnss
+{ 
+ optional double timestamp = 1; 
+ optional uint32 seq=2;
+ optional string parent_frame_id=3;
+ optional string frame_id=4;
+ optional uint32 status=5;
+ optional uint32 type=6;
+ optional uint32 sat_cnt=7;
+ repeated double pos=8;
+ repeated double pos_cov=9;
+ repeated double orien=10;
+ repeated double oeirn_cov=11;
+ repeated double linear_vel=12;
+ repeated double linear_vel_cov=13;
+
+}
+
+

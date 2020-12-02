@@ -1,0 +1,19 @@
+syntax="proto2";
+package Proto_msg;
+message Imu
+{ 
+ optional double timestamp = 1; 
+ optional uint32 seq=2;
+ optional string parent_frame_id=3;
+ optional string frame_id=4;
+ repeated double orien=5;
+ repeated double orien_cov=6;
+ repeated double angular_vel=7;
+ repeated double angular_vel_cov=8;
+ repeated double angular_bias_cov=9;
+ repeated double acc=10;
+ repeated double acc_cov=11;
+ repeated double acc_bias_cov=12;
+}
+
+

@@ -1,0 +1,5 @@
+device_type: BIEKE      #@type: string @brief: the device type  ***DO NOT EDIT!***
+frame_id: /odom       #@type: string @brief: the frame id of the message
+can_index: 0
+timeing0: 0x00 
+timeing1: 0x1C

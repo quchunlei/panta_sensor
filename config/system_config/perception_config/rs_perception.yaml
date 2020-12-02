@@ -1,0 +1,153 @@
+common: # common args before invoke the perception algorithm core
+  perception_mode: 1 # 0: perception with points only, 1: perception with points and pose from localizaiton, 2: for odometry, 3: for V2R
+  with_debug_info: false # enable debug info output or not
+  perception_frame_id: rs_perception # setting perception info frame_id
+  stick_height: 0 ## !!!Notes: Only use for V2R!
+
+algorithm: # true perception algorithm args
+  ## robosense perception sdk user configure
+  ## !!!Notes:
+  ## all of the "range" parameters are set based on lidar coordinate (lidar itself is origin, right-hand, not vehicle, be carefull)
+  ##========================common config===========================
+  common_config:
+    lidar_info:
+      device_id: 0
+      hori_resolution: 0.2
+      vert_resolution: 0.5
+    enable_auto_align: true
+    ignore_range: # if object located within the 'ignore_ange', they will be moved out
+      xmin: -2.5 # (background of the vehicle)
+      xmax: 2.5 # (foreground of the vehicle)
+      ymin: -1.5 # (right side of the vehicle)
+      ymax: 1.5 # (left side of the vehicle)
+      zmin: -3 # (lower side of the vehicle)
+      zmax: 3 # (upper side of the vehicle)
+    enable_fusion_adjust: true # true for P3
+    enable_height_adjust: false # true for old model (ground is below zero, sdk version <=2.3)
+    enable_class_enhance: false
+    enable_roi: false
+  ##========================deeplearning detection config 1===========================
+  deep_detection_config:
+    detect_range: # main detection range, should set smaller if with low computing power such as nvidia edge devices like tx2 or xavier
+      xmin: -100
+      xmax: 100
+      ymin: -60
+      ymax: 60
+      zmin: -1
+      zmax: 4
+    unit_size: 0.2 # be care! this should not be changed if keep deeplearning model unchanged.
+    obstacle_confidence_thd: 0.5
+    object_confidence_thd: 0.1
+    regress_height_thd: 0.5
+    density_base: 1.0
+    enable_intensity_normalize: false
+    enable_fp_16: false # should be set true when use with nvidia edge devices like tx2 or xavier
+    max_workspace: 30
+    min_pts_num: 3
+    ground_height_thd: 1.0
+    ground_h_error_thd: 0.2
+    overlap_thd: 0.5
+  ##========================deeplearning detection config 2===========================
+  deep_detection_config2:
+    rows: 64 # be care! this should not be changed if keep deeplearning model unchanged.
+    cols: 512 # be care! this should not be changed if keep deeplearning model unchanged.
+    range: 150 # main detection range, should set smaller if with low computing power such as nvidia edge devices like tx2 or xavier
+    min_height: -5
+    max_height: 5
+    min_theta: -15
+    max_theta: 5
+    min_phi: -60
+    max_phi: 60
+    min_pts_num: 3
+    delta_x: 0.5
+    delta_y: 0.5
+    use_intensity: false # should set true when intensity channel data is ok
+    enable_intensity_normalize: false
+    enable_fp_16: false # should be set true when use with nvidia edge devices like tx2 or xavier
+    max_workspace: 30
+    ground_height_thd: 1.0
+    ground_h_error_thd: 0.2
+    ground_grid_size: 0.25
+  ##========================second stage detection refine config===========================
+  refine_detection_config: # complementary detection range, to make sure no objects are missed
+    enable_detection_refine: false
+    refine_range:
+      xmin: -50
+      xmax: 50
+      ymin: -10
+      ymax: 10
+      zmin: -3
+      zmax: 4
+    enable_geo_filter: true
+    obj_limit:
+      obj_max_height: 5.0
+      obj_size_height: 4.0
+      obj_size_length: 3.0
+      obj_size_width: 2.0
+      obj_length_width_ratio: 5.0
+      obj_max_area: 5.0
+    enable_upper_detect: true
+    min_pts_num: 3
+    overlap_thd: 0.5
+  ##========================tracking config===========================
+  tracking_config:
+    enable_tracking: true
+    enable_track_optimize: false # can be set true when global pose is obtained, in order to promote the box direciton
+    enable_adaptive_filter_gain: false
+    enable_check_filter_state: false
+    enable_weighted_direction_filter: false # !!!
+    enable_direction_cue_to_filter: false # !!! be care, should with global pose estimation or static
+    enable_adaptive_measure_noise_estimate: false # !!!
+    enable_history_improve_filter: true
+    enable_check_static_obj: true
+    predict_time: 0.5
+    history_num: 10
+    eva_seq_size: 10
+    basic_velocity_noise: 0.4
+    match_distance_max: 3.0
+  ##========================dynamic detection===========================
+  dynamic_detect_config: # dynamic detection
+    enable_dynamic_detection: false
+    dynamic_detect_range: 80
+    min_hori_angle: -180
+    max_hori_angle: 180
+    min_vert_range: -1
+    max_vert_range: 2.5
+  ##========================freespace detection config===========================
+  freespace_detect_config: # freespace detection
+    enable_freespace_detection: true
+    vertical_range:
+      min: -1
+      max: 3.0
+    min_hori_angle: -60
+    max_hori_angle: 60
+    sector_num: 100
+    free_width_thre: 2.0
+    ignore_range: # if points located within the 'ignore_ange', they will be moved out
+      xmin: -3. # (background of the vehicle)
+      xmax: 3. # (foreground of the vehicle)
+      ymin: -2. # (right side of the vehicle)
+      ymax: 2. # (left side of the vehicle)
+    obstacle_range: # freespace detect range
+      xmin: -100
+      xmax: 100
+      ymin: -80
+      ymax: 80
+    unit_size: 0.25
+    mode: 0 # if 0,no detections, if 1,detect obstacles only around freespace, of 2, detect all obstacles
+    min_pts: 3 #filter obstacles pts nums less than min_pts
+    min_delta_height: 0.2 #filter obstacles delta height less than min_delta_height
+    max_range: 180.0
+    in_min_hori_angle: -60.0
+    in_max_hori_angle: 60.0
+  ##========================post denoising (dust, tail gas etc.) filter config===========================
+  post_denoise_config: # in order to filter out miss-detections caused by dust or tail gas of vehicle
+    enable_post_denoise_filter: false
+    post_denoise_range:
+      xmin: -10
+      xmax: 5
+      ymin: -5
+      ymax: 5
+      zmin: -3
+      zmax: 5
+    post_denoise_filter_thd: 0.5

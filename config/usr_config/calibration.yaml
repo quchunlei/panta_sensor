@@ -1,0 +1,62 @@
+lidar:  
+  - parent_frame_id: /base_link  
+    frame_id: /middle_lidar
+    x: 0
+    y: 0
+    z: 0
+    roll: 0
+    pitch: 0
+    yaw: 0
+
+  - parent_frame_id: /middle_lidar
+    frame_id: /left_lidar 
+    x: 0
+    y: 0
+    z: 0
+    roll: 0
+    pitch: 0
+    yaw: 0
+
+  - parent_frame_id: /middle_lidar
+    frame_id: /right_lidar
+    x: 0
+    y: 0
+    z: 0
+    roll: 0
+    pitch: 0
+    yaw: 0
+
+vehicle: 
+  frame_id: /base_link 
+ 
+imu: 
+  parent_frame_id: /base_link 
+  frame_id: /imu 
+  x: 0 
+  y: 0 
+  z: 0 
+  roll: 0 
+  pitch: 0 
+  yaw: 0 
+ 
+gnss: 
+  parent_frame_id: /base_link 
+  frame_id: /gnss 
+  x: 0 
+  y: 0 
+  z: 0 
+  roll: 0 
+  pitch: 0 
+  yaw: 0 
+ 
+odom: 
+  parent_frame_id: /base_link 
+  frame_id: /odom 
+  x: 0 
+  y: 0 
+  z: 0 
+  roll: 0 
+  pitch: 0 
+  yaw: 0 
+ 
+

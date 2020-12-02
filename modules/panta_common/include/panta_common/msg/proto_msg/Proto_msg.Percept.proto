@@ -1,0 +1,158 @@
+syntax = "proto2";
+package Proto_msg;
+
+//---------------------basic data struct-----------------------
+
+// defined struct to contain the vector or point information
+message Point3 {
+  optional float x = 1;
+  optional float y = 2;
+  optional float z = 3;
+}
+
+//----------------------basic perception objcet----------------------
+
+message FreeSpace {
+
+  //============header info============
+  optional double timestamp = 1;
+  optional uint32 device_code = 2; // which device the obstacle is detected by.
+
+  optional float distance = 3;  // distance to the nearest obstacle per section
+  optional float yaw_angle = 4; // section yaw angle
+  optional float free_prob = 5; // probability for the section to be passable,
+                                // 0~1, the greater, the better.
+}
+
+
+message Obstacle {
+
+    //============header info============
+    optional double timestamp = 1;
+    optional uint32 device_code = 2; // which device the obstacle is detected by.
+
+    //============basic detection info============
+    optional int32 id = 3; // obstacle detection ID, only valid for one frame,
+    // i.e., will be reinit every frame.
+
+    optional Point3 anchor = 4; // stable anchor point of obstacle, can be used to
+    // estimate the position of obstacle
+
+    optional Point3 geo_center = 5; // obstacle geometry center
+
+    optional Point3 geo_size = 6; // Size of obstacle bounding box. obstacle size,
+    // i.e., length = size[0]], width =
+    // size[1], height = size[2], lenght >= width.
+
+    optional Point3 geo_direction = 7; // normalized direction of boundingbox of obstacle
+
+    repeated Point3 polygon = 8; // corner points of the convex hull of the obstacle.
+
+    optional float detect_confidence = 9; // the confidence for the obstacle detection, 0~1, the greater, the
+    // higher probability for obstacle existence.
+
+    //-----------supplementary detection info-------------
+    optional Point3 nearest_point = 10;
+    optional Point3 left_point = 11; // clock-wise the leftmost point of the bostacle
+    optional Point3 right_point = 12; // clock-wise the rightmost point of the bostacle
+    optional float distance = 13; // the minimal distance between the lidar and
+    // the nearest point of obstacle
+    optional float yaw = 14; // yaw angle of the obstacle location relative to the
+    // lidar coordinate.
+    optional int32 point_num = 15; // points num of obstacle pointcloud.
+
+    //============classification info============
+    enum Type {
+        UNKNOWN = 0; // unclassified or can not classified obstacles
+        PEDESTRIAN =
+        1;       // single separated pedestrian, persons group are not included.
+        BICYCLE = 2; // people riding bike or motor bike
+        CAR = 3;     // small personal vehicle, like car, suv or small van
+        TRUCK_BUS = 4; // truck or bus or other cargo carrier.
+        ULTRA_VEHICLE = 5; //very huge vehicles like long cargo truck (>=15m)
+    };
+
+    optional Type type = 16; // obstacle type from classification module: 0 is
+    // unknow, 1 is pedestrian, 2 is bicycle, 3 is small
+    // vehicle and 4 is big vehicle, 5 is very huge vehicle like long cargo truck.
+    optional float type_confidence = 17; // the confidence for the classification
+    // from classification module, 0~1, the
+    // greater, the better.
+    repeated float latent_types = 18; // all the possible types that the object may belong to.
+
+    //============motion info============
+    enum MotionType {
+        UNKNOW  = 0; //unknown motion state
+        MOVING  = 1; //moving state
+        STATIC  = 2; //stationary state
+        STOPED  = 3; //just from moving to stationary
+    };
+
+    optional MotionType motion_state = 19;
+
+    //============tracking info============
+    optional bool is_track_converged = 20; // obstacle tracking state: tracked
+    // succeed or not, if not, the tracking
+    // information is not reliable.
+    optional int32 tracker_id = 21; // obstacle tracking ID, valid accross frame sequence all the time.
+    optional Point3 velocity = 22; // obstacle velocity in global coordinate with unit m/s.
+    repeated float velocity_cov = 23;         // covariance of velocity
+    optional float velocity_uncertainty = 24; // the uncertainty of the velocity
+    optional Point3 ave_velocity = 25; // averate velocity by a sequence, i.g. 10 frames.
+    // estimation, 0~1, the greater, the
+    // better.
+    optional Point3 acceleration = 26; // obstacle acceleration in global coordinate with unit m/s^2.
+    repeated float acceleration_cov = 27; // covariance of acceleration
+    optional float acceleration_uncertainty = 28; // the uncertainty of the acceleration
+    optional Point3 ave_acceleration = 29; // averate acceleration by a sequence, i.g. 10 frames.
+    optional float angle_velocity = 30; // angular velocity with radian in global coordinate with unit rad/s.
+    optional float angle_velocity_cov = 31; // covariance of angle velocity
+    optional float angle_velocity_uncertainty = 32; // the uncertainty of the angle velocity
+    optional float ave_angle_velocity = 33; // averate angle velocity by a sequence, i.g. 10 frames.
+    optional float asso_quality = 34; // the association quality of current tracked obstacle
+    // when involved into a tracker, 0~1, the
+    // greater, the better.
+    optional float tracker_quality = 35; // the quality for the tracker that
+    // the obstacle belong to, 0~1, the
+    // greater, the better.
+    optional double tracking_time = 36; // the total time for the obstacle been tracked since been first
+    // detected, including visible or shadowed in seconds.
+
+    //*************supplementary tracking info*************
+
+    //============dynamic detection info============
+//    optional float dynamic_confidence = 37; // probability for a obstacle belong to dynamic object, 0~1, the
+    // greater, the more probability for the obstacle to be dynamic.
+//    optional float foreground_confidence = 38; // probability for a obstacle belong to foreground object, 0~1, the
+//    // greater, the more probability for the obstacle to be foreground.
+
+//    repeated Point3 history_velocity = 39; // historical velocity for the obstacle
+    // when tracked in global coordinate,
+    // default is 10 frames.
+
+//    repeated Point3 trajectory = 40; // historical trajectory for the obstacle
+    // when tracked in global coordinate in
+    // meters, default is 10 frames.
+}
+
+//--------------------------composite perception target--------------------------------
+message FreeSpaces {
+  optional double timestamp = 1;
+  optional uint32 seq = 2;
+  optional string parent_frame_id = 3;
+  optional string frame_id = 4;
+
+  repeated FreeSpace freeSpaces = 5;
+}
+
+
+message Obstacles {
+  optional double timestamp = 1;
+  optional uint32 seq = 2;
+  optional string parent_frame_id = 3;
+  optional string frame_id = 4;
+
+  repeated Obstacle obstacles = 5;
+}
+
+

@@ -1,0 +1,11 @@
+# yaml
+name: ImuObserver # observer must specify a predefined name
+type: Prediction # observer type: Prediction or Correction
+
+acc_output_with_gravaty: yes # yes or no
+
+acc_noise_sigma: 1e-2
+gyro_noise_sigma: 1e-3
+
+acc_bias_sigma: 1e-4
+gyro_bias_sigma: 1e-5

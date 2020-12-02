@@ -1,0 +1,20 @@
+#@brief: common parameters for Odom message
+common:
+  msg_source: 0           #@type: int  @detail: 0--not use Odom, 1--message come from sensor driver, 2--message come from ROS,3--message come from protobuf(UDP)
+  send_msg_ros: false     #@type: bool @detail: if true, the original Odom message will be sent out through ROS
+  send_msg_proto: false   #@type: bool @detail: if true, the original Odom message will be sent out through Proto
+
+#@brief: config file for sensor driver 
+driver:
+  include: ../sensor_config/other_sensors/odom/odom_BYD.yaml
+
+#@brief: configration for ROS
+ros:
+  ros_recv_topic: /navsat/odom 
+  ros_send_topic: /navsat/odom
+  
+#@brief: configration for Proto
+proto:
+  proto_send_port: 60013
+  proto_send_ip: 127.0.0.1
+  proto_recv_port: 60013
