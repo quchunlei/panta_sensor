@@ -7,6 +7,7 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
+#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/stubs/once.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/wire_format_lite_inl.h>
@@ -17,125 +18,174 @@
 // @@protoc_insertion_point(includes)
 
 namespace Proto_msg {
+class OdomDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<Odom>
+     _instance;
+} _Odom_default_instance_;
+
+namespace protobuf_Proto_5fmsg_2eOdom_2eproto {
+
 
 namespace {
 
-const ::google::protobuf::Descriptor* Odom_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  Odom_reflection_ = NULL;
+::google::protobuf::Metadata file_level_metadata[1];
 
 }  // namespace
 
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
+};
 
-void protobuf_AssignDesc_Proto_5fmsg_2eOdom_2eproto() {
-  protobuf_AddDesc_Proto_5fmsg_2eOdom_2eproto();
-  const ::google::protobuf::FileDescriptor* file =
-    ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
-      "Proto_msg.Odom.proto");
-  GOOGLE_CHECK(file != NULL);
-  Odom_descriptor_ = file->message_type(0);
-  static const int Odom_offsets_[6] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Odom, timestamp_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Odom, seq_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Odom, parent_frame_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Odom, frame_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Odom, linear_vel_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Odom, linear_vel_cov_),
-  };
-  Odom_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      Odom_descriptor_,
-      Odom::default_instance_,
-      Odom_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Odom, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Odom, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(Odom));
-}
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  ::google::protobuf::internal::AuxillaryParseTableField(),
+};
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+};
+
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Odom, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Odom, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Odom, timestamp_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Odom, seq_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Odom, parent_frame_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Odom, frame_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Odom, linear_vel_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Odom, linear_vel_cov_),
+  2,
+  3,
+  0,
+  1,
+  ~0u,
+  ~0u,
+};
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, 11, sizeof(Odom)},
+};
+
+static ::google::protobuf::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::google::protobuf::Message*>(&_Odom_default_instance_),
+};
 
 namespace {
 
-GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
-inline void protobuf_AssignDescriptorsOnce() {
-  ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
-                 &protobuf_AssignDesc_Proto_5fmsg_2eOdom_2eproto);
+void protobuf_AssignDescriptors() {
+  AddDescriptors();
+  ::google::protobuf::MessageFactory* factory = NULL;
+  AssignDescriptors(
+      "Proto_msg.Odom.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      file_level_metadata, NULL, NULL);
 }
 
+void protobuf_AssignDescriptorsOnce() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
+}
+
+void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    Odom_descriptor_, &Odom::default_instance());
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
 }
 
 }  // namespace
-
-void protobuf_ShutdownFile_Proto_5fmsg_2eOdom_2eproto() {
-  delete Odom::default_instance_;
-  delete Odom_reflection_;
-}
-
-void protobuf_AddDesc_Proto_5fmsg_2eOdom_2eproto() {
-  static bool already_here = false;
-  if (already_here) return;
-  already_here = true;
+void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+  ::google::protobuf::internal::InitProtobufDefaults();
+  _Odom_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_Odom_default_instance_);}
+
+void InitDefaults() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
+}
+namespace {
+void AddDescriptorsImpl() {
+  InitDefaults();
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+      "\n\024Proto_msg.Odom.proto\022\tProto_msg\"}\n\004Odo"
+      "m\022\021\n\ttimestamp\030\001 \001(\001\022\013\n\003seq\030\002 \001(\r\022\027\n\017par"
+      "ent_frame_id\030\003 \001(\t\022\020\n\010frame_id\030\004 \001(\t\022\022\n\n"
+      "linear_vel\030\014 \003(\001\022\026\n\016linear_vel_cov\030\r \003(\001"
+  };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\024Proto_msg.Odom.proto\022\tProto_msg\"}\n\004Odo"
-    "m\022\021\n\ttimestamp\030\001 \001(\001\022\013\n\003seq\030\002 \001(\r\022\027\n\017par"
-    "ent_frame_id\030\003 \001(\t\022\020\n\010frame_id\030\004 \001(\t\022\022\n\n"
-    "linear_vel\030\014 \003(\001\022\026\n\016linear_vel_cov\030\r \003(\001", 160);
+      descriptor, 160);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Proto_msg.Odom.proto", &protobuf_RegisterTypes);
-  Odom::default_instance_ = new Odom();
-  Odom::default_instance_->InitAsDefaultInstance();
-  ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_Proto_5fmsg_2eOdom_2eproto);
 }
+} // anonymous namespace
 
-// Force AddDescriptors() to be called at static initialization time.
-struct StaticDescriptorInitializer_Proto_5fmsg_2eOdom_2eproto {
-  StaticDescriptorInitializer_Proto_5fmsg_2eOdom_2eproto() {
-    protobuf_AddDesc_Proto_5fmsg_2eOdom_2eproto();
+void AddDescriptors() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
+}
+// Force AddDescriptors() to be called at dynamic initialization time.
+struct StaticDescriptorInitializer {
+  StaticDescriptorInitializer() {
+    AddDescriptors();
   }
-} static_descriptor_initializer_Proto_5fmsg_2eOdom_2eproto_;
+} static_descriptor_initializer;
+
+}  // namespace protobuf_Proto_5fmsg_2eOdom_2eproto
+
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Odom::kTimestampFieldNumber;
 const int Odom::kSeqFieldNumber;
 const int Odom::kParentFrameIdFieldNumber;
 const int Odom::kFrameIdFieldNumber;
 const int Odom::kLinearVelFieldNumber;
 const int Odom::kLinearVelCovFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Odom::Odom()
-  : ::google::protobuf::Message() {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_Proto_5fmsg_2eOdom_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:Proto_msg.Odom)
 }
-
-void Odom::InitAsDefaultInstance() {
-}
-
 Odom::Odom(const Odom& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0),
+      linear_vel_(from.linear_vel_),
+      linear_vel_cov_(from.linear_vel_cov_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  parent_frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_parent_frame_id()) {
+    parent_frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.parent_frame_id_);
+  }
+  frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_frame_id()) {
+    frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.frame_id_);
+  }
+  ::memcpy(&timestamp_, &from.timestamp_,
+    static_cast<size_t>(reinterpret_cast<char*>(&seq_) -
+    reinterpret_cast<char*>(&timestamp_)) + sizeof(seq_));
   // @@protoc_insertion_point(copy_constructor:Proto_msg.Odom)
 }
 
 void Odom::SharedCtor() {
-  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
-  timestamp_ = 0;
-  seq_ = 0u;
-  parent_frame_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  frame_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  parent_frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&timestamp_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&seq_) -
+      reinterpret_cast<char*>(&timestamp_)) + sizeof(seq_));
 }
 
 Odom::~Odom() {
@@ -144,14 +194,8 @@ Odom::~Odom() {
 }
 
 void Odom::SharedDtor() {
-  if (parent_frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete parent_frame_id_;
-  }
-  if (frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete frame_id_;
-  }
-  if (this != default_instance_) {
-  }
+  parent_frame_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  frame_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void Odom::SetCachedSize(int size) const {
@@ -160,162 +204,166 @@ void Odom::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* Odom::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return Odom_descriptor_;
+  protobuf_Proto_5fmsg_2eOdom_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2eOdom_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const Odom& Odom::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_Proto_5fmsg_2eOdom_2eproto();
-  return *default_instance_;
+  protobuf_Proto_5fmsg_2eOdom_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
 
-Odom* Odom::default_instance_ = NULL;
-
-Odom* Odom::New() const {
-  return new Odom;
+Odom* Odom::New(::google::protobuf::Arena* arena) const {
+  Odom* n = new Odom;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
 }
 
 void Odom::Clear() {
-  if (_has_bits_[0 / 32] & 15) {
-    timestamp_ = 0;
-    seq_ = 0u;
-    if (has_parent_frame_id()) {
-      if (parent_frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        parent_frame_id_->clear();
-      }
-    }
-    if (has_frame_id()) {
-      if (frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        frame_id_->clear();
-      }
-    }
-  }
+// @@protoc_insertion_point(message_clear_start:Proto_msg.Odom)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   linear_vel_.Clear();
   linear_vel_cov_.Clear();
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 3u) {
+    if (cached_has_bits & 0x00000001u) {
+      GOOGLE_DCHECK(!parent_frame_id_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*parent_frame_id_.UnsafeRawStringPointer())->clear();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(!frame_id_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*frame_id_.UnsafeRawStringPointer())->clear();
+    }
+  }
+  if (cached_has_bits & 12u) {
+    ::memset(&timestamp_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&seq_) -
+        reinterpret_cast<char*>(&timestamp_)) + sizeof(seq_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
 }
 
 bool Odom::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:Proto_msg.Odom)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // optional double timestamp = 1;
       case 1: {
-        if (tag == 9) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
+          set_has_timestamp();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, &timestamp_)));
-          set_has_timestamp();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(16)) goto parse_seq;
         break;
       }
 
       // optional uint32 seq = 2;
       case 2: {
-        if (tag == 16) {
-         parse_seq:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+          set_has_seq();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  input, &seq_)));
-          set_has_seq();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_parent_frame_id;
         break;
       }
 
       // optional string parent_frame_id = 3;
       case 3: {
-        if (tag == 26) {
-         parse_parent_frame_id:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_parent_frame_id()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->parent_frame_id().data(), this->parent_frame_id().length(),
+            this->parent_frame_id().data(), static_cast<int>(this->parent_frame_id().length()),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "parent_frame_id");
+            "Proto_msg.Odom.parent_frame_id");
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(34)) goto parse_frame_id;
         break;
       }
 
       // optional string frame_id = 4;
       case 4: {
-        if (tag == 34) {
-         parse_frame_id:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_frame_id()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->frame_id().data(), this->frame_id().length(),
+            this->frame_id().data(), static_cast<int>(this->frame_id().length()),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "frame_id");
+            "Proto_msg.Odom.frame_id");
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(97)) goto parse_linear_vel;
         break;
       }
 
       // repeated double linear_vel = 12;
       case 12: {
-        if (tag == 97) {
-         parse_linear_vel:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(97u /* 97 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 97, input, this->mutable_linear_vel())));
-        } else if (tag == 98) {
+                 1, 97u, input, this->mutable_linear_vel())));
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(98u /* 98 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, this->mutable_linear_vel())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(97)) goto parse_linear_vel;
-        if (input->ExpectTag(105)) goto parse_linear_vel_cov;
         break;
       }
 
       // repeated double linear_vel_cov = 13;
       case 13: {
-        if (tag == 105) {
-         parse_linear_vel_cov:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(105u /* 105 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 105, input, this->mutable_linear_vel_cov())));
-        } else if (tag == 106) {
+                 1, 105u, input, this->mutable_linear_vel_cov())));
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(106u /* 106 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, this->mutable_linear_vel_cov())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(105)) goto parse_linear_vel_cov;
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -332,126 +380,143 @@ failure:
 void Odom::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:Proto_msg.Odom)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional double timestamp = 1;
-  if (has_timestamp()) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->timestamp(), output);
   }
 
   // optional uint32 seq = 2;
-  if (has_seq()) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->seq(), output);
   }
 
   // optional string parent_frame_id = 3;
-  if (has_parent_frame_id()) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->parent_frame_id().data(), this->parent_frame_id().length(),
+      this->parent_frame_id().data(), static_cast<int>(this->parent_frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "parent_frame_id");
+      "Proto_msg.Odom.parent_frame_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->parent_frame_id(), output);
   }
 
   // optional string frame_id = 4;
-  if (has_frame_id()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->frame_id().data(), this->frame_id().length(),
+      this->frame_id().data(), static_cast<int>(this->frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "frame_id");
+      "Proto_msg.Odom.frame_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       4, this->frame_id(), output);
   }
 
   // repeated double linear_vel = 12;
-  for (int i = 0; i < this->linear_vel_size(); i++) {
+  for (int i = 0, n = this->linear_vel_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       12, this->linear_vel(i), output);
   }
 
   // repeated double linear_vel_cov = 13;
-  for (int i = 0; i < this->linear_vel_cov_size(); i++) {
+  for (int i = 0, n = this->linear_vel_cov_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       13, this->linear_vel_cov(i), output);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:Proto_msg.Odom)
 }
 
-::google::protobuf::uint8* Odom::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* Odom::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:Proto_msg.Odom)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional double timestamp = 1;
-  if (has_timestamp()) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->timestamp(), target);
   }
 
   // optional uint32 seq = 2;
-  if (has_seq()) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->seq(), target);
   }
 
   // optional string parent_frame_id = 3;
-  if (has_parent_frame_id()) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->parent_frame_id().data(), this->parent_frame_id().length(),
+      this->parent_frame_id().data(), static_cast<int>(this->parent_frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "parent_frame_id");
+      "Proto_msg.Odom.parent_frame_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         3, this->parent_frame_id(), target);
   }
 
   // optional string frame_id = 4;
-  if (has_frame_id()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->frame_id().data(), this->frame_id().length(),
+      this->frame_id().data(), static_cast<int>(this->frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "frame_id");
+      "Proto_msg.Odom.frame_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         4, this->frame_id(), target);
   }
 
   // repeated double linear_vel = 12;
-  for (int i = 0; i < this->linear_vel_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleToArray(12, this->linear_vel(i), target);
-  }
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteDoubleToArray(12, this->linear_vel_, target);
 
   // repeated double linear_vel_cov = 13;
-  for (int i = 0; i < this->linear_vel_cov_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleToArray(13, this->linear_vel_cov(i), target);
-  }
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteDoubleToArray(13, this->linear_vel_cov_, target);
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Proto_msg.Odom)
   return target;
 }
 
-int Odom::ByteSize() const {
-  int total_size = 0;
+size_t Odom::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Proto_msg.Odom)
+  size_t total_size = 0;
 
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // optional double timestamp = 1;
-    if (has_timestamp()) {
-      total_size += 1 + 8;
-    }
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  // repeated double linear_vel = 12;
+  {
+    unsigned int count = static_cast<unsigned int>(this->linear_vel_size());
+    size_t data_size = 8UL * count;
+    total_size += 1 *
+                  ::google::protobuf::internal::FromIntSize(this->linear_vel_size());
+    total_size += data_size;
+  }
 
-    // optional uint32 seq = 2;
-    if (has_seq()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->seq());
-    }
+  // repeated double linear_vel_cov = 13;
+  {
+    unsigned int count = static_cast<unsigned int>(this->linear_vel_cov_size());
+    size_t data_size = 8UL * count;
+    total_size += 1 *
+                  ::google::protobuf::internal::FromIntSize(this->linear_vel_cov_size());
+    total_size += data_size;
+  }
 
+  if (_has_bits_[0 / 32] & 15u) {
     // optional string parent_frame_id = 3;
     if (has_parent_frame_id()) {
       total_size += 1 +
@@ -466,104 +531,348 @@ int Odom::ByteSize() const {
           this->frame_id());
     }
 
-  }
-  // repeated double linear_vel = 12;
-  {
-    int data_size = 0;
-    data_size = 8 * this->linear_vel_size();
-    total_size += 1 * this->linear_vel_size() + data_size;
-  }
+    // optional double timestamp = 1;
+    if (has_timestamp()) {
+      total_size += 1 + 8;
+    }
 
-  // repeated double linear_vel_cov = 13;
-  {
-    int data_size = 0;
-    data_size = 8 * this->linear_vel_cov_size();
-    total_size += 1 * this->linear_vel_cov_size() + data_size;
-  }
+    // optional uint32 seq = 2;
+    if (has_seq()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->seq());
+    }
 
-  if (!unknown_fields().empty()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
   }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void Odom::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(generalized_merge_from_start:Proto_msg.Odom)
+  GOOGLE_DCHECK_NE(&from, this);
   const Odom* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const Odom*>(
-      &from);
+      ::google::protobuf::internal::DynamicCastToGenerated<const Odom>(
+          &from);
   if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Proto_msg.Odom)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Proto_msg.Odom)
     MergeFrom(*source);
   }
 }
 
 void Odom::MergeFrom(const Odom& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(class_specific_merge_from_start:Proto_msg.Odom)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   linear_vel_.MergeFrom(from.linear_vel_);
   linear_vel_cov_.MergeFrom(from.linear_vel_cov_);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_timestamp()) {
-      set_timestamp(from.timestamp());
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 15u) {
+    if (cached_has_bits & 0x00000001u) {
+      set_has_parent_frame_id();
+      parent_frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.parent_frame_id_);
     }
-    if (from.has_seq()) {
-      set_seq(from.seq());
+    if (cached_has_bits & 0x00000002u) {
+      set_has_frame_id();
+      frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.frame_id_);
     }
-    if (from.has_parent_frame_id()) {
-      set_parent_frame_id(from.parent_frame_id());
+    if (cached_has_bits & 0x00000004u) {
+      timestamp_ = from.timestamp_;
     }
-    if (from.has_frame_id()) {
-      set_frame_id(from.frame_id());
+    if (cached_has_bits & 0x00000008u) {
+      seq_ = from.seq_;
     }
+    _has_bits_[0] |= cached_has_bits;
   }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
 void Odom::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Proto_msg.Odom)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void Odom::CopyFrom(const Odom& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Proto_msg.Odom)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 bool Odom::IsInitialized() const {
-
   return true;
 }
 
 void Odom::Swap(Odom* other) {
-  if (other != this) {
-    std::swap(timestamp_, other->timestamp_);
-    std::swap(seq_, other->seq_);
-    std::swap(parent_frame_id_, other->parent_frame_id_);
-    std::swap(frame_id_, other->frame_id_);
-    linear_vel_.Swap(&other->linear_vel_);
-    linear_vel_cov_.Swap(&other->linear_vel_cov_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Odom::InternalSwap(Odom* other) {
+  using std::swap;
+  linear_vel_.InternalSwap(&other->linear_vel_);
+  linear_vel_cov_.InternalSwap(&other->linear_vel_cov_);
+  parent_frame_id_.Swap(&other->parent_frame_id_);
+  frame_id_.Swap(&other->frame_id_);
+  swap(timestamp_, other->timestamp_);
+  swap(seq_, other->seq_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Odom::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = Odom_descriptor_;
-  metadata.reflection = Odom_reflection_;
-  return metadata;
+  protobuf_Proto_5fmsg_2eOdom_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2eOdom_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// Odom
+
+// optional double timestamp = 1;
+bool Odom::has_timestamp() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void Odom::set_has_timestamp() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void Odom::clear_has_timestamp() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void Odom::clear_timestamp() {
+  timestamp_ = 0;
+  clear_has_timestamp();
+}
+double Odom::timestamp() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Odom.timestamp)
+  return timestamp_;
+}
+void Odom::set_timestamp(double value) {
+  set_has_timestamp();
+  timestamp_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Odom.timestamp)
+}
+
+// optional uint32 seq = 2;
+bool Odom::has_seq() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+void Odom::set_has_seq() {
+  _has_bits_[0] |= 0x00000008u;
+}
+void Odom::clear_has_seq() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+void Odom::clear_seq() {
+  seq_ = 0u;
+  clear_has_seq();
+}
+::google::protobuf::uint32 Odom::seq() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Odom.seq)
+  return seq_;
+}
+void Odom::set_seq(::google::protobuf::uint32 value) {
+  set_has_seq();
+  seq_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Odom.seq)
+}
+
+// optional string parent_frame_id = 3;
+bool Odom::has_parent_frame_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void Odom::set_has_parent_frame_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void Odom::clear_has_parent_frame_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void Odom::clear_parent_frame_id() {
+  parent_frame_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_parent_frame_id();
+}
+const ::std::string& Odom::parent_frame_id() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Odom.parent_frame_id)
+  return parent_frame_id_.GetNoArena();
+}
+void Odom::set_parent_frame_id(const ::std::string& value) {
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Proto_msg.Odom.parent_frame_id)
+}
+#if LANG_CXX11
+void Odom::set_parent_frame_id(::std::string&& value) {
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Proto_msg.Odom.parent_frame_id)
+}
+#endif
+void Odom::set_parent_frame_id(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Proto_msg.Odom.parent_frame_id)
+}
+void Odom::set_parent_frame_id(const char* value, size_t size) {
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Proto_msg.Odom.parent_frame_id)
+}
+::std::string* Odom::mutable_parent_frame_id() {
+  set_has_parent_frame_id();
+  // @@protoc_insertion_point(field_mutable:Proto_msg.Odom.parent_frame_id)
+  return parent_frame_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* Odom::release_parent_frame_id() {
+  // @@protoc_insertion_point(field_release:Proto_msg.Odom.parent_frame_id)
+  clear_has_parent_frame_id();
+  return parent_frame_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void Odom::set_allocated_parent_frame_id(::std::string* parent_frame_id) {
+  if (parent_frame_id != NULL) {
+    set_has_parent_frame_id();
+  } else {
+    clear_has_parent_frame_id();
+  }
+  parent_frame_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), parent_frame_id);
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.Odom.parent_frame_id)
+}
+
+// optional string frame_id = 4;
+bool Odom::has_frame_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void Odom::set_has_frame_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void Odom::clear_has_frame_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void Odom::clear_frame_id() {
+  frame_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_frame_id();
+}
+const ::std::string& Odom::frame_id() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Odom.frame_id)
+  return frame_id_.GetNoArena();
+}
+void Odom::set_frame_id(const ::std::string& value) {
+  set_has_frame_id();
+  frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Proto_msg.Odom.frame_id)
+}
+#if LANG_CXX11
+void Odom::set_frame_id(::std::string&& value) {
+  set_has_frame_id();
+  frame_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Proto_msg.Odom.frame_id)
+}
+#endif
+void Odom::set_frame_id(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_frame_id();
+  frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Proto_msg.Odom.frame_id)
+}
+void Odom::set_frame_id(const char* value, size_t size) {
+  set_has_frame_id();
+  frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Proto_msg.Odom.frame_id)
+}
+::std::string* Odom::mutable_frame_id() {
+  set_has_frame_id();
+  // @@protoc_insertion_point(field_mutable:Proto_msg.Odom.frame_id)
+  return frame_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* Odom::release_frame_id() {
+  // @@protoc_insertion_point(field_release:Proto_msg.Odom.frame_id)
+  clear_has_frame_id();
+  return frame_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void Odom::set_allocated_frame_id(::std::string* frame_id) {
+  if (frame_id != NULL) {
+    set_has_frame_id();
+  } else {
+    clear_has_frame_id();
+  }
+  frame_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), frame_id);
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.Odom.frame_id)
+}
+
+// repeated double linear_vel = 12;
+int Odom::linear_vel_size() const {
+  return linear_vel_.size();
+}
+void Odom::clear_linear_vel() {
+  linear_vel_.Clear();
+}
+double Odom::linear_vel(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Odom.linear_vel)
+  return linear_vel_.Get(index);
+}
+void Odom::set_linear_vel(int index, double value) {
+  linear_vel_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Proto_msg.Odom.linear_vel)
+}
+void Odom::add_linear_vel(double value) {
+  linear_vel_.Add(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.Odom.linear_vel)
+}
+const ::google::protobuf::RepeatedField< double >&
+Odom::linear_vel() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.Odom.linear_vel)
+  return linear_vel_;
+}
+::google::protobuf::RepeatedField< double >*
+Odom::mutable_linear_vel() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.Odom.linear_vel)
+  return &linear_vel_;
+}
+
+// repeated double linear_vel_cov = 13;
+int Odom::linear_vel_cov_size() const {
+  return linear_vel_cov_.size();
+}
+void Odom::clear_linear_vel_cov() {
+  linear_vel_cov_.Clear();
+}
+double Odom::linear_vel_cov(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Odom.linear_vel_cov)
+  return linear_vel_cov_.Get(index);
+}
+void Odom::set_linear_vel_cov(int index, double value) {
+  linear_vel_cov_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Proto_msg.Odom.linear_vel_cov)
+}
+void Odom::add_linear_vel_cov(double value) {
+  linear_vel_cov_.Add(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.Odom.linear_vel_cov)
+}
+const ::google::protobuf::RepeatedField< double >&
+Odom::linear_vel_cov() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.Odom.linear_vel_cov)
+  return linear_vel_cov_;
+}
+::google::protobuf::RepeatedField< double >*
+Odom::mutable_linear_vel_cov() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.Odom.linear_vel_cov)
+  return &linear_vel_cov_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // @@protoc_insertion_point(namespace_scope)
 

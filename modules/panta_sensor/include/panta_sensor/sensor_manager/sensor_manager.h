@@ -29,6 +29,7 @@
 #include "panta_sensor/driver/gnss/gnss_POSLVX.h"
 #include "panta_sensor/driver/imu/imu_TL740D.h"
 #include "panta_sensor/driver/imu/imu_HWT605.h"
+#include "panta_sensor/driver/imu/imu_DY551.h"
 #include "panta_sensor/driver/ins/ins_XWG13668.h"
 #include "panta_sensor/driver/odom/odom_byd.h"
 #include "panta_sensor/driver/odom/odom_jili.h"

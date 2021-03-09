@@ -7,6 +7,7 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
+#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/stubs/once.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/wire_format_lite_inl.h>
@@ -17,103 +18,145 @@
 // @@protoc_insertion_point(includes)
 
 namespace Proto_msg {
+class LidarPointsDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<LidarPoints>
+     _instance;
+} _LidarPoints_default_instance_;
+
+namespace protobuf_Proto_5fmsg_2eLidarPoints_2eproto {
+
 
 namespace {
 
-const ::google::protobuf::Descriptor* LidarPoints_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  LidarPoints_reflection_ = NULL;
+::google::protobuf::Metadata file_level_metadata[1];
 
 }  // namespace
 
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
+};
 
-void protobuf_AssignDesc_Proto_5fmsg_2eLidarPoints_2eproto() {
-  protobuf_AddDesc_Proto_5fmsg_2eLidarPoints_2eproto();
-  const ::google::protobuf::FileDescriptor* file =
-    ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
-      "Proto_msg.LidarPoints.proto");
-  GOOGLE_CHECK(file != NULL);
-  LidarPoints_descriptor_ = file->message_type(0);
-  static const int LidarPoints_offsets_[12] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, timestamp_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, seq_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, parent_frame_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, frame_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, motion_correct_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, height_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, width_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, is_dense_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, is_transform_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, lidar_model_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, points_type_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, data_),
-  };
-  LidarPoints_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      LidarPoints_descriptor_,
-      LidarPoints::default_instance_,
-      LidarPoints_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(LidarPoints));
-}
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  ::google::protobuf::internal::AuxillaryParseTableField(),
+};
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+};
+
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, timestamp_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, seq_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, parent_frame_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, frame_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, motion_correct_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, height_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, width_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, is_dense_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, is_transform_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, lidar_model_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, points_type_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarPoints, data_),
+  4,
+  5,
+  0,
+  1,
+  8,
+  6,
+  7,
+  9,
+  10,
+  2,
+  3,
+  ~0u,
+};
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, 17, sizeof(LidarPoints)},
+};
+
+static ::google::protobuf::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::google::protobuf::Message*>(&_LidarPoints_default_instance_),
+};
 
 namespace {
 
-GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
-inline void protobuf_AssignDescriptorsOnce() {
-  ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
-                 &protobuf_AssignDesc_Proto_5fmsg_2eLidarPoints_2eproto);
+void protobuf_AssignDescriptors() {
+  AddDescriptors();
+  ::google::protobuf::MessageFactory* factory = NULL;
+  AssignDescriptors(
+      "Proto_msg.LidarPoints.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      file_level_metadata, NULL, NULL);
 }
 
+void protobuf_AssignDescriptorsOnce() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
+}
+
+void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    LidarPoints_descriptor_, &LidarPoints::default_instance());
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
 }
 
 }  // namespace
-
-void protobuf_ShutdownFile_Proto_5fmsg_2eLidarPoints_2eproto() {
-  delete LidarPoints::default_instance_;
-  delete LidarPoints_reflection_;
-}
-
-void protobuf_AddDesc_Proto_5fmsg_2eLidarPoints_2eproto() {
-  static bool already_here = false;
-  if (already_here) return;
-  already_here = true;
+void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+  ::google::protobuf::internal::InitProtobufDefaults();
+  _LidarPoints_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_LidarPoints_default_instance_);}
+
+void InitDefaults() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
+}
+namespace {
+void AddDescriptorsImpl() {
+  InitDefaults();
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+      "\n\033Proto_msg.LidarPoints.proto\022\tProto_msg"
+      "\"\357\001\n\013LidarPoints\022\021\n\ttimestamp\030\001 \001(\001\022\013\n\003s"
+      "eq\030\002 \001(\r\022\027\n\017parent_frame_id\030\003 \001(\t\022\020\n\010fra"
+      "me_id\030\004 \001(\t\022\026\n\016motion_correct\030\005 \001(\010\022\016\n\006h"
+      "eight\030\006 \001(\r\022\r\n\005width\030\007 \001(\r\022\020\n\010is_dense\030\010"
+      " \001(\010\022\024\n\014is_transform\030\t \001(\010\022\023\n\013lidar_mode"
+      "l\030\n \001(\t\022\023\n\013points_type\030\013 \001(\t\022\014\n\004data\030\014 \003"
+      "(\002"
+  };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\033Proto_msg.LidarPoints.proto\022\tProto_msg"
-    "\"\357\001\n\013LidarPoints\022\021\n\ttimestamp\030\001 \001(\001\022\013\n\003s"
-    "eq\030\002 \001(\r\022\027\n\017parent_frame_id\030\003 \001(\t\022\020\n\010fra"
-    "me_id\030\004 \001(\t\022\026\n\016motion_correct\030\005 \001(\010\022\016\n\006h"
-    "eight\030\006 \001(\r\022\r\n\005width\030\007 \001(\r\022\020\n\010is_dense\030\010"
-    " \001(\010\022\024\n\014is_transform\030\t \001(\010\022\023\n\013lidar_mode"
-    "l\030\n \001(\t\022\023\n\013points_type\030\013 \001(\t\022\014\n\004data\030\014 \003"
-    "(\002", 282);
+      descriptor, 282);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Proto_msg.LidarPoints.proto", &protobuf_RegisterTypes);
-  LidarPoints::default_instance_ = new LidarPoints();
-  LidarPoints::default_instance_->InitAsDefaultInstance();
-  ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_Proto_5fmsg_2eLidarPoints_2eproto);
 }
+} // anonymous namespace
 
-// Force AddDescriptors() to be called at static initialization time.
-struct StaticDescriptorInitializer_Proto_5fmsg_2eLidarPoints_2eproto {
-  StaticDescriptorInitializer_Proto_5fmsg_2eLidarPoints_2eproto() {
-    protobuf_AddDesc_Proto_5fmsg_2eLidarPoints_2eproto();
+void AddDescriptors() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
+}
+// Force AddDescriptors() to be called at dynamic initialization time.
+struct StaticDescriptorInitializer {
+  StaticDescriptorInitializer() {
+    AddDescriptors();
   }
-} static_descriptor_initializer_Proto_5fmsg_2eLidarPoints_2eproto_;
+} static_descriptor_initializer;
+
+}  // namespace protobuf_Proto_5fmsg_2eLidarPoints_2eproto
+
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int LidarPoints::kTimestampFieldNumber;
 const int LidarPoints::kSeqFieldNumber;
 const int LidarPoints::kParentFrameIdFieldNumber;
@@ -126,39 +169,54 @@ const int LidarPoints::kIsTransformFieldNumber;
 const int LidarPoints::kLidarModelFieldNumber;
 const int LidarPoints::kPointsTypeFieldNumber;
 const int LidarPoints::kDataFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 LidarPoints::LidarPoints()
-  : ::google::protobuf::Message() {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_Proto_5fmsg_2eLidarPoints_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:Proto_msg.LidarPoints)
 }
-
-void LidarPoints::InitAsDefaultInstance() {
-}
-
 LidarPoints::LidarPoints(const LidarPoints& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0),
+      data_(from.data_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  parent_frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_parent_frame_id()) {
+    parent_frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.parent_frame_id_);
+  }
+  frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_frame_id()) {
+    frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.frame_id_);
+  }
+  lidar_model_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_lidar_model()) {
+    lidar_model_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.lidar_model_);
+  }
+  points_type_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_points_type()) {
+    points_type_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.points_type_);
+  }
+  ::memcpy(&timestamp_, &from.timestamp_,
+    static_cast<size_t>(reinterpret_cast<char*>(&is_transform_) -
+    reinterpret_cast<char*>(&timestamp_)) + sizeof(is_transform_));
   // @@protoc_insertion_point(copy_constructor:Proto_msg.LidarPoints)
 }
 
 void LidarPoints::SharedCtor() {
-  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
-  timestamp_ = 0;
-  seq_ = 0u;
-  parent_frame_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  frame_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  motion_correct_ = false;
-  height_ = 0u;
-  width_ = 0u;
-  is_dense_ = false;
-  is_transform_ = false;
-  lidar_model_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  points_type_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  parent_frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  lidar_model_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  points_type_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&timestamp_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&is_transform_) -
+      reinterpret_cast<char*>(&timestamp_)) + sizeof(is_transform_));
 }
 
 LidarPoints::~LidarPoints() {
@@ -167,20 +225,10 @@ LidarPoints::~LidarPoints() {
 }
 
 void LidarPoints::SharedDtor() {
-  if (parent_frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete parent_frame_id_;
-  }
-  if (frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete frame_id_;
-  }
-  if (lidar_model_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete lidar_model_;
-  }
-  if (points_type_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete points_type_;
-  }
-  if (this != default_instance_) {
-  }
+  parent_frame_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  frame_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  lidar_model_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  points_type_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void LidarPoints::SetCachedSize(int size) const {
@@ -189,278 +237,261 @@ void LidarPoints::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* LidarPoints::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return LidarPoints_descriptor_;
+  protobuf_Proto_5fmsg_2eLidarPoints_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2eLidarPoints_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const LidarPoints& LidarPoints::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_Proto_5fmsg_2eLidarPoints_2eproto();
-  return *default_instance_;
+  protobuf_Proto_5fmsg_2eLidarPoints_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
 
-LidarPoints* LidarPoints::default_instance_ = NULL;
-
-LidarPoints* LidarPoints::New() const {
-  return new LidarPoints;
+LidarPoints* LidarPoints::New(::google::protobuf::Arena* arena) const {
+  LidarPoints* n = new LidarPoints;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
 }
 
 void LidarPoints::Clear() {
-#define OFFSET_OF_FIELD_(f) (reinterpret_cast<char*>(      \
-  &reinterpret_cast<LidarPoints*>(16)->f) - \
-   reinterpret_cast<char*>(16))
-
-#define ZR_(first, last) do {                              \
-    size_t f = OFFSET_OF_FIELD_(first);                    \
-    size_t n = OFFSET_OF_FIELD_(last) - f + sizeof(last);  \
-    ::memset(&first, 0, n);                                \
-  } while (0)
-
-  if (_has_bits_[0 / 32] & 255) {
-    ZR_(seq_, is_dense_);
-    timestamp_ = 0;
-    if (has_parent_frame_id()) {
-      if (parent_frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        parent_frame_id_->clear();
-      }
-    }
-    if (has_frame_id()) {
-      if (frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        frame_id_->clear();
-      }
-    }
-  }
-  if (_has_bits_[8 / 32] & 1792) {
-    is_transform_ = false;
-    if (has_lidar_model()) {
-      if (lidar_model_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        lidar_model_->clear();
-      }
-    }
-    if (has_points_type()) {
-      if (points_type_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        points_type_->clear();
-      }
-    }
-  }
-
-#undef OFFSET_OF_FIELD_
-#undef ZR_
+// @@protoc_insertion_point(message_clear_start:Proto_msg.LidarPoints)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   data_.Clear();
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 15u) {
+    if (cached_has_bits & 0x00000001u) {
+      GOOGLE_DCHECK(!parent_frame_id_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*parent_frame_id_.UnsafeRawStringPointer())->clear();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(!frame_id_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*frame_id_.UnsafeRawStringPointer())->clear();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      GOOGLE_DCHECK(!lidar_model_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*lidar_model_.UnsafeRawStringPointer())->clear();
+    }
+    if (cached_has_bits & 0x00000008u) {
+      GOOGLE_DCHECK(!points_type_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*points_type_.UnsafeRawStringPointer())->clear();
+    }
+  }
+  if (cached_has_bits & 240u) {
+    ::memset(&timestamp_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&width_) -
+        reinterpret_cast<char*>(&timestamp_)) + sizeof(width_));
+  }
+  if (cached_has_bits & 1792u) {
+    ::memset(&motion_correct_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&is_transform_) -
+        reinterpret_cast<char*>(&motion_correct_)) + sizeof(is_transform_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
 }
 
 bool LidarPoints::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:Proto_msg.LidarPoints)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // optional double timestamp = 1;
       case 1: {
-        if (tag == 9) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
+          set_has_timestamp();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, &timestamp_)));
-          set_has_timestamp();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(16)) goto parse_seq;
         break;
       }
 
       // optional uint32 seq = 2;
       case 2: {
-        if (tag == 16) {
-         parse_seq:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+          set_has_seq();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  input, &seq_)));
-          set_has_seq();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_parent_frame_id;
         break;
       }
 
       // optional string parent_frame_id = 3;
       case 3: {
-        if (tag == 26) {
-         parse_parent_frame_id:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_parent_frame_id()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->parent_frame_id().data(), this->parent_frame_id().length(),
+            this->parent_frame_id().data(), static_cast<int>(this->parent_frame_id().length()),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "parent_frame_id");
+            "Proto_msg.LidarPoints.parent_frame_id");
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(34)) goto parse_frame_id;
         break;
       }
 
       // optional string frame_id = 4;
       case 4: {
-        if (tag == 34) {
-         parse_frame_id:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_frame_id()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->frame_id().data(), this->frame_id().length(),
+            this->frame_id().data(), static_cast<int>(this->frame_id().length()),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "frame_id");
+            "Proto_msg.LidarPoints.frame_id");
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(40)) goto parse_motion_correct;
         break;
       }
 
       // optional bool motion_correct = 5;
       case 5: {
-        if (tag == 40) {
-         parse_motion_correct:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
+          set_has_motion_correct();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
                  input, &motion_correct_)));
-          set_has_motion_correct();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(48)) goto parse_height;
         break;
       }
 
       // optional uint32 height = 6;
       case 6: {
-        if (tag == 48) {
-         parse_height:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(48u /* 48 & 0xFF */)) {
+          set_has_height();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  input, &height_)));
-          set_has_height();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(56)) goto parse_width;
         break;
       }
 
       // optional uint32 width = 7;
       case 7: {
-        if (tag == 56) {
-         parse_width:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(56u /* 56 & 0xFF */)) {
+          set_has_width();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  input, &width_)));
-          set_has_width();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(64)) goto parse_is_dense;
         break;
       }
 
       // optional bool is_dense = 8;
       case 8: {
-        if (tag == 64) {
-         parse_is_dense:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(64u /* 64 & 0xFF */)) {
+          set_has_is_dense();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
                  input, &is_dense_)));
-          set_has_is_dense();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(72)) goto parse_is_transform;
         break;
       }
 
       // optional bool is_transform = 9;
       case 9: {
-        if (tag == 72) {
-         parse_is_transform:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(72u /* 72 & 0xFF */)) {
+          set_has_is_transform();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
                  input, &is_transform_)));
-          set_has_is_transform();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(82)) goto parse_lidar_model;
         break;
       }
 
       // optional string lidar_model = 10;
       case 10: {
-        if (tag == 82) {
-         parse_lidar_model:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(82u /* 82 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_lidar_model()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->lidar_model().data(), this->lidar_model().length(),
+            this->lidar_model().data(), static_cast<int>(this->lidar_model().length()),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "lidar_model");
+            "Proto_msg.LidarPoints.lidar_model");
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(90)) goto parse_points_type;
         break;
       }
 
       // optional string points_type = 11;
       case 11: {
-        if (tag == 90) {
-         parse_points_type:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(90u /* 90 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_points_type()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->points_type().data(), this->points_type().length(),
+            this->points_type().data(), static_cast<int>(this->points_type().length()),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "points_type");
+            "Proto_msg.LidarPoints.points_type");
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(101)) goto parse_data;
         break;
       }
 
       // repeated float data = 12;
       case 12: {
-        if (tag == 101) {
-         parse_data:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(101u /* 101 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 1, 101, input, this->mutable_data())));
-        } else if (tag == 98) {
+                 1, 101u, input, this->mutable_data())));
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(98u /* 98 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, this->mutable_data())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(101)) goto parse_data;
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -477,206 +508,216 @@ failure:
 void LidarPoints::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:Proto_msg.LidarPoints)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional double timestamp = 1;
-  if (has_timestamp()) {
+  if (cached_has_bits & 0x00000010u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->timestamp(), output);
   }
 
   // optional uint32 seq = 2;
-  if (has_seq()) {
+  if (cached_has_bits & 0x00000020u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->seq(), output);
   }
 
   // optional string parent_frame_id = 3;
-  if (has_parent_frame_id()) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->parent_frame_id().data(), this->parent_frame_id().length(),
+      this->parent_frame_id().data(), static_cast<int>(this->parent_frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "parent_frame_id");
+      "Proto_msg.LidarPoints.parent_frame_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->parent_frame_id(), output);
   }
 
   // optional string frame_id = 4;
-  if (has_frame_id()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->frame_id().data(), this->frame_id().length(),
+      this->frame_id().data(), static_cast<int>(this->frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "frame_id");
+      "Proto_msg.LidarPoints.frame_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       4, this->frame_id(), output);
   }
 
   // optional bool motion_correct = 5;
-  if (has_motion_correct()) {
+  if (cached_has_bits & 0x00000100u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(5, this->motion_correct(), output);
   }
 
   // optional uint32 height = 6;
-  if (has_height()) {
+  if (cached_has_bits & 0x00000040u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(6, this->height(), output);
   }
 
   // optional uint32 width = 7;
-  if (has_width()) {
+  if (cached_has_bits & 0x00000080u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(7, this->width(), output);
   }
 
   // optional bool is_dense = 8;
-  if (has_is_dense()) {
+  if (cached_has_bits & 0x00000200u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(8, this->is_dense(), output);
   }
 
   // optional bool is_transform = 9;
-  if (has_is_transform()) {
+  if (cached_has_bits & 0x00000400u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(9, this->is_transform(), output);
   }
 
   // optional string lidar_model = 10;
-  if (has_lidar_model()) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->lidar_model().data(), this->lidar_model().length(),
+      this->lidar_model().data(), static_cast<int>(this->lidar_model().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "lidar_model");
+      "Proto_msg.LidarPoints.lidar_model");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       10, this->lidar_model(), output);
   }
 
   // optional string points_type = 11;
-  if (has_points_type()) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->points_type().data(), this->points_type().length(),
+      this->points_type().data(), static_cast<int>(this->points_type().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "points_type");
+      "Proto_msg.LidarPoints.points_type");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       11, this->points_type(), output);
   }
 
   // repeated float data = 12;
-  for (int i = 0; i < this->data_size(); i++) {
+  for (int i = 0, n = this->data_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(
       12, this->data(i), output);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:Proto_msg.LidarPoints)
 }
 
-::google::protobuf::uint8* LidarPoints::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* LidarPoints::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:Proto_msg.LidarPoints)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional double timestamp = 1;
-  if (has_timestamp()) {
+  if (cached_has_bits & 0x00000010u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->timestamp(), target);
   }
 
   // optional uint32 seq = 2;
-  if (has_seq()) {
+  if (cached_has_bits & 0x00000020u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->seq(), target);
   }
 
   // optional string parent_frame_id = 3;
-  if (has_parent_frame_id()) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->parent_frame_id().data(), this->parent_frame_id().length(),
+      this->parent_frame_id().data(), static_cast<int>(this->parent_frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "parent_frame_id");
+      "Proto_msg.LidarPoints.parent_frame_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         3, this->parent_frame_id(), target);
   }
 
   // optional string frame_id = 4;
-  if (has_frame_id()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->frame_id().data(), this->frame_id().length(),
+      this->frame_id().data(), static_cast<int>(this->frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "frame_id");
+      "Proto_msg.LidarPoints.frame_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         4, this->frame_id(), target);
   }
 
   // optional bool motion_correct = 5;
-  if (has_motion_correct()) {
+  if (cached_has_bits & 0x00000100u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(5, this->motion_correct(), target);
   }
 
   // optional uint32 height = 6;
-  if (has_height()) {
+  if (cached_has_bits & 0x00000040u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(6, this->height(), target);
   }
 
   // optional uint32 width = 7;
-  if (has_width()) {
+  if (cached_has_bits & 0x00000080u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(7, this->width(), target);
   }
 
   // optional bool is_dense = 8;
-  if (has_is_dense()) {
+  if (cached_has_bits & 0x00000200u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(8, this->is_dense(), target);
   }
 
   // optional bool is_transform = 9;
-  if (has_is_transform()) {
+  if (cached_has_bits & 0x00000400u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(9, this->is_transform(), target);
   }
 
   // optional string lidar_model = 10;
-  if (has_lidar_model()) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->lidar_model().data(), this->lidar_model().length(),
+      this->lidar_model().data(), static_cast<int>(this->lidar_model().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "lidar_model");
+      "Proto_msg.LidarPoints.lidar_model");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         10, this->lidar_model(), target);
   }
 
   // optional string points_type = 11;
-  if (has_points_type()) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->points_type().data(), this->points_type().length(),
+      this->points_type().data(), static_cast<int>(this->points_type().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "points_type");
+      "Proto_msg.LidarPoints.points_type");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         11, this->points_type(), target);
   }
 
   // repeated float data = 12;
-  for (int i = 0; i < this->data_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteFloatToArray(12, this->data(i), target);
-  }
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteFloatToArray(12, this->data_, target);
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Proto_msg.LidarPoints)
   return target;
 }
 
-int LidarPoints::ByteSize() const {
-  int total_size = 0;
+size_t LidarPoints::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Proto_msg.LidarPoints)
+  size_t total_size = 0;
 
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // optional double timestamp = 1;
-    if (has_timestamp()) {
-      total_size += 1 + 8;
-    }
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  // repeated float data = 12;
+  {
+    unsigned int count = static_cast<unsigned int>(this->data_size());
+    size_t data_size = 4UL * count;
+    total_size += 1 *
+                  ::google::protobuf::internal::FromIntSize(this->data_size());
+    total_size += data_size;
+  }
 
-    // optional uint32 seq = 2;
-    if (has_seq()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->seq());
-    }
-
+  if (_has_bits_[0 / 32] & 255u) {
     // optional string parent_frame_id = 3;
     if (has_parent_frame_id()) {
       total_size += 1 +
@@ -689,37 +730,6 @@ int LidarPoints::ByteSize() const {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
           this->frame_id());
-    }
-
-    // optional bool motion_correct = 5;
-    if (has_motion_correct()) {
-      total_size += 1 + 1;
-    }
-
-    // optional uint32 height = 6;
-    if (has_height()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->height());
-    }
-
-    // optional uint32 width = 7;
-    if (has_width()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->width());
-    }
-
-    // optional bool is_dense = 8;
-    if (has_is_dense()) {
-      total_size += 1 + 1;
-    }
-
-  }
-  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
-    // optional bool is_transform = 9;
-    if (has_is_transform()) {
-      total_size += 1 + 1;
     }
 
     // optional string lidar_model = 10;
@@ -736,125 +746,626 @@ int LidarPoints::ByteSize() const {
           this->points_type());
     }
 
-  }
-  // repeated float data = 12;
-  {
-    int data_size = 0;
-    data_size = 4 * this->data_size();
-    total_size += 1 * this->data_size() + data_size;
-  }
+    // optional double timestamp = 1;
+    if (has_timestamp()) {
+      total_size += 1 + 8;
+    }
 
-  if (!unknown_fields().empty()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
+    // optional uint32 seq = 2;
+    if (has_seq()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->seq());
+    }
+
+    // optional uint32 height = 6;
+    if (has_height()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->height());
+    }
+
+    // optional uint32 width = 7;
+    if (has_width()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->width());
+    }
+
   }
+  if (_has_bits_[8 / 32] & 1792u) {
+    // optional bool motion_correct = 5;
+    if (has_motion_correct()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool is_dense = 8;
+    if (has_is_dense()) {
+      total_size += 1 + 1;
+    }
+
+    // optional bool is_transform = 9;
+    if (has_is_transform()) {
+      total_size += 1 + 1;
+    }
+
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void LidarPoints::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(generalized_merge_from_start:Proto_msg.LidarPoints)
+  GOOGLE_DCHECK_NE(&from, this);
   const LidarPoints* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const LidarPoints*>(
-      &from);
+      ::google::protobuf::internal::DynamicCastToGenerated<const LidarPoints>(
+          &from);
   if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Proto_msg.LidarPoints)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Proto_msg.LidarPoints)
     MergeFrom(*source);
   }
 }
 
 void LidarPoints::MergeFrom(const LidarPoints& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(class_specific_merge_from_start:Proto_msg.LidarPoints)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   data_.MergeFrom(from.data_);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_timestamp()) {
-      set_timestamp(from.timestamp());
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 255u) {
+    if (cached_has_bits & 0x00000001u) {
+      set_has_parent_frame_id();
+      parent_frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.parent_frame_id_);
     }
-    if (from.has_seq()) {
-      set_seq(from.seq());
+    if (cached_has_bits & 0x00000002u) {
+      set_has_frame_id();
+      frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.frame_id_);
     }
-    if (from.has_parent_frame_id()) {
-      set_parent_frame_id(from.parent_frame_id());
+    if (cached_has_bits & 0x00000004u) {
+      set_has_lidar_model();
+      lidar_model_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.lidar_model_);
     }
-    if (from.has_frame_id()) {
-      set_frame_id(from.frame_id());
+    if (cached_has_bits & 0x00000008u) {
+      set_has_points_type();
+      points_type_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.points_type_);
     }
-    if (from.has_motion_correct()) {
-      set_motion_correct(from.motion_correct());
+    if (cached_has_bits & 0x00000010u) {
+      timestamp_ = from.timestamp_;
     }
-    if (from.has_height()) {
-      set_height(from.height());
+    if (cached_has_bits & 0x00000020u) {
+      seq_ = from.seq_;
     }
-    if (from.has_width()) {
-      set_width(from.width());
+    if (cached_has_bits & 0x00000040u) {
+      height_ = from.height_;
     }
-    if (from.has_is_dense()) {
-      set_is_dense(from.is_dense());
+    if (cached_has_bits & 0x00000080u) {
+      width_ = from.width_;
     }
+    _has_bits_[0] |= cached_has_bits;
   }
-  if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
-    if (from.has_is_transform()) {
-      set_is_transform(from.is_transform());
+  if (cached_has_bits & 1792u) {
+    if (cached_has_bits & 0x00000100u) {
+      motion_correct_ = from.motion_correct_;
     }
-    if (from.has_lidar_model()) {
-      set_lidar_model(from.lidar_model());
+    if (cached_has_bits & 0x00000200u) {
+      is_dense_ = from.is_dense_;
     }
-    if (from.has_points_type()) {
-      set_points_type(from.points_type());
+    if (cached_has_bits & 0x00000400u) {
+      is_transform_ = from.is_transform_;
     }
+    _has_bits_[0] |= cached_has_bits;
   }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
 void LidarPoints::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Proto_msg.LidarPoints)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void LidarPoints::CopyFrom(const LidarPoints& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Proto_msg.LidarPoints)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 bool LidarPoints::IsInitialized() const {
-
   return true;
 }
 
 void LidarPoints::Swap(LidarPoints* other) {
-  if (other != this) {
-    std::swap(timestamp_, other->timestamp_);
-    std::swap(seq_, other->seq_);
-    std::swap(parent_frame_id_, other->parent_frame_id_);
-    std::swap(frame_id_, other->frame_id_);
-    std::swap(motion_correct_, other->motion_correct_);
-    std::swap(height_, other->height_);
-    std::swap(width_, other->width_);
-    std::swap(is_dense_, other->is_dense_);
-    std::swap(is_transform_, other->is_transform_);
-    std::swap(lidar_model_, other->lidar_model_);
-    std::swap(points_type_, other->points_type_);
-    data_.Swap(&other->data_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
+  if (other == this) return;
+  InternalSwap(other);
+}
+void LidarPoints::InternalSwap(LidarPoints* other) {
+  using std::swap;
+  data_.InternalSwap(&other->data_);
+  parent_frame_id_.Swap(&other->parent_frame_id_);
+  frame_id_.Swap(&other->frame_id_);
+  lidar_model_.Swap(&other->lidar_model_);
+  points_type_.Swap(&other->points_type_);
+  swap(timestamp_, other->timestamp_);
+  swap(seq_, other->seq_);
+  swap(height_, other->height_);
+  swap(width_, other->width_);
+  swap(motion_correct_, other->motion_correct_);
+  swap(is_dense_, other->is_dense_);
+  swap(is_transform_, other->is_transform_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata LidarPoints::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = LidarPoints_descriptor_;
-  metadata.reflection = LidarPoints_reflection_;
-  return metadata;
+  protobuf_Proto_5fmsg_2eLidarPoints_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2eLidarPoints_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// LidarPoints
+
+// optional double timestamp = 1;
+bool LidarPoints::has_timestamp() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+void LidarPoints::set_has_timestamp() {
+  _has_bits_[0] |= 0x00000010u;
+}
+void LidarPoints::clear_has_timestamp() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+void LidarPoints::clear_timestamp() {
+  timestamp_ = 0;
+  clear_has_timestamp();
+}
+double LidarPoints::timestamp() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.LidarPoints.timestamp)
+  return timestamp_;
+}
+void LidarPoints::set_timestamp(double value) {
+  set_has_timestamp();
+  timestamp_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.LidarPoints.timestamp)
+}
+
+// optional uint32 seq = 2;
+bool LidarPoints::has_seq() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+void LidarPoints::set_has_seq() {
+  _has_bits_[0] |= 0x00000020u;
+}
+void LidarPoints::clear_has_seq() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+void LidarPoints::clear_seq() {
+  seq_ = 0u;
+  clear_has_seq();
+}
+::google::protobuf::uint32 LidarPoints::seq() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.LidarPoints.seq)
+  return seq_;
+}
+void LidarPoints::set_seq(::google::protobuf::uint32 value) {
+  set_has_seq();
+  seq_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.LidarPoints.seq)
+}
+
+// optional string parent_frame_id = 3;
+bool LidarPoints::has_parent_frame_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void LidarPoints::set_has_parent_frame_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void LidarPoints::clear_has_parent_frame_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void LidarPoints::clear_parent_frame_id() {
+  parent_frame_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_parent_frame_id();
+}
+const ::std::string& LidarPoints::parent_frame_id() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.LidarPoints.parent_frame_id)
+  return parent_frame_id_.GetNoArena();
+}
+void LidarPoints::set_parent_frame_id(const ::std::string& value) {
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Proto_msg.LidarPoints.parent_frame_id)
+}
+#if LANG_CXX11
+void LidarPoints::set_parent_frame_id(::std::string&& value) {
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Proto_msg.LidarPoints.parent_frame_id)
+}
+#endif
+void LidarPoints::set_parent_frame_id(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Proto_msg.LidarPoints.parent_frame_id)
+}
+void LidarPoints::set_parent_frame_id(const char* value, size_t size) {
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Proto_msg.LidarPoints.parent_frame_id)
+}
+::std::string* LidarPoints::mutable_parent_frame_id() {
+  set_has_parent_frame_id();
+  // @@protoc_insertion_point(field_mutable:Proto_msg.LidarPoints.parent_frame_id)
+  return parent_frame_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* LidarPoints::release_parent_frame_id() {
+  // @@protoc_insertion_point(field_release:Proto_msg.LidarPoints.parent_frame_id)
+  clear_has_parent_frame_id();
+  return parent_frame_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void LidarPoints::set_allocated_parent_frame_id(::std::string* parent_frame_id) {
+  if (parent_frame_id != NULL) {
+    set_has_parent_frame_id();
+  } else {
+    clear_has_parent_frame_id();
+  }
+  parent_frame_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), parent_frame_id);
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.LidarPoints.parent_frame_id)
+}
+
+// optional string frame_id = 4;
+bool LidarPoints::has_frame_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void LidarPoints::set_has_frame_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void LidarPoints::clear_has_frame_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void LidarPoints::clear_frame_id() {
+  frame_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_frame_id();
+}
+const ::std::string& LidarPoints::frame_id() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.LidarPoints.frame_id)
+  return frame_id_.GetNoArena();
+}
+void LidarPoints::set_frame_id(const ::std::string& value) {
+  set_has_frame_id();
+  frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Proto_msg.LidarPoints.frame_id)
+}
+#if LANG_CXX11
+void LidarPoints::set_frame_id(::std::string&& value) {
+  set_has_frame_id();
+  frame_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Proto_msg.LidarPoints.frame_id)
+}
+#endif
+void LidarPoints::set_frame_id(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_frame_id();
+  frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Proto_msg.LidarPoints.frame_id)
+}
+void LidarPoints::set_frame_id(const char* value, size_t size) {
+  set_has_frame_id();
+  frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Proto_msg.LidarPoints.frame_id)
+}
+::std::string* LidarPoints::mutable_frame_id() {
+  set_has_frame_id();
+  // @@protoc_insertion_point(field_mutable:Proto_msg.LidarPoints.frame_id)
+  return frame_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* LidarPoints::release_frame_id() {
+  // @@protoc_insertion_point(field_release:Proto_msg.LidarPoints.frame_id)
+  clear_has_frame_id();
+  return frame_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void LidarPoints::set_allocated_frame_id(::std::string* frame_id) {
+  if (frame_id != NULL) {
+    set_has_frame_id();
+  } else {
+    clear_has_frame_id();
+  }
+  frame_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), frame_id);
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.LidarPoints.frame_id)
+}
+
+// optional bool motion_correct = 5;
+bool LidarPoints::has_motion_correct() const {
+  return (_has_bits_[0] & 0x00000100u) != 0;
+}
+void LidarPoints::set_has_motion_correct() {
+  _has_bits_[0] |= 0x00000100u;
+}
+void LidarPoints::clear_has_motion_correct() {
+  _has_bits_[0] &= ~0x00000100u;
+}
+void LidarPoints::clear_motion_correct() {
+  motion_correct_ = false;
+  clear_has_motion_correct();
+}
+bool LidarPoints::motion_correct() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.LidarPoints.motion_correct)
+  return motion_correct_;
+}
+void LidarPoints::set_motion_correct(bool value) {
+  set_has_motion_correct();
+  motion_correct_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.LidarPoints.motion_correct)
+}
+
+// optional uint32 height = 6;
+bool LidarPoints::has_height() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+void LidarPoints::set_has_height() {
+  _has_bits_[0] |= 0x00000040u;
+}
+void LidarPoints::clear_has_height() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+void LidarPoints::clear_height() {
+  height_ = 0u;
+  clear_has_height();
+}
+::google::protobuf::uint32 LidarPoints::height() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.LidarPoints.height)
+  return height_;
+}
+void LidarPoints::set_height(::google::protobuf::uint32 value) {
+  set_has_height();
+  height_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.LidarPoints.height)
+}
+
+// optional uint32 width = 7;
+bool LidarPoints::has_width() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+void LidarPoints::set_has_width() {
+  _has_bits_[0] |= 0x00000080u;
+}
+void LidarPoints::clear_has_width() {
+  _has_bits_[0] &= ~0x00000080u;
+}
+void LidarPoints::clear_width() {
+  width_ = 0u;
+  clear_has_width();
+}
+::google::protobuf::uint32 LidarPoints::width() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.LidarPoints.width)
+  return width_;
+}
+void LidarPoints::set_width(::google::protobuf::uint32 value) {
+  set_has_width();
+  width_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.LidarPoints.width)
+}
+
+// optional bool is_dense = 8;
+bool LidarPoints::has_is_dense() const {
+  return (_has_bits_[0] & 0x00000200u) != 0;
+}
+void LidarPoints::set_has_is_dense() {
+  _has_bits_[0] |= 0x00000200u;
+}
+void LidarPoints::clear_has_is_dense() {
+  _has_bits_[0] &= ~0x00000200u;
+}
+void LidarPoints::clear_is_dense() {
+  is_dense_ = false;
+  clear_has_is_dense();
+}
+bool LidarPoints::is_dense() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.LidarPoints.is_dense)
+  return is_dense_;
+}
+void LidarPoints::set_is_dense(bool value) {
+  set_has_is_dense();
+  is_dense_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.LidarPoints.is_dense)
+}
+
+// optional bool is_transform = 9;
+bool LidarPoints::has_is_transform() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+void LidarPoints::set_has_is_transform() {
+  _has_bits_[0] |= 0x00000400u;
+}
+void LidarPoints::clear_has_is_transform() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+void LidarPoints::clear_is_transform() {
+  is_transform_ = false;
+  clear_has_is_transform();
+}
+bool LidarPoints::is_transform() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.LidarPoints.is_transform)
+  return is_transform_;
+}
+void LidarPoints::set_is_transform(bool value) {
+  set_has_is_transform();
+  is_transform_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.LidarPoints.is_transform)
+}
+
+// optional string lidar_model = 10;
+bool LidarPoints::has_lidar_model() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void LidarPoints::set_has_lidar_model() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void LidarPoints::clear_has_lidar_model() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void LidarPoints::clear_lidar_model() {
+  lidar_model_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_lidar_model();
+}
+const ::std::string& LidarPoints::lidar_model() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.LidarPoints.lidar_model)
+  return lidar_model_.GetNoArena();
+}
+void LidarPoints::set_lidar_model(const ::std::string& value) {
+  set_has_lidar_model();
+  lidar_model_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Proto_msg.LidarPoints.lidar_model)
+}
+#if LANG_CXX11
+void LidarPoints::set_lidar_model(::std::string&& value) {
+  set_has_lidar_model();
+  lidar_model_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Proto_msg.LidarPoints.lidar_model)
+}
+#endif
+void LidarPoints::set_lidar_model(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_lidar_model();
+  lidar_model_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Proto_msg.LidarPoints.lidar_model)
+}
+void LidarPoints::set_lidar_model(const char* value, size_t size) {
+  set_has_lidar_model();
+  lidar_model_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Proto_msg.LidarPoints.lidar_model)
+}
+::std::string* LidarPoints::mutable_lidar_model() {
+  set_has_lidar_model();
+  // @@protoc_insertion_point(field_mutable:Proto_msg.LidarPoints.lidar_model)
+  return lidar_model_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* LidarPoints::release_lidar_model() {
+  // @@protoc_insertion_point(field_release:Proto_msg.LidarPoints.lidar_model)
+  clear_has_lidar_model();
+  return lidar_model_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void LidarPoints::set_allocated_lidar_model(::std::string* lidar_model) {
+  if (lidar_model != NULL) {
+    set_has_lidar_model();
+  } else {
+    clear_has_lidar_model();
+  }
+  lidar_model_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), lidar_model);
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.LidarPoints.lidar_model)
+}
+
+// optional string points_type = 11;
+bool LidarPoints::has_points_type() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+void LidarPoints::set_has_points_type() {
+  _has_bits_[0] |= 0x00000008u;
+}
+void LidarPoints::clear_has_points_type() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+void LidarPoints::clear_points_type() {
+  points_type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_points_type();
+}
+const ::std::string& LidarPoints::points_type() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.LidarPoints.points_type)
+  return points_type_.GetNoArena();
+}
+void LidarPoints::set_points_type(const ::std::string& value) {
+  set_has_points_type();
+  points_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Proto_msg.LidarPoints.points_type)
+}
+#if LANG_CXX11
+void LidarPoints::set_points_type(::std::string&& value) {
+  set_has_points_type();
+  points_type_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Proto_msg.LidarPoints.points_type)
+}
+#endif
+void LidarPoints::set_points_type(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_points_type();
+  points_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Proto_msg.LidarPoints.points_type)
+}
+void LidarPoints::set_points_type(const char* value, size_t size) {
+  set_has_points_type();
+  points_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Proto_msg.LidarPoints.points_type)
+}
+::std::string* LidarPoints::mutable_points_type() {
+  set_has_points_type();
+  // @@protoc_insertion_point(field_mutable:Proto_msg.LidarPoints.points_type)
+  return points_type_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* LidarPoints::release_points_type() {
+  // @@protoc_insertion_point(field_release:Proto_msg.LidarPoints.points_type)
+  clear_has_points_type();
+  return points_type_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void LidarPoints::set_allocated_points_type(::std::string* points_type) {
+  if (points_type != NULL) {
+    set_has_points_type();
+  } else {
+    clear_has_points_type();
+  }
+  points_type_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), points_type);
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.LidarPoints.points_type)
+}
+
+// repeated float data = 12;
+int LidarPoints::data_size() const {
+  return data_.size();
+}
+void LidarPoints::clear_data() {
+  data_.Clear();
+}
+float LidarPoints::data(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.LidarPoints.data)
+  return data_.Get(index);
+}
+void LidarPoints::set_data(int index, float value) {
+  data_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Proto_msg.LidarPoints.data)
+}
+void LidarPoints::add_data(float value) {
+  data_.Add(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.LidarPoints.data)
+}
+const ::google::protobuf::RepeatedField< float >&
+LidarPoints::data() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.LidarPoints.data)
+  return data_;
+}
+::google::protobuf::RepeatedField< float >*
+LidarPoints::mutable_data() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.LidarPoints.data)
+  return &data_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // @@protoc_insertion_point(namespace_scope)
 

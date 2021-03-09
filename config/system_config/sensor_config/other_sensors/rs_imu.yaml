@@ -1,12 +1,12 @@
 #@brief: common parameters for Imu message
 common:
-  msg_source: 0            #@type: int  @detail: 0--not use Imu, 1--message come from sensor driver, 2--message come from ROS,3--message come from protobuf(UDP)
-  send_msg_ros: false      #@type: bool @detail: if true, the original Imu message will be sent out through ROS
+  msg_source: 1            #@type: int  @detail: 0--not use Imu, 1--message come from sensor driver, 2--message come from ROS,3--message come from protobuf(UDP)
+  send_msg_ros: true      #@type: bool @detail: if true, the original Imu message will be sent out through ROS
   send_msg_proto: false    #@type: bool @detail: if true, the original Imu message will be sent out through Proto
 
 #@brief: config file for sensor driver
 driver:
-  include: ../sensor_config/other_sensors/ins/ins_XWG13668.yaml
+  include: ../sensor_config/other_sensors/imu/imu_DY551.yaml
 
 #@brief: configration for ROS
 ros:

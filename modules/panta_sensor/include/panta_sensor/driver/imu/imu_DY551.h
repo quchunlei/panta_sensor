@@ -20,89 +20,39 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 #pragma once
-#include "panta_sensor/driver/serial/rs_serial.h"
-#include <panta_common/interface/sensor/imu_interface.h>
+#include "panta_sensor/driver/imu/imu_base.h"
+#include <iomanip>
 namespace robosense
 {
 namespace WitImu
 {
-const double g_ = 9.8;
-const int msg_len = 3;
-const int acc_scale = 4;
-const int gyr_scale = 500;
-const int angle_scale = 180;
-const double deg2rad = 0.01745329;
-const int max_range = 32768;
-struct Time
-{
-  int year;
-  int month;
-  int day;
-  int hour;
-  int minute;
-  int sec;
-};
+const double dy_g = 9.8;
+const int dy_msg_len = 31;
+const int dy_acc_scale = 4;
+const int dy_gyr_scale = 250;
+const int dy_angle_scale = 360;
+const int dy_temp_scale = 200;
+const double dy_deg2rad = 0.01745329;
+const int dy_max_range = 32768;
 
-struct Acc
-{
-  double acc_x;
-  double acc_y;
-  double acc_z;
-  double T;
-};
+const int year_s[2] = { 365 * 24 * 60 * 60, 366 * 24 * 60 * 60 };
+const int month_s[2][12] = { { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 },
+                             { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 } };
+const int day_s = 24 * 60 * 60;
+const int hour_s = 60 * 60;
+const int minute_s = 60;
 
-struct Gyr
-{
-  double gyr_x;
-  double gyr_y;
-  double gyr_z;
-};
-
-struct Eular_Angle
-{
-  double roll;
-  double pitch;
-  double yaw;
-};
-
-struct Mag
-{
-  double h_x;
-  double h_y;
-  double h_z;
-};
-
-struct Press_Height
-{
-  double presure;
-  double height;
-};
-
-struct Gps
-{
-  double Longitude;
-  double Latitude;
-};
-
-struct Quad
-{
-  double q0, q1, q2, q3;
-};
-
-struct ImuData
+struct ImuData1
 {
   Time time_;
   Acc acc_;
   Gyr gyr_;
   Eular_Angle eular_angle_;
-  Mag mag_;
-  Press_Height ph_;
-  Gps gps_;
-  Quad quad_;
+  double temperature_;
 
-  ImuData operator+(const ImuData& b)
+  ImuData1 operator+(const ImuData1& b)
   {
-    ImuData temp_;
+    ImuData1 temp_;
     temp_.acc_.acc_x = this->acc_.acc_x + b.acc_.acc_x;
     temp_.acc_.acc_y = this->acc_.acc_y + b.acc_.acc_y;
     temp_.acc_.acc_z = this->acc_.acc_z + b.acc_.acc_z - g_;
@@ -117,9 +67,9 @@ struct ImuData
     return temp_;
   }
 
-  ImuData operator-(const ImuData& b)
+  ImuData1 operator-(const ImuData1& b)
   {
-    ImuData temp_;
+    ImuData1 temp_;
     temp_.acc_.acc_x = this->acc_.acc_x - b.acc_.acc_x;
     temp_.acc_.acc_y = this->acc_.acc_y - b.acc_.acc_y;
     temp_.acc_.acc_z = this->acc_.acc_z - b.acc_.acc_z;
@@ -134,9 +84,9 @@ struct ImuData
     return temp_;
   }
 
-  ImuData operator=(int n)
+  ImuData1 operator=(int n)
   {
-    ImuData temp_;
+    ImuData1 temp_;
     temp_.acc_.acc_x = n;
     temp_.acc_.acc_y = n;
     temp_.acc_.acc_z = n;
@@ -151,9 +101,9 @@ struct ImuData
     return temp_;
   }
 
-  ImuData operator/(int n)
+  ImuData1 operator/(int n)
   {
-    ImuData temp_;
+    ImuData1 temp_;
     temp_.acc_.acc_x = this->acc_.acc_x / n;
     temp_.acc_.acc_y = this->acc_.acc_y / n;
     temp_.acc_.acc_z = this->acc_.acc_z / n;
@@ -168,97 +118,132 @@ struct ImuData
     return temp_;
   }
 };
-typedef ImuData YJ901_Data;
+typedef ImuData1 DY551_Data;
 }  // namespace WitImu
+
 namespace sensor
 {
-class ImuBase : virtual public common::ImuInterface
+class ImuDY551 : virtual public ImuBase
 {
 public:
-  ImuBase() = default;
-  ~ImuBase()
-  {
-    stop();
-  }
-  virtual common::ErrCode init(const YAML::Node& config);
-  common::ErrCode start();
-  common::ErrCode stop();
-
-  inline void regExceptionCallback(const std::function<void(const common::ErrCode&)> excallBack)
-  {
-    excb_ = excallBack;
-  }
-
-  inline void regRecvCallback(const std::function<void(const common::ImuMsg&)> callBack)
-  {
-    imucb_.emplace_back(callBack);
-  }
-  static uint16_t getApi()
-  {
-    return supported_api_;
-  }
-
-protected:
-  virtual void prepareMsg() = 0;
-  virtual bool autoConnect() = 0;
-  virtual int checkMarkBit() = 0;
-
-protected:
-  inline void reportError(const common::ErrCode& error)
-  {
-    if (excb_ != NULL)
-    {
-      excb_(error);
-    }
-  }
-  inline void runCallBack(const common::ImuMsg& imu_msg)
-  {
-    for (auto& it : imucb_)
-    {
-      it(imu_msg);
-    }
-  }
-
-protected:
-  enum state
-  {
-    IDLE = 0,
-    CONNECT,
-    CHECK_MARK_BIT,
-    READ_DATA,
-    CHECK_CONNECTION,
-  };
-  void stateMachine();
-
-protected:
-  struct Imu_Parameter
-  {
-    std::string device_type = "";
-    bool auto_scan_port = false;
-    std::string port_name = "";
-    int baudrate = 0;
-    std::string frame_id = "";
-    bool do_reconnect = false;
-    int reconnect_interval = 0;
-    int reconnect_attemps = 0;
-    double warning_gyro_z = 0;
-    double timeout = 0;
-    int imu_correction = 0;
-  };
-
-protected:
-  std::vector<std::function<void(const common::ImuMsg&)>> imucb_;
-  std::function<void(const common::ErrCode&)> excb_;
-  std::shared_ptr<Serial> imu_ser_;
-  std::shared_ptr<std::thread> imu_thread_;
-  bool thread_flag_;
-  state self_state_;
-  uint32_t imu_seq_;
-
-  Imu_Parameter imu_parameter_;
+  ImuDY551();
+  ~ImuDY551() = default;
 
 private:
-  static const uint16_t supported_api_ = 0x0004;
+  inline common::ErrCode init(const YAML::Node& config)
+  {
+    setName("Imu ImuDY551");
+    return this->ImuBase::init(config);
+  }
+
+  bool IsRound(int year)
+  {
+    if ((year % 100) && (year % 4 == 0))
+      return 1;
+    if ((year % 100 == 0) && (year % 400 == 0))
+      return 1;
+    return 0;
+  }
+
+  void secondToYMDHMS(int temp)
+  {
+    using namespace robosense::WitImu;
+    Time time_c;
+    time_c.year = 1970;
+    time_c.month = 1;
+    time_c.day = 1;
+    time_c.hour = 0;
+    time_c.minute = 0;
+    time_c.sec = 0;
+
+    while (temp >= 60)
+    {
+      int flag = IsRound(time_c.year);
+      if (temp >= year_s[flag])
+      {
+        time_c.year++;
+        temp -= year_s[flag];
+      }
+      else if (temp >= day_s)
+      {
+        int days = temp / day_s;
+        temp = temp % day_s;
+        int i = 0;
+        int flag = IsRound(time_c.year);
+        int hh = 31;
+        while (days >= hh)
+        {
+          days -= month_s[flag][i++];
+          hh = month_s[flag][i];
+        }
+        time_c.month += i;
+        time_c.day += days;
+      }
+      else if (temp >= hour_s)
+      {
+        time_c.hour = temp / hour_s;
+        temp %= hour_s;
+      }
+      else if (temp >= minute_s)
+      {
+        time_c.minute = temp / minute_s;
+        temp %= minute_s;
+      }
+    }
+    time_c.sec = temp;
+    yj9_data_.time_ = time_c;
+  }
+
+  void prepareMsg();
+  int checkMarkBit();
+  bool autoConnect();
+  void analysis(std::vector<uint8_t>& buf_);
+  void decode_msg(int num, std::vector<uint8_t>& buf_rec_);
+  robosense::WitImu::DY551_Data yj9_data_;
+  std::vector<uint8_t> read_rec_;
+  std::vector<uint8_t> write_rec_;
+
+  void translation_4d(std::array<int16_t, 4>& vec_hec)
+  {
+    for (int i = 0; i < 4; i++)
+    {
+      if (vec_hec[i] & 0x8000)
+      {
+        vec_hec[i] -= 1;
+        vec_hec[i] = ~vec_hec[i];
+        vec_hec[i] &= 0x7fff;
+        vec_hec[i] = -vec_hec[i];
+      }
+    }
+  }
+
+  void translation_3d(std::array<int16_t, 3>& vec_hec)
+  {
+    for (int i = 0; i < 3; i++)
+    {
+      if (vec_hec[i] & 0x8000)
+      {
+        vec_hec[i] -= 1;
+        vec_hec[i] = ~vec_hec[i];
+        vec_hec[i] &= 0x7fff;
+        vec_hec[i] = -vec_hec[i];
+      }
+    }
+  }
+
+  void translation_2d(std::array<int32_t, 2>& vec_hec)
+  {
+    for (int i = 0; i < 2; i++)
+    {
+      if (vec_hec[i] & 0x80000000)
+      {
+        vec_hec[i] -= 1;
+        vec_hec[i] = ~vec_hec[i];
+        vec_hec[i] &= 0x7fffffff;
+        vec_hec[i] = -vec_hec[i];
+      }
+    }
+  }
 };
 }  // namespace sensor
 }  // namespace robosense

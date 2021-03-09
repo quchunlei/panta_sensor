@@ -7,6 +7,7 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
+#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/stubs/once.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/wire_format_lite_inl.h>
@@ -17,116 +18,153 @@
 // @@protoc_insertion_point(includes)
 
 namespace Proto_msg {
+class LidarScanDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<LidarScan>
+     _instance;
+} _LidarScan_default_instance_;
+
+namespace protobuf_Proto_5fmsg_2eLidarScan_2eproto {
+
 
 namespace {
 
-const ::google::protobuf::Descriptor* LidarScan_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  LidarScan_reflection_ = NULL;
+::google::protobuf::Metadata file_level_metadata[1];
 
 }  // namespace
 
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
+};
 
-void protobuf_AssignDesc_Proto_5fmsg_2eLidarScan_2eproto() {
-  protobuf_AddDesc_Proto_5fmsg_2eLidarScan_2eproto();
-  const ::google::protobuf::FileDescriptor* file =
-    ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
-      "Proto_msg.LidarScan.proto");
-  GOOGLE_CHECK(file != NULL);
-  LidarScan_descriptor_ = file->message_type(0);
-  static const int LidarScan_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarScan, timestamp_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarScan, seq_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarScan, data_),
-  };
-  LidarScan_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      LidarScan_descriptor_,
-      LidarScan::default_instance_,
-      LidarScan_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarScan, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarScan, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(LidarScan));
-}
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  ::google::protobuf::internal::AuxillaryParseTableField(),
+};
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+};
+
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarScan, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarScan, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarScan, timestamp_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarScan, seq_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LidarScan, data_),
+  0,
+  1,
+  ~0u,
+};
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, 8, sizeof(LidarScan)},
+};
+
+static ::google::protobuf::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::google::protobuf::Message*>(&_LidarScan_default_instance_),
+};
 
 namespace {
 
-GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
-inline void protobuf_AssignDescriptorsOnce() {
-  ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
-                 &protobuf_AssignDesc_Proto_5fmsg_2eLidarScan_2eproto);
+void protobuf_AssignDescriptors() {
+  AddDescriptors();
+  ::google::protobuf::MessageFactory* factory = NULL;
+  AssignDescriptors(
+      "Proto_msg.LidarScan.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      file_level_metadata, NULL, NULL);
 }
 
+void protobuf_AssignDescriptorsOnce() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
+}
+
+void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    LidarScan_descriptor_, &LidarScan::default_instance());
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
 }
 
 }  // namespace
-
-void protobuf_ShutdownFile_Proto_5fmsg_2eLidarScan_2eproto() {
-  delete LidarScan::default_instance_;
-  delete LidarScan_reflection_;
-}
-
-void protobuf_AddDesc_Proto_5fmsg_2eLidarScan_2eproto() {
-  static bool already_here = false;
-  if (already_here) return;
-  already_here = true;
+void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+  ::google::protobuf::internal::InitProtobufDefaults();
+  _LidarScan_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_LidarScan_default_instance_);}
+
+void InitDefaults() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
+}
+namespace {
+void AddDescriptorsImpl() {
+  InitDefaults();
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+      "\n\031Proto_msg.LidarScan.proto\022\tProto_msg\"9"
+      "\n\tLidarScan\022\021\n\ttimestamp\030\001 \001(\001\022\013\n\003seq\030\002 "
+      "\001(\r\022\014\n\004data\030\003 \003(\014"
+  };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\031Proto_msg.LidarScan.proto\022\tProto_msg\"9"
-    "\n\tLidarScan\022\021\n\ttimestamp\030\001 \001(\001\022\013\n\003seq\030\002 "
-    "\001(\r\022\014\n\004data\030\003 \003(\014", 97);
+      descriptor, 97);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Proto_msg.LidarScan.proto", &protobuf_RegisterTypes);
-  LidarScan::default_instance_ = new LidarScan();
-  LidarScan::default_instance_->InitAsDefaultInstance();
-  ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_Proto_5fmsg_2eLidarScan_2eproto);
 }
+} // anonymous namespace
 
-// Force AddDescriptors() to be called at static initialization time.
-struct StaticDescriptorInitializer_Proto_5fmsg_2eLidarScan_2eproto {
-  StaticDescriptorInitializer_Proto_5fmsg_2eLidarScan_2eproto() {
-    protobuf_AddDesc_Proto_5fmsg_2eLidarScan_2eproto();
+void AddDescriptors() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
+}
+// Force AddDescriptors() to be called at dynamic initialization time.
+struct StaticDescriptorInitializer {
+  StaticDescriptorInitializer() {
+    AddDescriptors();
   }
-} static_descriptor_initializer_Proto_5fmsg_2eLidarScan_2eproto_;
+} static_descriptor_initializer;
+
+}  // namespace protobuf_Proto_5fmsg_2eLidarScan_2eproto
+
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int LidarScan::kTimestampFieldNumber;
 const int LidarScan::kSeqFieldNumber;
 const int LidarScan::kDataFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 LidarScan::LidarScan()
-  : ::google::protobuf::Message() {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_Proto_5fmsg_2eLidarScan_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:Proto_msg.LidarScan)
 }
-
-void LidarScan::InitAsDefaultInstance() {
-}
-
 LidarScan::LidarScan(const LidarScan& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0),
+      data_(from.data_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&timestamp_, &from.timestamp_,
+    static_cast<size_t>(reinterpret_cast<char*>(&seq_) -
+    reinterpret_cast<char*>(&timestamp_)) + sizeof(seq_));
   // @@protoc_insertion_point(copy_constructor:Proto_msg.LidarScan)
 }
 
 void LidarScan::SharedCtor() {
-  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
-  timestamp_ = 0;
-  seq_ = 0u;
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  ::memset(&timestamp_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&seq_) -
+      reinterpret_cast<char*>(&timestamp_)) + sizeof(seq_));
 }
 
 LidarScan::~LidarScan() {
@@ -135,8 +173,6 @@ LidarScan::~LidarScan() {
 }
 
 void LidarScan::SharedDtor() {
-  if (this != default_instance_) {
-  }
 }
 
 void LidarScan::SetCachedSize(int size) const {
@@ -145,93 +181,97 @@ void LidarScan::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* LidarScan::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return LidarScan_descriptor_;
+  protobuf_Proto_5fmsg_2eLidarScan_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2eLidarScan_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const LidarScan& LidarScan::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_Proto_5fmsg_2eLidarScan_2eproto();
-  return *default_instance_;
+  protobuf_Proto_5fmsg_2eLidarScan_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
 
-LidarScan* LidarScan::default_instance_ = NULL;
-
-LidarScan* LidarScan::New() const {
-  return new LidarScan;
+LidarScan* LidarScan::New(::google::protobuf::Arena* arena) const {
+  LidarScan* n = new LidarScan;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
 }
 
 void LidarScan::Clear() {
-  if (_has_bits_[0 / 32] & 3) {
-    timestamp_ = 0;
-    seq_ = 0u;
-  }
+// @@protoc_insertion_point(message_clear_start:Proto_msg.LidarScan)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   data_.Clear();
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 3u) {
+    ::memset(&timestamp_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&seq_) -
+        reinterpret_cast<char*>(&timestamp_)) + sizeof(seq_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
 }
 
 bool LidarScan::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:Proto_msg.LidarScan)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // optional double timestamp = 1;
       case 1: {
-        if (tag == 9) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
+          set_has_timestamp();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, &timestamp_)));
-          set_has_timestamp();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(16)) goto parse_seq;
         break;
       }
 
       // optional uint32 seq = 2;
       case 2: {
-        if (tag == 16) {
-         parse_seq:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+          set_has_seq();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  input, &seq_)));
-          set_has_seq();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_data;
         break;
       }
 
       // repeated bytes data = 3;
       case 3: {
-        if (tag == 26) {
-         parse_data:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->add_data()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_data;
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -248,60 +288,83 @@ failure:
 void LidarScan::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:Proto_msg.LidarScan)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional double timestamp = 1;
-  if (has_timestamp()) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->timestamp(), output);
   }
 
   // optional uint32 seq = 2;
-  if (has_seq()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->seq(), output);
   }
 
   // repeated bytes data = 3;
-  for (int i = 0; i < this->data_size(); i++) {
+  for (int i = 0, n = this->data_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteBytes(
       3, this->data(i), output);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:Proto_msg.LidarScan)
 }
 
-::google::protobuf::uint8* LidarScan::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* LidarScan::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:Proto_msg.LidarScan)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional double timestamp = 1;
-  if (has_timestamp()) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->timestamp(), target);
   }
 
   // optional uint32 seq = 2;
-  if (has_seq()) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->seq(), target);
   }
 
   // repeated bytes data = 3;
-  for (int i = 0; i < this->data_size(); i++) {
+  for (int i = 0, n = this->data_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteBytesToArray(3, this->data(i), target);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Proto_msg.LidarScan)
   return target;
 }
 
-int LidarScan::ByteSize() const {
-  int total_size = 0;
+size_t LidarScan::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Proto_msg.LidarScan)
+  size_t total_size = 0;
 
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  // repeated bytes data = 3;
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->data_size());
+  for (int i = 0, n = this->data_size(); i < n; i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::BytesSize(
+      this->data(i));
+  }
+
+  if (_has_bits_[0 / 32] & 3u) {
     // optional double timestamp = 1;
     if (has_timestamp()) {
       total_size += 1 + 8;
@@ -315,86 +378,206 @@ int LidarScan::ByteSize() const {
     }
 
   }
-  // repeated bytes data = 3;
-  total_size += 1 * this->data_size();
-  for (int i = 0; i < this->data_size(); i++) {
-    total_size += ::google::protobuf::internal::WireFormatLite::BytesSize(
-      this->data(i));
-  }
-
-  if (!unknown_fields().empty()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
-  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void LidarScan::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(generalized_merge_from_start:Proto_msg.LidarScan)
+  GOOGLE_DCHECK_NE(&from, this);
   const LidarScan* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const LidarScan*>(
-      &from);
+      ::google::protobuf::internal::DynamicCastToGenerated<const LidarScan>(
+          &from);
   if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Proto_msg.LidarScan)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Proto_msg.LidarScan)
     MergeFrom(*source);
   }
 }
 
 void LidarScan::MergeFrom(const LidarScan& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(class_specific_merge_from_start:Proto_msg.LidarScan)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   data_.MergeFrom(from.data_);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_timestamp()) {
-      set_timestamp(from.timestamp());
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 3u) {
+    if (cached_has_bits & 0x00000001u) {
+      timestamp_ = from.timestamp_;
     }
-    if (from.has_seq()) {
-      set_seq(from.seq());
+    if (cached_has_bits & 0x00000002u) {
+      seq_ = from.seq_;
     }
+    _has_bits_[0] |= cached_has_bits;
   }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
 void LidarScan::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Proto_msg.LidarScan)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void LidarScan::CopyFrom(const LidarScan& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Proto_msg.LidarScan)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 bool LidarScan::IsInitialized() const {
-
   return true;
 }
 
 void LidarScan::Swap(LidarScan* other) {
-  if (other != this) {
-    std::swap(timestamp_, other->timestamp_);
-    std::swap(seq_, other->seq_);
-    data_.Swap(&other->data_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
+  if (other == this) return;
+  InternalSwap(other);
+}
+void LidarScan::InternalSwap(LidarScan* other) {
+  using std::swap;
+  data_.InternalSwap(&other->data_);
+  swap(timestamp_, other->timestamp_);
+  swap(seq_, other->seq_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata LidarScan::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = LidarScan_descriptor_;
-  metadata.reflection = LidarScan_reflection_;
-  return metadata;
+  protobuf_Proto_5fmsg_2eLidarScan_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2eLidarScan_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// LidarScan
+
+// optional double timestamp = 1;
+bool LidarScan::has_timestamp() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void LidarScan::set_has_timestamp() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void LidarScan::clear_has_timestamp() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void LidarScan::clear_timestamp() {
+  timestamp_ = 0;
+  clear_has_timestamp();
+}
+double LidarScan::timestamp() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.LidarScan.timestamp)
+  return timestamp_;
+}
+void LidarScan::set_timestamp(double value) {
+  set_has_timestamp();
+  timestamp_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.LidarScan.timestamp)
+}
+
+// optional uint32 seq = 2;
+bool LidarScan::has_seq() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void LidarScan::set_has_seq() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void LidarScan::clear_has_seq() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void LidarScan::clear_seq() {
+  seq_ = 0u;
+  clear_has_seq();
+}
+::google::protobuf::uint32 LidarScan::seq() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.LidarScan.seq)
+  return seq_;
+}
+void LidarScan::set_seq(::google::protobuf::uint32 value) {
+  set_has_seq();
+  seq_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.LidarScan.seq)
+}
+
+// repeated bytes data = 3;
+int LidarScan::data_size() const {
+  return data_.size();
+}
+void LidarScan::clear_data() {
+  data_.Clear();
+}
+const ::std::string& LidarScan::data(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.LidarScan.data)
+  return data_.Get(index);
+}
+::std::string* LidarScan::mutable_data(int index) {
+  // @@protoc_insertion_point(field_mutable:Proto_msg.LidarScan.data)
+  return data_.Mutable(index);
+}
+void LidarScan::set_data(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:Proto_msg.LidarScan.data)
+  data_.Mutable(index)->assign(value);
+}
+#if LANG_CXX11
+void LidarScan::set_data(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:Proto_msg.LidarScan.data)
+  data_.Mutable(index)->assign(std::move(value));
+}
+#endif
+void LidarScan::set_data(int index, const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  data_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:Proto_msg.LidarScan.data)
+}
+void LidarScan::set_data(int index, const void* value, size_t size) {
+  data_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:Proto_msg.LidarScan.data)
+}
+::std::string* LidarScan::add_data() {
+  // @@protoc_insertion_point(field_add_mutable:Proto_msg.LidarScan.data)
+  return data_.Add();
+}
+void LidarScan::add_data(const ::std::string& value) {
+  data_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.LidarScan.data)
+}
+#if LANG_CXX11
+void LidarScan::add_data(::std::string&& value) {
+  data_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:Proto_msg.LidarScan.data)
+}
+#endif
+void LidarScan::add_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  data_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:Proto_msg.LidarScan.data)
+}
+void LidarScan::add_data(const void* value, size_t size) {
+  data_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:Proto_msg.LidarScan.data)
+}
+const ::google::protobuf::RepeatedPtrField< ::std::string>&
+LidarScan::data() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.LidarScan.data)
+  return data_;
+}
+::google::protobuf::RepeatedPtrField< ::std::string>*
+LidarScan::mutable_data() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.LidarScan.data)
+  return &data_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // @@protoc_insertion_point(namespace_scope)
 

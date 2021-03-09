@@ -7,6 +7,7 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
+#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/stubs/once.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/wire_format_lite_inl.h>
@@ -17,303 +18,431 @@
 // @@protoc_insertion_point(includes)
 
 namespace Proto_msg {
+class Point3DefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<Point3>
+     _instance;
+} _Point3_default_instance_;
+class FreeSpaceDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<FreeSpace>
+     _instance;
+} _FreeSpace_default_instance_;
+class ObstacleDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<Obstacle>
+     _instance;
+} _Obstacle_default_instance_;
+class FreeSpacesDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<FreeSpaces>
+     _instance;
+} _FreeSpaces_default_instance_;
+class ObstaclesDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<Obstacles>
+     _instance;
+} _Obstacles_default_instance_;
+
+namespace protobuf_Proto_5fmsg_2ePercept_2eproto {
+
 
 namespace {
 
-const ::google::protobuf::Descriptor* Point3_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  Point3_reflection_ = NULL;
-const ::google::protobuf::Descriptor* FreeSpace_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  FreeSpace_reflection_ = NULL;
-const ::google::protobuf::Descriptor* Obstacle_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  Obstacle_reflection_ = NULL;
-const ::google::protobuf::EnumDescriptor* Obstacle_Type_descriptor_ = NULL;
-const ::google::protobuf::EnumDescriptor* Obstacle_MotionType_descriptor_ = NULL;
-const ::google::protobuf::Descriptor* FreeSpaces_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  FreeSpaces_reflection_ = NULL;
-const ::google::protobuf::Descriptor* Obstacles_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  Obstacles_reflection_ = NULL;
+::google::protobuf::Metadata file_level_metadata[5];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[2];
 
 }  // namespace
 
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
+};
 
-void protobuf_AssignDesc_Proto_5fmsg_2ePercept_2eproto() {
-  protobuf_AddDesc_Proto_5fmsg_2ePercept_2eproto();
-  const ::google::protobuf::FileDescriptor* file =
-    ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
-      "Proto_msg.Percept.proto");
-  GOOGLE_CHECK(file != NULL);
-  Point3_descriptor_ = file->message_type(0);
-  static const int Point3_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Point3, x_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Point3, y_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Point3, z_),
-  };
-  Point3_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      Point3_descriptor_,
-      Point3::default_instance_,
-      Point3_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Point3, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Point3, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(Point3));
-  FreeSpace_descriptor_ = file->message_type(1);
-  static const int FreeSpace_offsets_[5] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpace, timestamp_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpace, device_code_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpace, distance_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpace, yaw_angle_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpace, free_prob_),
-  };
-  FreeSpace_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      FreeSpace_descriptor_,
-      FreeSpace::default_instance_,
-      FreeSpace_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpace, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpace, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(FreeSpace));
-  Obstacle_descriptor_ = file->message_type(2);
-  static const int Obstacle_offsets_[36] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, timestamp_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, device_code_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, anchor_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, geo_center_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, geo_size_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, geo_direction_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, polygon_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, detect_confidence_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, nearest_point_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, left_point_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, right_point_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, distance_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, yaw_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, point_num_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, type_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, type_confidence_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, latent_types_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, motion_state_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, is_track_converged_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, tracker_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, velocity_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, velocity_cov_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, velocity_uncertainty_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, ave_velocity_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, acceleration_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, acceleration_cov_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, acceleration_uncertainty_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, ave_acceleration_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, angle_velocity_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, angle_velocity_cov_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, angle_velocity_uncertainty_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, ave_angle_velocity_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, asso_quality_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, tracker_quality_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, tracking_time_),
-  };
-  Obstacle_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      Obstacle_descriptor_,
-      Obstacle::default_instance_,
-      Obstacle_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(Obstacle));
-  Obstacle_Type_descriptor_ = Obstacle_descriptor_->enum_type(0);
-  Obstacle_MotionType_descriptor_ = Obstacle_descriptor_->enum_type(1);
-  FreeSpaces_descriptor_ = file->message_type(3);
-  static const int FreeSpaces_offsets_[5] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpaces, timestamp_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpaces, seq_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpaces, parent_frame_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpaces, frame_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpaces, freespaces_),
-  };
-  FreeSpaces_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      FreeSpaces_descriptor_,
-      FreeSpaces::default_instance_,
-      FreeSpaces_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpaces, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpaces, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(FreeSpaces));
-  Obstacles_descriptor_ = file->message_type(4);
-  static const int Obstacles_offsets_[5] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacles, timestamp_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacles, seq_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacles, parent_frame_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacles, frame_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacles, obstacles_),
-  };
-  Obstacles_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      Obstacles_descriptor_,
-      Obstacles::default_instance_,
-      Obstacles_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacles, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacles, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(Obstacles));
-}
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  ::google::protobuf::internal::AuxillaryParseTableField(),
+};
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+};
+
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Point3, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Point3, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Point3, x_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Point3, y_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Point3, z_),
+  0,
+  1,
+  2,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpace, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpace, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpace, timestamp_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpace, device_code_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpace, distance_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpace, yaw_angle_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpace, free_prob_),
+  0,
+  1,
+  2,
+  3,
+  4,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, timestamp_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, device_code_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, anchor_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, geo_center_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, geo_size_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, geo_direction_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, polygon_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, detect_confidence_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, nearest_point_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, left_point_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, right_point_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, distance_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, yaw_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, point_num_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, type_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, type_confidence_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, latent_types_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, motion_state_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, is_track_converged_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, tracker_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, velocity_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, velocity_cov_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, velocity_uncertainty_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, ave_velocity_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, acceleration_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, acceleration_cov_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, acceleration_uncertainty_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, ave_acceleration_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, angle_velocity_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, angle_velocity_cov_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, angle_velocity_uncertainty_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, ave_angle_velocity_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, asso_quality_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, tracker_quality_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacle, tracking_time_),
+  11,
+  12,
+  13,
+  0,
+  1,
+  2,
+  3,
+  ~0u,
+  14,
+  4,
+  5,
+  6,
+  15,
+  16,
+  17,
+  18,
+  19,
+  ~0u,
+  20,
+  21,
+  22,
+  7,
+  ~0u,
+  23,
+  8,
+  9,
+  ~0u,
+  24,
+  10,
+  25,
+  26,
+  27,
+  28,
+  29,
+  31,
+  30,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpaces, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpaces, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpaces, timestamp_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpaces, seq_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpaces, parent_frame_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpaces, frame_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FreeSpaces, freespaces_),
+  2,
+  3,
+  0,
+  1,
+  ~0u,
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacles, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacles, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacles, timestamp_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacles, seq_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacles, parent_frame_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacles, frame_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Obstacles, obstacles_),
+  2,
+  3,
+  0,
+  1,
+  ~0u,
+};
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, 8, sizeof(Point3)},
+  { 11, 21, sizeof(FreeSpace)},
+  { 26, 67, sizeof(Obstacle)},
+  { 103, 113, sizeof(FreeSpaces)},
+  { 118, 128, sizeof(Obstacles)},
+};
+
+static ::google::protobuf::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::google::protobuf::Message*>(&_Point3_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_FreeSpace_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_Obstacle_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_FreeSpaces_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_Obstacles_default_instance_),
+};
 
 namespace {
 
-GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
-inline void protobuf_AssignDescriptorsOnce() {
-  ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
-                 &protobuf_AssignDesc_Proto_5fmsg_2ePercept_2eproto);
+void protobuf_AssignDescriptors() {
+  AddDescriptors();
+  ::google::protobuf::MessageFactory* factory = NULL;
+  AssignDescriptors(
+      "Proto_msg.Percept.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      file_level_metadata, file_level_enum_descriptors, NULL);
 }
 
+void protobuf_AssignDescriptorsOnce() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
+}
+
+void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    Point3_descriptor_, &Point3::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    FreeSpace_descriptor_, &FreeSpace::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    Obstacle_descriptor_, &Obstacle::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    FreeSpaces_descriptor_, &FreeSpaces::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    Obstacles_descriptor_, &Obstacles::default_instance());
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 5);
 }
 
 }  // namespace
-
-void protobuf_ShutdownFile_Proto_5fmsg_2ePercept_2eproto() {
-  delete Point3::default_instance_;
-  delete Point3_reflection_;
-  delete FreeSpace::default_instance_;
-  delete FreeSpace_reflection_;
-  delete Obstacle::default_instance_;
-  delete Obstacle_reflection_;
-  delete FreeSpaces::default_instance_;
-  delete FreeSpaces_reflection_;
-  delete Obstacles::default_instance_;
-  delete Obstacles_reflection_;
-}
-
-void protobuf_AddDesc_Proto_5fmsg_2ePercept_2eproto() {
-  static bool already_here = false;
-  if (already_here) return;
-  already_here = true;
+void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\027Proto_msg.Percept.proto\022\tProto_msg\")\n\006"
-    "Point3\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\022\t\n\001z\030\003 \001(\002\""
-    "k\n\tFreeSpace\022\021\n\ttimestamp\030\001 \001(\001\022\023\n\013devic"
-    "e_code\030\002 \001(\r\022\020\n\010distance\030\003 \001(\002\022\021\n\tyaw_an"
-    "gle\030\004 \001(\002\022\021\n\tfree_prob\030\005 \001(\002\"\347\t\n\010Obstacl"
-    "e\022\021\n\ttimestamp\030\001 \001(\001\022\023\n\013device_code\030\002 \001("
-    "\r\022\n\n\002id\030\003 \001(\005\022!\n\006anchor\030\004 \001(\0132\021.Proto_ms"
-    "g.Point3\022%\n\ngeo_center\030\005 \001(\0132\021.Proto_msg"
-    ".Point3\022#\n\010geo_size\030\006 \001(\0132\021.Proto_msg.Po"
-    "int3\022(\n\rgeo_direction\030\007 \001(\0132\021.Proto_msg."
-    "Point3\022\"\n\007polygon\030\010 \003(\0132\021.Proto_msg.Poin"
-    "t3\022\031\n\021detect_confidence\030\t \001(\002\022(\n\rnearest"
-    "_point\030\n \001(\0132\021.Proto_msg.Point3\022%\n\nleft_"
-    "point\030\013 \001(\0132\021.Proto_msg.Point3\022&\n\013right_"
-    "point\030\014 \001(\0132\021.Proto_msg.Point3\022\020\n\010distan"
-    "ce\030\r \001(\002\022\013\n\003yaw\030\016 \001(\002\022\021\n\tpoint_num\030\017 \001(\005"
-    "\022&\n\004type\030\020 \001(\0162\030.Proto_msg.Obstacle.Type"
-    "\022\027\n\017type_confidence\030\021 \001(\002\022\024\n\014latent_type"
-    "s\030\022 \003(\002\0224\n\014motion_state\030\023 \001(\0162\036.Proto_ms"
-    "g.Obstacle.MotionType\022\032\n\022is_track_conver"
-    "ged\030\024 \001(\010\022\022\n\ntracker_id\030\025 \001(\005\022#\n\010velocit"
-    "y\030\026 \001(\0132\021.Proto_msg.Point3\022\024\n\014velocity_c"
-    "ov\030\027 \003(\002\022\034\n\024velocity_uncertainty\030\030 \001(\002\022\'"
-    "\n\014ave_velocity\030\031 \001(\0132\021.Proto_msg.Point3\022"
-    "\'\n\014acceleration\030\032 \001(\0132\021.Proto_msg.Point3"
-    "\022\030\n\020acceleration_cov\030\033 \003(\002\022 \n\030accelerati"
-    "on_uncertainty\030\034 \001(\002\022+\n\020ave_acceleration"
-    "\030\035 \001(\0132\021.Proto_msg.Point3\022\026\n\016angle_veloc"
-    "ity\030\036 \001(\002\022\032\n\022angle_velocity_cov\030\037 \001(\002\022\"\n"
-    "\032angle_velocity_uncertainty\030  \001(\002\022\032\n\022ave"
-    "_angle_velocity\030! \001(\002\022\024\n\014asso_quality\030\" "
-    "\001(\002\022\027\n\017tracker_quality\030# \001(\002\022\025\n\rtracking"
-    "_time\030$ \001(\001\"[\n\004Type\022\013\n\007UNKNOWN\020\000\022\016\n\nPEDE"
-    "STRIAN\020\001\022\013\n\007BICYCLE\020\002\022\007\n\003CAR\020\003\022\r\n\tTRUCK_"
-    "BUS\020\004\022\021\n\rULTRA_VEHICLE\020\005\"<\n\nMotionType\022\n"
-    "\n\006UNKNOW\020\000\022\n\n\006MOVING\020\001\022\n\n\006STATIC\020\002\022\n\n\006ST"
-    "OPED\020\003\"\201\001\n\nFreeSpaces\022\021\n\ttimestamp\030\001 \001(\001"
-    "\022\013\n\003seq\030\002 \001(\r\022\027\n\017parent_frame_id\030\003 \001(\t\022\020"
-    "\n\010frame_id\030\004 \001(\t\022(\n\nfreeSpaces\030\005 \003(\0132\024.P"
-    "roto_msg.FreeSpace\"~\n\tObstacles\022\021\n\ttimes"
-    "tamp\030\001 \001(\001\022\013\n\003seq\030\002 \001(\r\022\027\n\017parent_frame_"
-    "id\030\003 \001(\t\022\020\n\010frame_id\030\004 \001(\t\022&\n\tobstacles\030"
-    "\005 \003(\0132\023.Proto_msg.Obstacle", 1706);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "Proto_msg.Percept.proto", &protobuf_RegisterTypes);
-  Point3::default_instance_ = new Point3();
-  FreeSpace::default_instance_ = new FreeSpace();
-  Obstacle::default_instance_ = new Obstacle();
-  FreeSpaces::default_instance_ = new FreeSpaces();
-  Obstacles::default_instance_ = new Obstacles();
-  Point3::default_instance_->InitAsDefaultInstance();
-  FreeSpace::default_instance_->InitAsDefaultInstance();
-  Obstacle::default_instance_->InitAsDefaultInstance();
-  FreeSpaces::default_instance_->InitAsDefaultInstance();
-  Obstacles::default_instance_->InitAsDefaultInstance();
-  ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_Proto_5fmsg_2ePercept_2eproto);
+  ::google::protobuf::internal::InitProtobufDefaults();
+  _Point3_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_Point3_default_instance_);_FreeSpace_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_FreeSpace_default_instance_);_Obstacle_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_Obstacle_default_instance_);_FreeSpaces_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_FreeSpaces_default_instance_);_Obstacles_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_Obstacles_default_instance_);_Obstacle_default_instance_._instance.get_mutable()->anchor_ = const_cast< ::Proto_msg::Point3*>(
+      ::Proto_msg::Point3::internal_default_instance());
+  _Obstacle_default_instance_._instance.get_mutable()->geo_center_ = const_cast< ::Proto_msg::Point3*>(
+      ::Proto_msg::Point3::internal_default_instance());
+  _Obstacle_default_instance_._instance.get_mutable()->geo_size_ = const_cast< ::Proto_msg::Point3*>(
+      ::Proto_msg::Point3::internal_default_instance());
+  _Obstacle_default_instance_._instance.get_mutable()->geo_direction_ = const_cast< ::Proto_msg::Point3*>(
+      ::Proto_msg::Point3::internal_default_instance());
+  _Obstacle_default_instance_._instance.get_mutable()->nearest_point_ = const_cast< ::Proto_msg::Point3*>(
+      ::Proto_msg::Point3::internal_default_instance());
+  _Obstacle_default_instance_._instance.get_mutable()->left_point_ = const_cast< ::Proto_msg::Point3*>(
+      ::Proto_msg::Point3::internal_default_instance());
+  _Obstacle_default_instance_._instance.get_mutable()->right_point_ = const_cast< ::Proto_msg::Point3*>(
+      ::Proto_msg::Point3::internal_default_instance());
+  _Obstacle_default_instance_._instance.get_mutable()->velocity_ = const_cast< ::Proto_msg::Point3*>(
+      ::Proto_msg::Point3::internal_default_instance());
+  _Obstacle_default_instance_._instance.get_mutable()->ave_velocity_ = const_cast< ::Proto_msg::Point3*>(
+      ::Proto_msg::Point3::internal_default_instance());
+  _Obstacle_default_instance_._instance.get_mutable()->acceleration_ = const_cast< ::Proto_msg::Point3*>(
+      ::Proto_msg::Point3::internal_default_instance());
+  _Obstacle_default_instance_._instance.get_mutable()->ave_acceleration_ = const_cast< ::Proto_msg::Point3*>(
+      ::Proto_msg::Point3::internal_default_instance());
 }
 
-// Force AddDescriptors() to be called at static initialization time.
-struct StaticDescriptorInitializer_Proto_5fmsg_2ePercept_2eproto {
-  StaticDescriptorInitializer_Proto_5fmsg_2ePercept_2eproto() {
-    protobuf_AddDesc_Proto_5fmsg_2ePercept_2eproto();
+void InitDefaults() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
+}
+namespace {
+void AddDescriptorsImpl() {
+  InitDefaults();
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+      "\n\027Proto_msg.Percept.proto\022\tProto_msg\")\n\006"
+      "Point3\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\022\t\n\001z\030\003 \001(\002\""
+      "k\n\tFreeSpace\022\021\n\ttimestamp\030\001 \001(\001\022\023\n\013devic"
+      "e_code\030\002 \001(\r\022\020\n\010distance\030\003 \001(\002\022\021\n\tyaw_an"
+      "gle\030\004 \001(\002\022\021\n\tfree_prob\030\005 \001(\002\"\347\t\n\010Obstacl"
+      "e\022\021\n\ttimestamp\030\001 \001(\001\022\023\n\013device_code\030\002 \001("
+      "\r\022\n\n\002id\030\003 \001(\005\022!\n\006anchor\030\004 \001(\0132\021.Proto_ms"
+      "g.Point3\022%\n\ngeo_center\030\005 \001(\0132\021.Proto_msg"
+      ".Point3\022#\n\010geo_size\030\006 \001(\0132\021.Proto_msg.Po"
+      "int3\022(\n\rgeo_direction\030\007 \001(\0132\021.Proto_msg."
+      "Point3\022\"\n\007polygon\030\010 \003(\0132\021.Proto_msg.Poin"
+      "t3\022\031\n\021detect_confidence\030\t \001(\002\022(\n\rnearest"
+      "_point\030\n \001(\0132\021.Proto_msg.Point3\022%\n\nleft_"
+      "point\030\013 \001(\0132\021.Proto_msg.Point3\022&\n\013right_"
+      "point\030\014 \001(\0132\021.Proto_msg.Point3\022\020\n\010distan"
+      "ce\030\r \001(\002\022\013\n\003yaw\030\016 \001(\002\022\021\n\tpoint_num\030\017 \001(\005"
+      "\022&\n\004type\030\020 \001(\0162\030.Proto_msg.Obstacle.Type"
+      "\022\027\n\017type_confidence\030\021 \001(\002\022\024\n\014latent_type"
+      "s\030\022 \003(\002\0224\n\014motion_state\030\023 \001(\0162\036.Proto_ms"
+      "g.Obstacle.MotionType\022\032\n\022is_track_conver"
+      "ged\030\024 \001(\010\022\022\n\ntracker_id\030\025 \001(\005\022#\n\010velocit"
+      "y\030\026 \001(\0132\021.Proto_msg.Point3\022\024\n\014velocity_c"
+      "ov\030\027 \003(\002\022\034\n\024velocity_uncertainty\030\030 \001(\002\022\'"
+      "\n\014ave_velocity\030\031 \001(\0132\021.Proto_msg.Point3\022"
+      "\'\n\014acceleration\030\032 \001(\0132\021.Proto_msg.Point3"
+      "\022\030\n\020acceleration_cov\030\033 \003(\002\022 \n\030accelerati"
+      "on_uncertainty\030\034 \001(\002\022+\n\020ave_acceleration"
+      "\030\035 \001(\0132\021.Proto_msg.Point3\022\026\n\016angle_veloc"
+      "ity\030\036 \001(\002\022\032\n\022angle_velocity_cov\030\037 \001(\002\022\"\n"
+      "\032angle_velocity_uncertainty\030  \001(\002\022\032\n\022ave"
+      "_angle_velocity\030! \001(\002\022\024\n\014asso_quality\030\" "
+      "\001(\002\022\027\n\017tracker_quality\030# \001(\002\022\025\n\rtracking"
+      "_time\030$ \001(\001\"[\n\004Type\022\013\n\007UNKNOWN\020\000\022\016\n\nPEDE"
+      "STRIAN\020\001\022\013\n\007BICYCLE\020\002\022\007\n\003CAR\020\003\022\r\n\tTRUCK_"
+      "BUS\020\004\022\021\n\rULTRA_VEHICLE\020\005\"<\n\nMotionType\022\n"
+      "\n\006UNKNOW\020\000\022\n\n\006MOVING\020\001\022\n\n\006STATIC\020\002\022\n\n\006ST"
+      "OPED\020\003\"\201\001\n\nFreeSpaces\022\021\n\ttimestamp\030\001 \001(\001"
+      "\022\013\n\003seq\030\002 \001(\r\022\027\n\017parent_frame_id\030\003 \001(\t\022\020"
+      "\n\010frame_id\030\004 \001(\t\022(\n\nfreeSpaces\030\005 \003(\0132\024.P"
+      "roto_msg.FreeSpace\"~\n\tObstacles\022\021\n\ttimes"
+      "tamp\030\001 \001(\001\022\013\n\003seq\030\002 \001(\r\022\027\n\017parent_frame_"
+      "id\030\003 \001(\t\022\020\n\010frame_id\030\004 \001(\t\022&\n\tobstacles\030"
+      "\005 \003(\0132\023.Proto_msg.Obstacle"
+  };
+  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
+      descriptor, 1706);
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
+    "Proto_msg.Percept.proto", &protobuf_RegisterTypes);
+}
+} // anonymous namespace
+
+void AddDescriptors() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
+}
+// Force AddDescriptors() to be called at dynamic initialization time.
+struct StaticDescriptorInitializer {
+  StaticDescriptorInitializer() {
+    AddDescriptors();
   }
-} static_descriptor_initializer_Proto_5fmsg_2ePercept_2eproto_;
+} static_descriptor_initializer;
+
+}  // namespace protobuf_Proto_5fmsg_2ePercept_2eproto
+
+const ::google::protobuf::EnumDescriptor* Obstacle_Type_descriptor() {
+  protobuf_Proto_5fmsg_2ePercept_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2ePercept_2eproto::file_level_enum_descriptors[0];
+}
+bool Obstacle_Type_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const Obstacle_Type Obstacle::UNKNOWN;
+const Obstacle_Type Obstacle::PEDESTRIAN;
+const Obstacle_Type Obstacle::BICYCLE;
+const Obstacle_Type Obstacle::CAR;
+const Obstacle_Type Obstacle::TRUCK_BUS;
+const Obstacle_Type Obstacle::ULTRA_VEHICLE;
+const Obstacle_Type Obstacle::Type_MIN;
+const Obstacle_Type Obstacle::Type_MAX;
+const int Obstacle::Type_ARRAYSIZE;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+const ::google::protobuf::EnumDescriptor* Obstacle_MotionType_descriptor() {
+  protobuf_Proto_5fmsg_2ePercept_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2ePercept_2eproto::file_level_enum_descriptors[1];
+}
+bool Obstacle_MotionType_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const Obstacle_MotionType Obstacle::UNKNOW;
+const Obstacle_MotionType Obstacle::MOVING;
+const Obstacle_MotionType Obstacle::STATIC;
+const Obstacle_MotionType Obstacle::STOPED;
+const Obstacle_MotionType Obstacle::MotionType_MIN;
+const Obstacle_MotionType Obstacle::MotionType_MAX;
+const int Obstacle::MotionType_ARRAYSIZE;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Point3::kXFieldNumber;
 const int Point3::kYFieldNumber;
 const int Point3::kZFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Point3::Point3()
-  : ::google::protobuf::Message() {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_Proto_5fmsg_2ePercept_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:Proto_msg.Point3)
 }
-
-void Point3::InitAsDefaultInstance() {
-}
-
 Point3::Point3(const Point3& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&x_, &from.x_,
+    static_cast<size_t>(reinterpret_cast<char*>(&z_) -
+    reinterpret_cast<char*>(&x_)) + sizeof(z_));
   // @@protoc_insertion_point(copy_constructor:Proto_msg.Point3)
 }
 
 void Point3::SharedCtor() {
   _cached_size_ = 0;
-  x_ = 0;
-  y_ = 0;
-  z_ = 0;
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  ::memset(&x_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&z_) -
+      reinterpret_cast<char*>(&x_)) + sizeof(z_));
 }
 
 Point3::~Point3() {
@@ -322,8 +451,6 @@ Point3::~Point3() {
 }
 
 void Point3::SharedDtor() {
-  if (this != default_instance_) {
-  }
 }
 
 void Point3::SetCachedSize(int size) const {
@@ -332,104 +459,98 @@ void Point3::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* Point3::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return Point3_descriptor_;
+  protobuf_Proto_5fmsg_2ePercept_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2ePercept_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const Point3& Point3::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_Proto_5fmsg_2ePercept_2eproto();
-  return *default_instance_;
+  protobuf_Proto_5fmsg_2ePercept_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
 
-Point3* Point3::default_instance_ = NULL;
-
-Point3* Point3::New() const {
-  return new Point3;
+Point3* Point3::New(::google::protobuf::Arena* arena) const {
+  Point3* n = new Point3;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
 }
 
 void Point3::Clear() {
-#define OFFSET_OF_FIELD_(f) (reinterpret_cast<char*>(      \
-  &reinterpret_cast<Point3*>(16)->f) - \
-   reinterpret_cast<char*>(16))
+// @@protoc_insertion_point(message_clear_start:Proto_msg.Point3)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
-#define ZR_(first, last) do {                              \
-    size_t f = OFFSET_OF_FIELD_(first);                    \
-    size_t n = OFFSET_OF_FIELD_(last) - f + sizeof(last);  \
-    ::memset(&first, 0, n);                                \
-  } while (0)
-
-  ZR_(x_, z_);
-
-#undef OFFSET_OF_FIELD_
-#undef ZR_
-
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 7u) {
+    ::memset(&x_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&z_) -
+        reinterpret_cast<char*>(&x_)) + sizeof(z_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
 }
 
 bool Point3::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:Proto_msg.Point3)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // optional float x = 1;
       case 1: {
-        if (tag == 13) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(13u /* 13 & 0xFF */)) {
+          set_has_x();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &x_)));
-          set_has_x();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(21)) goto parse_y;
         break;
       }
 
       // optional float y = 2;
       case 2: {
-        if (tag == 21) {
-         parse_y:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(21u /* 21 & 0xFF */)) {
+          set_has_y();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &y_)));
-          set_has_y();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(29)) goto parse_z;
         break;
       }
 
       // optional float z = 3;
       case 3: {
-        if (tag == 29) {
-         parse_z:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(29u /* 29 & 0xFF */)) {
+          set_has_z();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &z_)));
-          set_has_z();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -446,58 +567,73 @@ failure:
 void Point3::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:Proto_msg.Point3)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional float x = 1;
-  if (has_x()) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(1, this->x(), output);
   }
 
   // optional float y = 2;
-  if (has_y()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(2, this->y(), output);
   }
 
   // optional float z = 3;
-  if (has_z()) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->z(), output);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:Proto_msg.Point3)
 }
 
-::google::protobuf::uint8* Point3::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* Point3::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:Proto_msg.Point3)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional float x = 1;
-  if (has_x()) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(1, this->x(), target);
   }
 
   // optional float y = 2;
-  if (has_y()) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(2, this->y(), target);
   }
 
   // optional float z = 3;
-  if (has_z()) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->z(), target);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Proto_msg.Point3)
   return target;
 }
 
-int Point3::ByteSize() const {
-  int total_size = 0;
+size_t Point3::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Proto_msg.Point3)
+  size_t total_size = 0;
 
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 7u) {
     // optional float x = 1;
     if (has_x()) {
       total_size += 1 + 4;
@@ -514,116 +650,199 @@ int Point3::ByteSize() const {
     }
 
   }
-  if (!unknown_fields().empty()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
-  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void Point3::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(generalized_merge_from_start:Proto_msg.Point3)
+  GOOGLE_DCHECK_NE(&from, this);
   const Point3* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const Point3*>(
-      &from);
+      ::google::protobuf::internal::DynamicCastToGenerated<const Point3>(
+          &from);
   if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Proto_msg.Point3)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Proto_msg.Point3)
     MergeFrom(*source);
   }
 }
 
 void Point3::MergeFrom(const Point3& from) {
-  GOOGLE_CHECK_NE(&from, this);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_x()) {
-      set_x(from.x());
+// @@protoc_insertion_point(class_specific_merge_from_start:Proto_msg.Point3)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 7u) {
+    if (cached_has_bits & 0x00000001u) {
+      x_ = from.x_;
     }
-    if (from.has_y()) {
-      set_y(from.y());
+    if (cached_has_bits & 0x00000002u) {
+      y_ = from.y_;
     }
-    if (from.has_z()) {
-      set_z(from.z());
+    if (cached_has_bits & 0x00000004u) {
+      z_ = from.z_;
     }
+    _has_bits_[0] |= cached_has_bits;
   }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
 void Point3::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Proto_msg.Point3)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void Point3::CopyFrom(const Point3& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Proto_msg.Point3)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 bool Point3::IsInitialized() const {
-
   return true;
 }
 
 void Point3::Swap(Point3* other) {
-  if (other != this) {
-    std::swap(x_, other->x_);
-    std::swap(y_, other->y_);
-    std::swap(z_, other->z_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Point3::InternalSwap(Point3* other) {
+  using std::swap;
+  swap(x_, other->x_);
+  swap(y_, other->y_);
+  swap(z_, other->z_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Point3::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = Point3_descriptor_;
-  metadata.reflection = Point3_reflection_;
-  return metadata;
+  protobuf_Proto_5fmsg_2ePercept_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2ePercept_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// Point3
+
+// optional float x = 1;
+bool Point3::has_x() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void Point3::set_has_x() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void Point3::clear_has_x() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void Point3::clear_x() {
+  x_ = 0;
+  clear_has_x();
+}
+float Point3::x() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Point3.x)
+  return x_;
+}
+void Point3::set_x(float value) {
+  set_has_x();
+  x_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Point3.x)
+}
+
+// optional float y = 2;
+bool Point3::has_y() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void Point3::set_has_y() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void Point3::clear_has_y() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void Point3::clear_y() {
+  y_ = 0;
+  clear_has_y();
+}
+float Point3::y() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Point3.y)
+  return y_;
+}
+void Point3::set_y(float value) {
+  set_has_y();
+  y_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Point3.y)
+}
+
+// optional float z = 3;
+bool Point3::has_z() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void Point3::set_has_z() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void Point3::clear_has_z() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void Point3::clear_z() {
+  z_ = 0;
+  clear_has_z();
+}
+float Point3::z() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Point3.z)
+  return z_;
+}
+void Point3::set_z(float value) {
+  set_has_z();
+  z_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Point3.z)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int FreeSpace::kTimestampFieldNumber;
 const int FreeSpace::kDeviceCodeFieldNumber;
 const int FreeSpace::kDistanceFieldNumber;
 const int FreeSpace::kYawAngleFieldNumber;
 const int FreeSpace::kFreeProbFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 FreeSpace::FreeSpace()
-  : ::google::protobuf::Message() {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_Proto_5fmsg_2ePercept_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:Proto_msg.FreeSpace)
 }
-
-void FreeSpace::InitAsDefaultInstance() {
-}
-
 FreeSpace::FreeSpace(const FreeSpace& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&timestamp_, &from.timestamp_,
+    static_cast<size_t>(reinterpret_cast<char*>(&free_prob_) -
+    reinterpret_cast<char*>(&timestamp_)) + sizeof(free_prob_));
   // @@protoc_insertion_point(copy_constructor:Proto_msg.FreeSpace)
 }
 
 void FreeSpace::SharedCtor() {
   _cached_size_ = 0;
-  timestamp_ = 0;
-  device_code_ = 0u;
-  distance_ = 0;
-  yaw_angle_ = 0;
-  free_prob_ = 0;
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  ::memset(&timestamp_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&free_prob_) -
+      reinterpret_cast<char*>(&timestamp_)) + sizeof(free_prob_));
 }
 
 FreeSpace::~FreeSpace() {
@@ -632,8 +851,6 @@ FreeSpace::~FreeSpace() {
 }
 
 void FreeSpace::SharedDtor() {
-  if (this != default_instance_) {
-  }
 }
 
 void FreeSpace::SetCachedSize(int size) const {
@@ -642,136 +859,126 @@ void FreeSpace::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* FreeSpace::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return FreeSpace_descriptor_;
+  protobuf_Proto_5fmsg_2ePercept_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2ePercept_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const FreeSpace& FreeSpace::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_Proto_5fmsg_2ePercept_2eproto();
-  return *default_instance_;
+  protobuf_Proto_5fmsg_2ePercept_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
 
-FreeSpace* FreeSpace::default_instance_ = NULL;
-
-FreeSpace* FreeSpace::New() const {
-  return new FreeSpace;
+FreeSpace* FreeSpace::New(::google::protobuf::Arena* arena) const {
+  FreeSpace* n = new FreeSpace;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
 }
 
 void FreeSpace::Clear() {
-#define OFFSET_OF_FIELD_(f) (reinterpret_cast<char*>(      \
-  &reinterpret_cast<FreeSpace*>(16)->f) - \
-   reinterpret_cast<char*>(16))
+// @@protoc_insertion_point(message_clear_start:Proto_msg.FreeSpace)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
-#define ZR_(first, last) do {                              \
-    size_t f = OFFSET_OF_FIELD_(first);                    \
-    size_t n = OFFSET_OF_FIELD_(last) - f + sizeof(last);  \
-    ::memset(&first, 0, n);                                \
-  } while (0)
-
-  if (_has_bits_[0 / 32] & 31) {
-    ZR_(timestamp_, free_prob_);
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 31u) {
+    ::memset(&timestamp_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&free_prob_) -
+        reinterpret_cast<char*>(&timestamp_)) + sizeof(free_prob_));
   }
-
-#undef OFFSET_OF_FIELD_
-#undef ZR_
-
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
 }
 
 bool FreeSpace::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:Proto_msg.FreeSpace)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // optional double timestamp = 1;
       case 1: {
-        if (tag == 9) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
+          set_has_timestamp();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, &timestamp_)));
-          set_has_timestamp();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(16)) goto parse_device_code;
         break;
       }
 
       // optional uint32 device_code = 2;
       case 2: {
-        if (tag == 16) {
-         parse_device_code:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+          set_has_device_code();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  input, &device_code_)));
-          set_has_device_code();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(29)) goto parse_distance;
         break;
       }
 
       // optional float distance = 3;
       case 3: {
-        if (tag == 29) {
-         parse_distance:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(29u /* 29 & 0xFF */)) {
+          set_has_distance();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &distance_)));
-          set_has_distance();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(37)) goto parse_yaw_angle;
         break;
       }
 
       // optional float yaw_angle = 4;
       case 4: {
-        if (tag == 37) {
-         parse_yaw_angle:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(37u /* 37 & 0xFF */)) {
+          set_has_yaw_angle();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &yaw_angle_)));
-          set_has_yaw_angle();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(45)) goto parse_free_prob;
         break;
       }
 
       // optional float free_prob = 5;
       case 5: {
-        if (tag == 45) {
-         parse_free_prob:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(45u /* 45 & 0xFF */)) {
+          set_has_free_prob();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &free_prob_)));
-          set_has_free_prob();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -788,78 +995,93 @@ failure:
 void FreeSpace::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:Proto_msg.FreeSpace)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional double timestamp = 1;
-  if (has_timestamp()) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->timestamp(), output);
   }
 
   // optional uint32 device_code = 2;
-  if (has_device_code()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->device_code(), output);
   }
 
   // optional float distance = 3;
-  if (has_distance()) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->distance(), output);
   }
 
   // optional float yaw_angle = 4;
-  if (has_yaw_angle()) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(4, this->yaw_angle(), output);
   }
 
   // optional float free_prob = 5;
-  if (has_free_prob()) {
+  if (cached_has_bits & 0x00000010u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(5, this->free_prob(), output);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:Proto_msg.FreeSpace)
 }
 
-::google::protobuf::uint8* FreeSpace::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* FreeSpace::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:Proto_msg.FreeSpace)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional double timestamp = 1;
-  if (has_timestamp()) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->timestamp(), target);
   }
 
   // optional uint32 device_code = 2;
-  if (has_device_code()) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->device_code(), target);
   }
 
   // optional float distance = 3;
-  if (has_distance()) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->distance(), target);
   }
 
   // optional float yaw_angle = 4;
-  if (has_yaw_angle()) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(4, this->yaw_angle(), target);
   }
 
   // optional float free_prob = 5;
-  if (has_free_prob()) {
+  if (cached_has_bits & 0x00000010u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(5, this->free_prob(), target);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Proto_msg.FreeSpace)
   return target;
 }
 
-int FreeSpace::ByteSize() const {
-  int total_size = 0;
+size_t FreeSpace::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Proto_msg.FreeSpace)
+  size_t total_size = 0;
 
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  if (_has_bits_[0 / 32] & 31u) {
     // optional double timestamp = 1;
     if (has_timestamp()) {
       total_size += 1 + 8;
@@ -888,147 +1110,223 @@ int FreeSpace::ByteSize() const {
     }
 
   }
-  if (!unknown_fields().empty()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
-  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void FreeSpace::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(generalized_merge_from_start:Proto_msg.FreeSpace)
+  GOOGLE_DCHECK_NE(&from, this);
   const FreeSpace* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const FreeSpace*>(
-      &from);
+      ::google::protobuf::internal::DynamicCastToGenerated<const FreeSpace>(
+          &from);
   if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Proto_msg.FreeSpace)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Proto_msg.FreeSpace)
     MergeFrom(*source);
   }
 }
 
 void FreeSpace::MergeFrom(const FreeSpace& from) {
-  GOOGLE_CHECK_NE(&from, this);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_timestamp()) {
-      set_timestamp(from.timestamp());
+// @@protoc_insertion_point(class_specific_merge_from_start:Proto_msg.FreeSpace)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 31u) {
+    if (cached_has_bits & 0x00000001u) {
+      timestamp_ = from.timestamp_;
     }
-    if (from.has_device_code()) {
-      set_device_code(from.device_code());
+    if (cached_has_bits & 0x00000002u) {
+      device_code_ = from.device_code_;
     }
-    if (from.has_distance()) {
-      set_distance(from.distance());
+    if (cached_has_bits & 0x00000004u) {
+      distance_ = from.distance_;
     }
-    if (from.has_yaw_angle()) {
-      set_yaw_angle(from.yaw_angle());
+    if (cached_has_bits & 0x00000008u) {
+      yaw_angle_ = from.yaw_angle_;
     }
-    if (from.has_free_prob()) {
-      set_free_prob(from.free_prob());
+    if (cached_has_bits & 0x00000010u) {
+      free_prob_ = from.free_prob_;
     }
+    _has_bits_[0] |= cached_has_bits;
   }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
 void FreeSpace::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Proto_msg.FreeSpace)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void FreeSpace::CopyFrom(const FreeSpace& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Proto_msg.FreeSpace)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 bool FreeSpace::IsInitialized() const {
-
   return true;
 }
 
 void FreeSpace::Swap(FreeSpace* other) {
-  if (other != this) {
-    std::swap(timestamp_, other->timestamp_);
-    std::swap(device_code_, other->device_code_);
-    std::swap(distance_, other->distance_);
-    std::swap(yaw_angle_, other->yaw_angle_);
-    std::swap(free_prob_, other->free_prob_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
+  if (other == this) return;
+  InternalSwap(other);
+}
+void FreeSpace::InternalSwap(FreeSpace* other) {
+  using std::swap;
+  swap(timestamp_, other->timestamp_);
+  swap(device_code_, other->device_code_);
+  swap(distance_, other->distance_);
+  swap(yaw_angle_, other->yaw_angle_);
+  swap(free_prob_, other->free_prob_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata FreeSpace::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = FreeSpace_descriptor_;
-  metadata.reflection = FreeSpace_reflection_;
-  return metadata;
+  protobuf_Proto_5fmsg_2ePercept_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2ePercept_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// FreeSpace
+
+// optional double timestamp = 1;
+bool FreeSpace::has_timestamp() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void FreeSpace::set_has_timestamp() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void FreeSpace::clear_has_timestamp() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void FreeSpace::clear_timestamp() {
+  timestamp_ = 0;
+  clear_has_timestamp();
+}
+double FreeSpace::timestamp() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.FreeSpace.timestamp)
+  return timestamp_;
+}
+void FreeSpace::set_timestamp(double value) {
+  set_has_timestamp();
+  timestamp_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.FreeSpace.timestamp)
+}
+
+// optional uint32 device_code = 2;
+bool FreeSpace::has_device_code() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void FreeSpace::set_has_device_code() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void FreeSpace::clear_has_device_code() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void FreeSpace::clear_device_code() {
+  device_code_ = 0u;
+  clear_has_device_code();
+}
+::google::protobuf::uint32 FreeSpace::device_code() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.FreeSpace.device_code)
+  return device_code_;
+}
+void FreeSpace::set_device_code(::google::protobuf::uint32 value) {
+  set_has_device_code();
+  device_code_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.FreeSpace.device_code)
+}
+
+// optional float distance = 3;
+bool FreeSpace::has_distance() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void FreeSpace::set_has_distance() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void FreeSpace::clear_has_distance() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void FreeSpace::clear_distance() {
+  distance_ = 0;
+  clear_has_distance();
+}
+float FreeSpace::distance() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.FreeSpace.distance)
+  return distance_;
+}
+void FreeSpace::set_distance(float value) {
+  set_has_distance();
+  distance_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.FreeSpace.distance)
+}
+
+// optional float yaw_angle = 4;
+bool FreeSpace::has_yaw_angle() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+void FreeSpace::set_has_yaw_angle() {
+  _has_bits_[0] |= 0x00000008u;
+}
+void FreeSpace::clear_has_yaw_angle() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+void FreeSpace::clear_yaw_angle() {
+  yaw_angle_ = 0;
+  clear_has_yaw_angle();
+}
+float FreeSpace::yaw_angle() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.FreeSpace.yaw_angle)
+  return yaw_angle_;
+}
+void FreeSpace::set_yaw_angle(float value) {
+  set_has_yaw_angle();
+  yaw_angle_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.FreeSpace.yaw_angle)
+}
+
+// optional float free_prob = 5;
+bool FreeSpace::has_free_prob() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+void FreeSpace::set_has_free_prob() {
+  _has_bits_[0] |= 0x00000010u;
+}
+void FreeSpace::clear_has_free_prob() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+void FreeSpace::clear_free_prob() {
+  free_prob_ = 0;
+  clear_has_free_prob();
+}
+float FreeSpace::free_prob() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.FreeSpace.free_prob)
+  return free_prob_;
+}
+void FreeSpace::set_free_prob(float value) {
+  set_has_free_prob();
+  free_prob_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.FreeSpace.free_prob)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
 
-const ::google::protobuf::EnumDescriptor* Obstacle_Type_descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return Obstacle_Type_descriptor_;
-}
-bool Obstacle_Type_IsValid(int value) {
-  switch(value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-      return true;
-    default:
-      return false;
-  }
-}
-
-#ifndef _MSC_VER
-const Obstacle_Type Obstacle::UNKNOWN;
-const Obstacle_Type Obstacle::PEDESTRIAN;
-const Obstacle_Type Obstacle::BICYCLE;
-const Obstacle_Type Obstacle::CAR;
-const Obstacle_Type Obstacle::TRUCK_BUS;
-const Obstacle_Type Obstacle::ULTRA_VEHICLE;
-const Obstacle_Type Obstacle::Type_MIN;
-const Obstacle_Type Obstacle::Type_MAX;
-const int Obstacle::Type_ARRAYSIZE;
-#endif  // _MSC_VER
-const ::google::protobuf::EnumDescriptor* Obstacle_MotionType_descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return Obstacle_MotionType_descriptor_;
-}
-bool Obstacle_MotionType_IsValid(int value) {
-  switch(value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-      return true;
-    default:
-      return false;
-  }
-}
-
-#ifndef _MSC_VER
-const Obstacle_MotionType Obstacle::UNKNOW;
-const Obstacle_MotionType Obstacle::MOVING;
-const Obstacle_MotionType Obstacle::STATIC;
-const Obstacle_MotionType Obstacle::STOPED;
-const Obstacle_MotionType Obstacle::MotionType_MIN;
-const Obstacle_MotionType Obstacle::MotionType_MAX;
-const int Obstacle::MotionType_ARRAYSIZE;
-#endif  // _MSC_VER
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Obstacle::kTimestampFieldNumber;
 const int Obstacle::kDeviceCodeFieldNumber;
 const int Obstacle::kIdFieldNumber;
@@ -1065,70 +1363,92 @@ const int Obstacle::kAveAngleVelocityFieldNumber;
 const int Obstacle::kAssoQualityFieldNumber;
 const int Obstacle::kTrackerQualityFieldNumber;
 const int Obstacle::kTrackingTimeFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Obstacle::Obstacle()
-  : ::google::protobuf::Message() {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_Proto_5fmsg_2ePercept_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:Proto_msg.Obstacle)
 }
-
-void Obstacle::InitAsDefaultInstance() {
-  anchor_ = const_cast< ::Proto_msg::Point3*>(&::Proto_msg::Point3::default_instance());
-  geo_center_ = const_cast< ::Proto_msg::Point3*>(&::Proto_msg::Point3::default_instance());
-  geo_size_ = const_cast< ::Proto_msg::Point3*>(&::Proto_msg::Point3::default_instance());
-  geo_direction_ = const_cast< ::Proto_msg::Point3*>(&::Proto_msg::Point3::default_instance());
-  nearest_point_ = const_cast< ::Proto_msg::Point3*>(&::Proto_msg::Point3::default_instance());
-  left_point_ = const_cast< ::Proto_msg::Point3*>(&::Proto_msg::Point3::default_instance());
-  right_point_ = const_cast< ::Proto_msg::Point3*>(&::Proto_msg::Point3::default_instance());
-  velocity_ = const_cast< ::Proto_msg::Point3*>(&::Proto_msg::Point3::default_instance());
-  ave_velocity_ = const_cast< ::Proto_msg::Point3*>(&::Proto_msg::Point3::default_instance());
-  acceleration_ = const_cast< ::Proto_msg::Point3*>(&::Proto_msg::Point3::default_instance());
-  ave_acceleration_ = const_cast< ::Proto_msg::Point3*>(&::Proto_msg::Point3::default_instance());
-}
-
 Obstacle::Obstacle(const Obstacle& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0),
+      polygon_(from.polygon_),
+      latent_types_(from.latent_types_),
+      velocity_cov_(from.velocity_cov_),
+      acceleration_cov_(from.acceleration_cov_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_anchor()) {
+    anchor_ = new ::Proto_msg::Point3(*from.anchor_);
+  } else {
+    anchor_ = NULL;
+  }
+  if (from.has_geo_center()) {
+    geo_center_ = new ::Proto_msg::Point3(*from.geo_center_);
+  } else {
+    geo_center_ = NULL;
+  }
+  if (from.has_geo_size()) {
+    geo_size_ = new ::Proto_msg::Point3(*from.geo_size_);
+  } else {
+    geo_size_ = NULL;
+  }
+  if (from.has_geo_direction()) {
+    geo_direction_ = new ::Proto_msg::Point3(*from.geo_direction_);
+  } else {
+    geo_direction_ = NULL;
+  }
+  if (from.has_nearest_point()) {
+    nearest_point_ = new ::Proto_msg::Point3(*from.nearest_point_);
+  } else {
+    nearest_point_ = NULL;
+  }
+  if (from.has_left_point()) {
+    left_point_ = new ::Proto_msg::Point3(*from.left_point_);
+  } else {
+    left_point_ = NULL;
+  }
+  if (from.has_right_point()) {
+    right_point_ = new ::Proto_msg::Point3(*from.right_point_);
+  } else {
+    right_point_ = NULL;
+  }
+  if (from.has_velocity()) {
+    velocity_ = new ::Proto_msg::Point3(*from.velocity_);
+  } else {
+    velocity_ = NULL;
+  }
+  if (from.has_ave_velocity()) {
+    ave_velocity_ = new ::Proto_msg::Point3(*from.ave_velocity_);
+  } else {
+    ave_velocity_ = NULL;
+  }
+  if (from.has_acceleration()) {
+    acceleration_ = new ::Proto_msg::Point3(*from.acceleration_);
+  } else {
+    acceleration_ = NULL;
+  }
+  if (from.has_ave_acceleration()) {
+    ave_acceleration_ = new ::Proto_msg::Point3(*from.ave_acceleration_);
+  } else {
+    ave_acceleration_ = NULL;
+  }
+  ::memcpy(&timestamp_, &from.timestamp_,
+    static_cast<size_t>(reinterpret_cast<char*>(&tracker_quality_) -
+    reinterpret_cast<char*>(&timestamp_)) + sizeof(tracker_quality_));
   // @@protoc_insertion_point(copy_constructor:Proto_msg.Obstacle)
 }
 
 void Obstacle::SharedCtor() {
   _cached_size_ = 0;
-  timestamp_ = 0;
-  device_code_ = 0u;
-  id_ = 0;
-  anchor_ = NULL;
-  geo_center_ = NULL;
-  geo_size_ = NULL;
-  geo_direction_ = NULL;
-  detect_confidence_ = 0;
-  nearest_point_ = NULL;
-  left_point_ = NULL;
-  right_point_ = NULL;
-  distance_ = 0;
-  yaw_ = 0;
-  point_num_ = 0;
-  type_ = 0;
-  type_confidence_ = 0;
-  motion_state_ = 0;
-  is_track_converged_ = false;
-  tracker_id_ = 0;
-  velocity_ = NULL;
-  velocity_uncertainty_ = 0;
-  ave_velocity_ = NULL;
-  acceleration_ = NULL;
-  acceleration_uncertainty_ = 0;
-  ave_acceleration_ = NULL;
-  angle_velocity_ = 0;
-  angle_velocity_cov_ = 0;
-  angle_velocity_uncertainty_ = 0;
-  ave_angle_velocity_ = 0;
-  asso_quality_ = 0;
-  tracker_quality_ = 0;
-  tracking_time_ = 0;
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  ::memset(&anchor_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&tracker_quality_) -
+      reinterpret_cast<char*>(&anchor_)) + sizeof(tracker_quality_));
 }
 
 Obstacle::~Obstacle() {
@@ -1137,19 +1457,17 @@ Obstacle::~Obstacle() {
 }
 
 void Obstacle::SharedDtor() {
-  if (this != default_instance_) {
-    delete anchor_;
-    delete geo_center_;
-    delete geo_size_;
-    delete geo_direction_;
-    delete nearest_point_;
-    delete left_point_;
-    delete right_point_;
-    delete velocity_;
-    delete ave_velocity_;
-    delete acceleration_;
-    delete ave_acceleration_;
-  }
+  if (this != internal_default_instance()) delete anchor_;
+  if (this != internal_default_instance()) delete geo_center_;
+  if (this != internal_default_instance()) delete geo_size_;
+  if (this != internal_default_instance()) delete geo_direction_;
+  if (this != internal_default_instance()) delete nearest_point_;
+  if (this != internal_default_instance()) delete left_point_;
+  if (this != internal_default_instance()) delete right_point_;
+  if (this != internal_default_instance()) delete velocity_;
+  if (this != internal_default_instance()) delete ave_velocity_;
+  if (this != internal_default_instance()) delete acceleration_;
+  if (this != internal_default_instance()) delete ave_acceleration_;
 }
 
 void Obstacle::SetCachedSize(int size) const {
@@ -1158,316 +1476,309 @@ void Obstacle::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* Obstacle::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return Obstacle_descriptor_;
+  protobuf_Proto_5fmsg_2ePercept_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2ePercept_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const Obstacle& Obstacle::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_Proto_5fmsg_2ePercept_2eproto();
-  return *default_instance_;
+  protobuf_Proto_5fmsg_2ePercept_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
 
-Obstacle* Obstacle::default_instance_ = NULL;
-
-Obstacle* Obstacle::New() const {
-  return new Obstacle;
+Obstacle* Obstacle::New(::google::protobuf::Arena* arena) const {
+  Obstacle* n = new Obstacle;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
 }
 
 void Obstacle::Clear() {
-#define OFFSET_OF_FIELD_(f) (reinterpret_cast<char*>(      \
-  &reinterpret_cast<Obstacle*>(16)->f) - \
-   reinterpret_cast<char*>(16))
-
-#define ZR_(first, last) do {                              \
-    size_t f = OFFSET_OF_FIELD_(first);                    \
-    size_t n = OFFSET_OF_FIELD_(last) - f + sizeof(last);  \
-    ::memset(&first, 0, n);                                \
-  } while (0)
-
-  if (_has_bits_[0 / 32] & 127) {
-    ZR_(timestamp_, id_);
-    if (has_anchor()) {
-      if (anchor_ != NULL) anchor_->::Proto_msg::Point3::Clear();
-    }
-    if (has_geo_center()) {
-      if (geo_center_ != NULL) geo_center_->::Proto_msg::Point3::Clear();
-    }
-    if (has_geo_size()) {
-      if (geo_size_ != NULL) geo_size_->::Proto_msg::Point3::Clear();
-    }
-    if (has_geo_direction()) {
-      if (geo_direction_ != NULL) geo_direction_->::Proto_msg::Point3::Clear();
-    }
-  }
-  if (_has_bits_[8 / 32] & 65280) {
-    ZR_(detect_confidence_, distance_);
-    ZR_(yaw_, type_);
-    if (has_nearest_point()) {
-      if (nearest_point_ != NULL) nearest_point_->::Proto_msg::Point3::Clear();
-    }
-    if (has_left_point()) {
-      if (left_point_ != NULL) left_point_->::Proto_msg::Point3::Clear();
-    }
-    if (has_right_point()) {
-      if (right_point_ != NULL) right_point_->::Proto_msg::Point3::Clear();
-    }
-  }
-  if (_has_bits_[16 / 32] & 12386304) {
-    ZR_(motion_state_, is_track_converged_);
-    ZR_(tracker_id_, velocity_uncertainty_);
-    type_confidence_ = 0;
-    if (has_velocity()) {
-      if (velocity_ != NULL) velocity_->::Proto_msg::Point3::Clear();
-    }
-  }
-  if (_has_bits_[24 / 32] & 4211081216) {
-    ZR_(acceleration_uncertainty_, angle_velocity_uncertainty_);
-    if (has_ave_velocity()) {
-      if (ave_velocity_ != NULL) ave_velocity_->::Proto_msg::Point3::Clear();
-    }
-    if (has_acceleration()) {
-      if (acceleration_ != NULL) acceleration_->::Proto_msg::Point3::Clear();
-    }
-    if (has_ave_acceleration()) {
-      if (ave_acceleration_ != NULL) ave_acceleration_->::Proto_msg::Point3::Clear();
-    }
-  }
-  ZR_(ave_angle_velocity_, tracker_quality_);
-
-#undef OFFSET_OF_FIELD_
-#undef ZR_
+// @@protoc_insertion_point(message_clear_start:Proto_msg.Obstacle)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   polygon_.Clear();
   latent_types_.Clear();
   velocity_cov_.Clear();
   acceleration_cov_.Clear();
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 255u) {
+    if (cached_has_bits & 0x00000001u) {
+      GOOGLE_DCHECK(anchor_ != NULL);
+      anchor_->::Proto_msg::Point3::Clear();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(geo_center_ != NULL);
+      geo_center_->::Proto_msg::Point3::Clear();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      GOOGLE_DCHECK(geo_size_ != NULL);
+      geo_size_->::Proto_msg::Point3::Clear();
+    }
+    if (cached_has_bits & 0x00000008u) {
+      GOOGLE_DCHECK(geo_direction_ != NULL);
+      geo_direction_->::Proto_msg::Point3::Clear();
+    }
+    if (cached_has_bits & 0x00000010u) {
+      GOOGLE_DCHECK(nearest_point_ != NULL);
+      nearest_point_->::Proto_msg::Point3::Clear();
+    }
+    if (cached_has_bits & 0x00000020u) {
+      GOOGLE_DCHECK(left_point_ != NULL);
+      left_point_->::Proto_msg::Point3::Clear();
+    }
+    if (cached_has_bits & 0x00000040u) {
+      GOOGLE_DCHECK(right_point_ != NULL);
+      right_point_->::Proto_msg::Point3::Clear();
+    }
+    if (cached_has_bits & 0x00000080u) {
+      GOOGLE_DCHECK(velocity_ != NULL);
+      velocity_->::Proto_msg::Point3::Clear();
+    }
+  }
+  if (cached_has_bits & 1792u) {
+    if (cached_has_bits & 0x00000100u) {
+      GOOGLE_DCHECK(ave_velocity_ != NULL);
+      ave_velocity_->::Proto_msg::Point3::Clear();
+    }
+    if (cached_has_bits & 0x00000200u) {
+      GOOGLE_DCHECK(acceleration_ != NULL);
+      acceleration_->::Proto_msg::Point3::Clear();
+    }
+    if (cached_has_bits & 0x00000400u) {
+      GOOGLE_DCHECK(ave_acceleration_ != NULL);
+      ave_acceleration_->::Proto_msg::Point3::Clear();
+    }
+  }
+  if (cached_has_bits & 63488u) {
+    ::memset(&timestamp_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&distance_) -
+        reinterpret_cast<char*>(&timestamp_)) + sizeof(distance_));
+  }
+  if (cached_has_bits & 16711680u) {
+    ::memset(&yaw_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&velocity_uncertainty_) -
+        reinterpret_cast<char*>(&yaw_)) + sizeof(velocity_uncertainty_));
+  }
+  if (cached_has_bits & 4278190080u) {
+    ::memset(&acceleration_uncertainty_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&tracker_quality_) -
+        reinterpret_cast<char*>(&acceleration_uncertainty_)) + sizeof(tracker_quality_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
 }
 
 bool Obstacle::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:Proto_msg.Obstacle)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(16383);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // optional double timestamp = 1;
       case 1: {
-        if (tag == 9) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
+          set_has_timestamp();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, &timestamp_)));
-          set_has_timestamp();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(16)) goto parse_device_code;
         break;
       }
 
       // optional uint32 device_code = 2;
       case 2: {
-        if (tag == 16) {
-         parse_device_code:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+          set_has_device_code();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  input, &device_code_)));
-          set_has_device_code();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(24)) goto parse_id;
         break;
       }
 
       // optional int32 id = 3;
       case 3: {
-        if (tag == 24) {
-         parse_id:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
+          set_has_id();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &id_)));
-          set_has_id();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(34)) goto parse_anchor;
         break;
       }
 
       // optional .Proto_msg.Point3 anchor = 4;
       case 4: {
-        if (tag == 34) {
-         parse_anchor:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_anchor()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(42)) goto parse_geo_center;
         break;
       }
 
       // optional .Proto_msg.Point3 geo_center = 5;
       case 5: {
-        if (tag == 42) {
-         parse_geo_center:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_geo_center()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(50)) goto parse_geo_size;
         break;
       }
 
       // optional .Proto_msg.Point3 geo_size = 6;
       case 6: {
-        if (tag == 50) {
-         parse_geo_size:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_geo_size()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(58)) goto parse_geo_direction;
         break;
       }
 
       // optional .Proto_msg.Point3 geo_direction = 7;
       case 7: {
-        if (tag == 58) {
-         parse_geo_direction:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_geo_direction()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(66)) goto parse_polygon;
         break;
       }
 
       // repeated .Proto_msg.Point3 polygon = 8;
       case 8: {
-        if (tag == 66) {
-         parse_polygon:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(66u /* 66 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_polygon()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(66)) goto parse_polygon;
-        if (input->ExpectTag(77)) goto parse_detect_confidence;
         break;
       }
 
       // optional float detect_confidence = 9;
       case 9: {
-        if (tag == 77) {
-         parse_detect_confidence:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(77u /* 77 & 0xFF */)) {
+          set_has_detect_confidence();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &detect_confidence_)));
-          set_has_detect_confidence();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(82)) goto parse_nearest_point;
         break;
       }
 
       // optional .Proto_msg.Point3 nearest_point = 10;
       case 10: {
-        if (tag == 82) {
-         parse_nearest_point:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(82u /* 82 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_nearest_point()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(90)) goto parse_left_point;
         break;
       }
 
       // optional .Proto_msg.Point3 left_point = 11;
       case 11: {
-        if (tag == 90) {
-         parse_left_point:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(90u /* 90 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_left_point()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(98)) goto parse_right_point;
         break;
       }
 
       // optional .Proto_msg.Point3 right_point = 12;
       case 12: {
-        if (tag == 98) {
-         parse_right_point:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(98u /* 98 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_right_point()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(109)) goto parse_distance;
         break;
       }
 
       // optional float distance = 13;
       case 13: {
-        if (tag == 109) {
-         parse_distance:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(109u /* 109 & 0xFF */)) {
+          set_has_distance();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &distance_)));
-          set_has_distance();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(117)) goto parse_yaw;
         break;
       }
 
       // optional float yaw = 14;
       case 14: {
-        if (tag == 117) {
-         parse_yaw:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(117u /* 117 & 0xFF */)) {
+          set_has_yaw();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &yaw_)));
-          set_has_yaw();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(120)) goto parse_point_num;
         break;
       }
 
       // optional int32 point_num = 15;
       case 15: {
-        if (tag == 120) {
-         parse_point_num:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(120u /* 120 & 0xFF */)) {
+          set_has_point_num();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &point_num_)));
-          set_has_point_num();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(128)) goto parse_type;
         break;
       }
 
       // optional .Proto_msg.Obstacle.Type type = 16;
       case 16: {
-        if (tag == 128) {
-         parse_type:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(128u /* 128 & 0xFF */)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -1475,53 +1786,52 @@ bool Obstacle::MergePartialFromCodedStream(
           if (::Proto_msg::Obstacle_Type_IsValid(value)) {
             set_type(static_cast< ::Proto_msg::Obstacle_Type >(value));
           } else {
-            mutable_unknown_fields()->AddVarint(16, value);
+            mutable_unknown_fields()->AddVarint(
+                16, static_cast< ::google::protobuf::uint64>(value));
           }
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(141)) goto parse_type_confidence;
         break;
       }
 
       // optional float type_confidence = 17;
       case 17: {
-        if (tag == 141) {
-         parse_type_confidence:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(141u /* 141 & 0xFF */)) {
+          set_has_type_confidence();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &type_confidence_)));
-          set_has_type_confidence();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(149)) goto parse_latent_types;
         break;
       }
 
       // repeated float latent_types = 18;
       case 18: {
-        if (tag == 149) {
-         parse_latent_types:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(149u /* 149 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 2, 149, input, this->mutable_latent_types())));
-        } else if (tag == 146) {
+                 2, 149u, input, this->mutable_latent_types())));
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(146u /* 146 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, this->mutable_latent_types())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(149)) goto parse_latent_types;
-        if (input->ExpectTag(152)) goto parse_motion_state;
         break;
       }
 
       // optional .Proto_msg.Obstacle.MotionType motion_state = 19;
       case 19: {
-        if (tag == 152) {
-         parse_motion_state:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(152u /* 152 & 0xFF */)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -1529,279 +1839,262 @@ bool Obstacle::MergePartialFromCodedStream(
           if (::Proto_msg::Obstacle_MotionType_IsValid(value)) {
             set_motion_state(static_cast< ::Proto_msg::Obstacle_MotionType >(value));
           } else {
-            mutable_unknown_fields()->AddVarint(19, value);
+            mutable_unknown_fields()->AddVarint(
+                19, static_cast< ::google::protobuf::uint64>(value));
           }
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(160)) goto parse_is_track_converged;
         break;
       }
 
       // optional bool is_track_converged = 20;
       case 20: {
-        if (tag == 160) {
-         parse_is_track_converged:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(160u /* 160 & 0xFF */)) {
+          set_has_is_track_converged();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
                  input, &is_track_converged_)));
-          set_has_is_track_converged();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(168)) goto parse_tracker_id;
         break;
       }
 
       // optional int32 tracker_id = 21;
       case 21: {
-        if (tag == 168) {
-         parse_tracker_id:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(168u /* 168 & 0xFF */)) {
+          set_has_tracker_id();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &tracker_id_)));
-          set_has_tracker_id();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(178)) goto parse_velocity;
         break;
       }
 
       // optional .Proto_msg.Point3 velocity = 22;
       case 22: {
-        if (tag == 178) {
-         parse_velocity:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(178u /* 178 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_velocity()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(189)) goto parse_velocity_cov;
         break;
       }
 
       // repeated float velocity_cov = 23;
       case 23: {
-        if (tag == 189) {
-         parse_velocity_cov:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(189u /* 189 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 2, 189, input, this->mutable_velocity_cov())));
-        } else if (tag == 186) {
+                 2, 189u, input, this->mutable_velocity_cov())));
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(186u /* 186 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, this->mutable_velocity_cov())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(189)) goto parse_velocity_cov;
-        if (input->ExpectTag(197)) goto parse_velocity_uncertainty;
         break;
       }
 
       // optional float velocity_uncertainty = 24;
       case 24: {
-        if (tag == 197) {
-         parse_velocity_uncertainty:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(197u /* 197 & 0xFF */)) {
+          set_has_velocity_uncertainty();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &velocity_uncertainty_)));
-          set_has_velocity_uncertainty();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(202)) goto parse_ave_velocity;
         break;
       }
 
       // optional .Proto_msg.Point3 ave_velocity = 25;
       case 25: {
-        if (tag == 202) {
-         parse_ave_velocity:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(202u /* 202 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_ave_velocity()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(210)) goto parse_acceleration;
         break;
       }
 
       // optional .Proto_msg.Point3 acceleration = 26;
       case 26: {
-        if (tag == 210) {
-         parse_acceleration:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(210u /* 210 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_acceleration()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(221)) goto parse_acceleration_cov;
         break;
       }
 
       // repeated float acceleration_cov = 27;
       case 27: {
-        if (tag == 221) {
-         parse_acceleration_cov:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(221u /* 221 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 2, 221, input, this->mutable_acceleration_cov())));
-        } else if (tag == 218) {
+                 2, 221u, input, this->mutable_acceleration_cov())));
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(218u /* 218 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, this->mutable_acceleration_cov())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(221)) goto parse_acceleration_cov;
-        if (input->ExpectTag(229)) goto parse_acceleration_uncertainty;
         break;
       }
 
       // optional float acceleration_uncertainty = 28;
       case 28: {
-        if (tag == 229) {
-         parse_acceleration_uncertainty:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(229u /* 229 & 0xFF */)) {
+          set_has_acceleration_uncertainty();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &acceleration_uncertainty_)));
-          set_has_acceleration_uncertainty();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(234)) goto parse_ave_acceleration;
         break;
       }
 
       // optional .Proto_msg.Point3 ave_acceleration = 29;
       case 29: {
-        if (tag == 234) {
-         parse_ave_acceleration:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(234u /* 234 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_ave_acceleration()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(245)) goto parse_angle_velocity;
         break;
       }
 
       // optional float angle_velocity = 30;
       case 30: {
-        if (tag == 245) {
-         parse_angle_velocity:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(245u /* 245 & 0xFF */)) {
+          set_has_angle_velocity();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &angle_velocity_)));
-          set_has_angle_velocity();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(253)) goto parse_angle_velocity_cov;
         break;
       }
 
       // optional float angle_velocity_cov = 31;
       case 31: {
-        if (tag == 253) {
-         parse_angle_velocity_cov:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(253u /* 253 & 0xFF */)) {
+          set_has_angle_velocity_cov();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &angle_velocity_cov_)));
-          set_has_angle_velocity_cov();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(261)) goto parse_angle_velocity_uncertainty;
         break;
       }
 
       // optional float angle_velocity_uncertainty = 32;
       case 32: {
-        if (tag == 261) {
-         parse_angle_velocity_uncertainty:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(5u /* 261 & 0xFF */)) {
+          set_has_angle_velocity_uncertainty();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &angle_velocity_uncertainty_)));
-          set_has_angle_velocity_uncertainty();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(269)) goto parse_ave_angle_velocity;
         break;
       }
 
       // optional float ave_angle_velocity = 33;
       case 33: {
-        if (tag == 269) {
-         parse_ave_angle_velocity:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(13u /* 269 & 0xFF */)) {
+          set_has_ave_angle_velocity();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &ave_angle_velocity_)));
-          set_has_ave_angle_velocity();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(277)) goto parse_asso_quality;
         break;
       }
 
       // optional float asso_quality = 34;
       case 34: {
-        if (tag == 277) {
-         parse_asso_quality:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(21u /* 277 & 0xFF */)) {
+          set_has_asso_quality();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &asso_quality_)));
-          set_has_asso_quality();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(285)) goto parse_tracker_quality;
         break;
       }
 
       // optional float tracker_quality = 35;
       case 35: {
-        if (tag == 285) {
-         parse_tracker_quality:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(29u /* 285 & 0xFF */)) {
+          set_has_tracker_quality();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &tracker_quality_)));
-          set_has_tracker_quality();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(289)) goto parse_tracking_time;
         break;
       }
 
       // optional double tracking_time = 36;
       case 36: {
-        if (tag == 289) {
-         parse_tracking_time:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(33u /* 289 & 0xFF */)) {
+          set_has_tracking_time();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, &tracking_time_)));
-          set_has_tracking_time();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -1818,434 +2111,562 @@ failure:
 void Obstacle::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:Proto_msg.Obstacle)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional double timestamp = 1;
-  if (has_timestamp()) {
+  if (cached_has_bits & 0x00000800u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->timestamp(), output);
   }
 
   // optional uint32 device_code = 2;
-  if (has_device_code()) {
+  if (cached_has_bits & 0x00001000u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->device_code(), output);
   }
 
   // optional int32 id = 3;
-  if (has_id()) {
+  if (cached_has_bits & 0x00002000u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->id(), output);
   }
 
   // optional .Proto_msg.Point3 anchor = 4;
-  if (has_anchor()) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, this->anchor(), output);
+      4, *this->anchor_, output);
   }
 
   // optional .Proto_msg.Point3 geo_center = 5;
-  if (has_geo_center()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, this->geo_center(), output);
+      5, *this->geo_center_, output);
   }
 
   // optional .Proto_msg.Point3 geo_size = 6;
-  if (has_geo_size()) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, this->geo_size(), output);
+      6, *this->geo_size_, output);
   }
 
   // optional .Proto_msg.Point3 geo_direction = 7;
-  if (has_geo_direction()) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7, this->geo_direction(), output);
+      7, *this->geo_direction_, output);
   }
 
   // repeated .Proto_msg.Point3 polygon = 8;
-  for (int i = 0; i < this->polygon_size(); i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->polygon_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      8, this->polygon(i), output);
+      8, this->polygon(static_cast<int>(i)), output);
   }
 
   // optional float detect_confidence = 9;
-  if (has_detect_confidence()) {
+  if (cached_has_bits & 0x00004000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(9, this->detect_confidence(), output);
   }
 
   // optional .Proto_msg.Point3 nearest_point = 10;
-  if (has_nearest_point()) {
+  if (cached_has_bits & 0x00000010u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      10, this->nearest_point(), output);
+      10, *this->nearest_point_, output);
   }
 
   // optional .Proto_msg.Point3 left_point = 11;
-  if (has_left_point()) {
+  if (cached_has_bits & 0x00000020u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      11, this->left_point(), output);
+      11, *this->left_point_, output);
   }
 
   // optional .Proto_msg.Point3 right_point = 12;
-  if (has_right_point()) {
+  if (cached_has_bits & 0x00000040u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      12, this->right_point(), output);
+      12, *this->right_point_, output);
   }
 
   // optional float distance = 13;
-  if (has_distance()) {
+  if (cached_has_bits & 0x00008000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(13, this->distance(), output);
   }
 
   // optional float yaw = 14;
-  if (has_yaw()) {
+  if (cached_has_bits & 0x00010000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(14, this->yaw(), output);
   }
 
   // optional int32 point_num = 15;
-  if (has_point_num()) {
+  if (cached_has_bits & 0x00020000u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(15, this->point_num(), output);
   }
 
   // optional .Proto_msg.Obstacle.Type type = 16;
-  if (has_type()) {
+  if (cached_has_bits & 0x00040000u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       16, this->type(), output);
   }
 
   // optional float type_confidence = 17;
-  if (has_type_confidence()) {
+  if (cached_has_bits & 0x00080000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(17, this->type_confidence(), output);
   }
 
   // repeated float latent_types = 18;
-  for (int i = 0; i < this->latent_types_size(); i++) {
+  for (int i = 0, n = this->latent_types_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(
       18, this->latent_types(i), output);
   }
 
   // optional .Proto_msg.Obstacle.MotionType motion_state = 19;
-  if (has_motion_state()) {
+  if (cached_has_bits & 0x00100000u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       19, this->motion_state(), output);
   }
 
   // optional bool is_track_converged = 20;
-  if (has_is_track_converged()) {
+  if (cached_has_bits & 0x00200000u) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(20, this->is_track_converged(), output);
   }
 
   // optional int32 tracker_id = 21;
-  if (has_tracker_id()) {
+  if (cached_has_bits & 0x00400000u) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(21, this->tracker_id(), output);
   }
 
   // optional .Proto_msg.Point3 velocity = 22;
-  if (has_velocity()) {
+  if (cached_has_bits & 0x00000080u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      22, this->velocity(), output);
+      22, *this->velocity_, output);
   }
 
   // repeated float velocity_cov = 23;
-  for (int i = 0; i < this->velocity_cov_size(); i++) {
+  for (int i = 0, n = this->velocity_cov_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(
       23, this->velocity_cov(i), output);
   }
 
   // optional float velocity_uncertainty = 24;
-  if (has_velocity_uncertainty()) {
+  if (cached_has_bits & 0x00800000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(24, this->velocity_uncertainty(), output);
   }
 
   // optional .Proto_msg.Point3 ave_velocity = 25;
-  if (has_ave_velocity()) {
+  if (cached_has_bits & 0x00000100u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      25, this->ave_velocity(), output);
+      25, *this->ave_velocity_, output);
   }
 
   // optional .Proto_msg.Point3 acceleration = 26;
-  if (has_acceleration()) {
+  if (cached_has_bits & 0x00000200u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      26, this->acceleration(), output);
+      26, *this->acceleration_, output);
   }
 
   // repeated float acceleration_cov = 27;
-  for (int i = 0; i < this->acceleration_cov_size(); i++) {
+  for (int i = 0, n = this->acceleration_cov_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(
       27, this->acceleration_cov(i), output);
   }
 
   // optional float acceleration_uncertainty = 28;
-  if (has_acceleration_uncertainty()) {
+  if (cached_has_bits & 0x01000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(28, this->acceleration_uncertainty(), output);
   }
 
   // optional .Proto_msg.Point3 ave_acceleration = 29;
-  if (has_ave_acceleration()) {
+  if (cached_has_bits & 0x00000400u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      29, this->ave_acceleration(), output);
+      29, *this->ave_acceleration_, output);
   }
 
   // optional float angle_velocity = 30;
-  if (has_angle_velocity()) {
+  if (cached_has_bits & 0x02000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(30, this->angle_velocity(), output);
   }
 
   // optional float angle_velocity_cov = 31;
-  if (has_angle_velocity_cov()) {
+  if (cached_has_bits & 0x04000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(31, this->angle_velocity_cov(), output);
   }
 
   // optional float angle_velocity_uncertainty = 32;
-  if (has_angle_velocity_uncertainty()) {
+  if (cached_has_bits & 0x08000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(32, this->angle_velocity_uncertainty(), output);
   }
 
   // optional float ave_angle_velocity = 33;
-  if (has_ave_angle_velocity()) {
+  if (cached_has_bits & 0x10000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(33, this->ave_angle_velocity(), output);
   }
 
   // optional float asso_quality = 34;
-  if (has_asso_quality()) {
+  if (cached_has_bits & 0x20000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(34, this->asso_quality(), output);
   }
 
   // optional float tracker_quality = 35;
-  if (has_tracker_quality()) {
+  if (cached_has_bits & 0x80000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(35, this->tracker_quality(), output);
   }
 
   // optional double tracking_time = 36;
-  if (has_tracking_time()) {
+  if (cached_has_bits & 0x40000000u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(36, this->tracking_time(), output);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:Proto_msg.Obstacle)
 }
 
-::google::protobuf::uint8* Obstacle::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* Obstacle::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:Proto_msg.Obstacle)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional double timestamp = 1;
-  if (has_timestamp()) {
+  if (cached_has_bits & 0x00000800u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->timestamp(), target);
   }
 
   // optional uint32 device_code = 2;
-  if (has_device_code()) {
+  if (cached_has_bits & 0x00001000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->device_code(), target);
   }
 
   // optional int32 id = 3;
-  if (has_id()) {
+  if (cached_has_bits & 0x00002000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->id(), target);
   }
 
   // optional .Proto_msg.Point3 anchor = 4;
-  if (has_anchor()) {
+  if (cached_has_bits & 0x00000001u) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        4, this->anchor(), target);
+      InternalWriteMessageNoVirtualToArray(
+        4, *this->anchor_, deterministic, target);
   }
 
   // optional .Proto_msg.Point3 geo_center = 5;
-  if (has_geo_center()) {
+  if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        5, this->geo_center(), target);
+      InternalWriteMessageNoVirtualToArray(
+        5, *this->geo_center_, deterministic, target);
   }
 
   // optional .Proto_msg.Point3 geo_size = 6;
-  if (has_geo_size()) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        6, this->geo_size(), target);
+      InternalWriteMessageNoVirtualToArray(
+        6, *this->geo_size_, deterministic, target);
   }
 
   // optional .Proto_msg.Point3 geo_direction = 7;
-  if (has_geo_direction()) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        7, this->geo_direction(), target);
+      InternalWriteMessageNoVirtualToArray(
+        7, *this->geo_direction_, deterministic, target);
   }
 
   // repeated .Proto_msg.Point3 polygon = 8;
-  for (int i = 0; i < this->polygon_size(); i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->polygon_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        8, this->polygon(i), target);
+      InternalWriteMessageNoVirtualToArray(
+        8, this->polygon(static_cast<int>(i)), deterministic, target);
   }
 
   // optional float detect_confidence = 9;
-  if (has_detect_confidence()) {
+  if (cached_has_bits & 0x00004000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(9, this->detect_confidence(), target);
   }
 
   // optional .Proto_msg.Point3 nearest_point = 10;
-  if (has_nearest_point()) {
+  if (cached_has_bits & 0x00000010u) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        10, this->nearest_point(), target);
+      InternalWriteMessageNoVirtualToArray(
+        10, *this->nearest_point_, deterministic, target);
   }
 
   // optional .Proto_msg.Point3 left_point = 11;
-  if (has_left_point()) {
+  if (cached_has_bits & 0x00000020u) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        11, this->left_point(), target);
+      InternalWriteMessageNoVirtualToArray(
+        11, *this->left_point_, deterministic, target);
   }
 
   // optional .Proto_msg.Point3 right_point = 12;
-  if (has_right_point()) {
+  if (cached_has_bits & 0x00000040u) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        12, this->right_point(), target);
+      InternalWriteMessageNoVirtualToArray(
+        12, *this->right_point_, deterministic, target);
   }
 
   // optional float distance = 13;
-  if (has_distance()) {
+  if (cached_has_bits & 0x00008000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(13, this->distance(), target);
   }
 
   // optional float yaw = 14;
-  if (has_yaw()) {
+  if (cached_has_bits & 0x00010000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(14, this->yaw(), target);
   }
 
   // optional int32 point_num = 15;
-  if (has_point_num()) {
+  if (cached_has_bits & 0x00020000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(15, this->point_num(), target);
   }
 
   // optional .Proto_msg.Obstacle.Type type = 16;
-  if (has_type()) {
+  if (cached_has_bits & 0x00040000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       16, this->type(), target);
   }
 
   // optional float type_confidence = 17;
-  if (has_type_confidence()) {
+  if (cached_has_bits & 0x00080000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(17, this->type_confidence(), target);
   }
 
   // repeated float latent_types = 18;
-  for (int i = 0; i < this->latent_types_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteFloatToArray(18, this->latent_types(i), target);
-  }
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteFloatToArray(18, this->latent_types_, target);
 
   // optional .Proto_msg.Obstacle.MotionType motion_state = 19;
-  if (has_motion_state()) {
+  if (cached_has_bits & 0x00100000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       19, this->motion_state(), target);
   }
 
   // optional bool is_track_converged = 20;
-  if (has_is_track_converged()) {
+  if (cached_has_bits & 0x00200000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(20, this->is_track_converged(), target);
   }
 
   // optional int32 tracker_id = 21;
-  if (has_tracker_id()) {
+  if (cached_has_bits & 0x00400000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(21, this->tracker_id(), target);
   }
 
   // optional .Proto_msg.Point3 velocity = 22;
-  if (has_velocity()) {
+  if (cached_has_bits & 0x00000080u) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        22, this->velocity(), target);
+      InternalWriteMessageNoVirtualToArray(
+        22, *this->velocity_, deterministic, target);
   }
 
   // repeated float velocity_cov = 23;
-  for (int i = 0; i < this->velocity_cov_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteFloatToArray(23, this->velocity_cov(i), target);
-  }
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteFloatToArray(23, this->velocity_cov_, target);
 
   // optional float velocity_uncertainty = 24;
-  if (has_velocity_uncertainty()) {
+  if (cached_has_bits & 0x00800000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(24, this->velocity_uncertainty(), target);
   }
 
   // optional .Proto_msg.Point3 ave_velocity = 25;
-  if (has_ave_velocity()) {
+  if (cached_has_bits & 0x00000100u) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        25, this->ave_velocity(), target);
+      InternalWriteMessageNoVirtualToArray(
+        25, *this->ave_velocity_, deterministic, target);
   }
 
   // optional .Proto_msg.Point3 acceleration = 26;
-  if (has_acceleration()) {
+  if (cached_has_bits & 0x00000200u) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        26, this->acceleration(), target);
+      InternalWriteMessageNoVirtualToArray(
+        26, *this->acceleration_, deterministic, target);
   }
 
   // repeated float acceleration_cov = 27;
-  for (int i = 0; i < this->acceleration_cov_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteFloatToArray(27, this->acceleration_cov(i), target);
-  }
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteFloatToArray(27, this->acceleration_cov_, target);
 
   // optional float acceleration_uncertainty = 28;
-  if (has_acceleration_uncertainty()) {
+  if (cached_has_bits & 0x01000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(28, this->acceleration_uncertainty(), target);
   }
 
   // optional .Proto_msg.Point3 ave_acceleration = 29;
-  if (has_ave_acceleration()) {
+  if (cached_has_bits & 0x00000400u) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        29, this->ave_acceleration(), target);
+      InternalWriteMessageNoVirtualToArray(
+        29, *this->ave_acceleration_, deterministic, target);
   }
 
   // optional float angle_velocity = 30;
-  if (has_angle_velocity()) {
+  if (cached_has_bits & 0x02000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(30, this->angle_velocity(), target);
   }
 
   // optional float angle_velocity_cov = 31;
-  if (has_angle_velocity_cov()) {
+  if (cached_has_bits & 0x04000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(31, this->angle_velocity_cov(), target);
   }
 
   // optional float angle_velocity_uncertainty = 32;
-  if (has_angle_velocity_uncertainty()) {
+  if (cached_has_bits & 0x08000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(32, this->angle_velocity_uncertainty(), target);
   }
 
   // optional float ave_angle_velocity = 33;
-  if (has_ave_angle_velocity()) {
+  if (cached_has_bits & 0x10000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(33, this->ave_angle_velocity(), target);
   }
 
   // optional float asso_quality = 34;
-  if (has_asso_quality()) {
+  if (cached_has_bits & 0x20000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(34, this->asso_quality(), target);
   }
 
   // optional float tracker_quality = 35;
-  if (has_tracker_quality()) {
+  if (cached_has_bits & 0x80000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(35, this->tracker_quality(), target);
   }
 
   // optional double tracking_time = 36;
-  if (has_tracking_time()) {
+  if (cached_has_bits & 0x40000000u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(36, this->tracking_time(), target);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Proto_msg.Obstacle)
   return target;
 }
 
-int Obstacle::ByteSize() const {
-  int total_size = 0;
+size_t Obstacle::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Proto_msg.Obstacle)
+  size_t total_size = 0;
 
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  // repeated .Proto_msg.Point3 polygon = 8;
+  {
+    unsigned int count = static_cast<unsigned int>(this->polygon_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->polygon(static_cast<int>(i)));
+    }
+  }
+
+  // repeated float latent_types = 18;
+  {
+    unsigned int count = static_cast<unsigned int>(this->latent_types_size());
+    size_t data_size = 4UL * count;
+    total_size += 2 *
+                  ::google::protobuf::internal::FromIntSize(this->latent_types_size());
+    total_size += data_size;
+  }
+
+  // repeated float velocity_cov = 23;
+  {
+    unsigned int count = static_cast<unsigned int>(this->velocity_cov_size());
+    size_t data_size = 4UL * count;
+    total_size += 2 *
+                  ::google::protobuf::internal::FromIntSize(this->velocity_cov_size());
+    total_size += data_size;
+  }
+
+  // repeated float acceleration_cov = 27;
+  {
+    unsigned int count = static_cast<unsigned int>(this->acceleration_cov_size());
+    size_t data_size = 4UL * count;
+    total_size += 2 *
+                  ::google::protobuf::internal::FromIntSize(this->acceleration_cov_size());
+    total_size += data_size;
+  }
+
+  if (_has_bits_[0 / 32] & 255u) {
+    // optional .Proto_msg.Point3 anchor = 4;
+    if (has_anchor()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          *this->anchor_);
+    }
+
+    // optional .Proto_msg.Point3 geo_center = 5;
+    if (has_geo_center()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          *this->geo_center_);
+    }
+
+    // optional .Proto_msg.Point3 geo_size = 6;
+    if (has_geo_size()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          *this->geo_size_);
+    }
+
+    // optional .Proto_msg.Point3 geo_direction = 7;
+    if (has_geo_direction()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          *this->geo_direction_);
+    }
+
+    // optional .Proto_msg.Point3 nearest_point = 10;
+    if (has_nearest_point()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          *this->nearest_point_);
+    }
+
+    // optional .Proto_msg.Point3 left_point = 11;
+    if (has_left_point()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          *this->left_point_);
+    }
+
+    // optional .Proto_msg.Point3 right_point = 12;
+    if (has_right_point()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          *this->right_point_);
+    }
+
+    // optional .Proto_msg.Point3 velocity = 22;
+    if (has_velocity()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          *this->velocity_);
+    }
+
+  }
+  if (_has_bits_[8 / 32] & 65280u) {
+    // optional .Proto_msg.Point3 ave_velocity = 25;
+    if (has_ave_velocity()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          *this->ave_velocity_);
+    }
+
+    // optional .Proto_msg.Point3 acceleration = 26;
+    if (has_acceleration()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          *this->acceleration_);
+    }
+
+    // optional .Proto_msg.Point3 ave_acceleration = 29;
+    if (has_ave_acceleration()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          *this->ave_acceleration_);
+    }
+
     // optional double timestamp = 1;
     if (has_timestamp()) {
       total_size += 1 + 8;
@@ -2265,60 +2686,9 @@ int Obstacle::ByteSize() const {
           this->id());
     }
 
-    // optional .Proto_msg.Point3 anchor = 4;
-    if (has_anchor()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->anchor());
-    }
-
-    // optional .Proto_msg.Point3 geo_center = 5;
-    if (has_geo_center()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->geo_center());
-    }
-
-    // optional .Proto_msg.Point3 geo_size = 6;
-    if (has_geo_size()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->geo_size());
-    }
-
-    // optional .Proto_msg.Point3 geo_direction = 7;
-    if (has_geo_direction()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->geo_direction());
-    }
-
-  }
-  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
     // optional float detect_confidence = 9;
     if (has_detect_confidence()) {
       total_size += 1 + 4;
-    }
-
-    // optional .Proto_msg.Point3 nearest_point = 10;
-    if (has_nearest_point()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->nearest_point());
-    }
-
-    // optional .Proto_msg.Point3 left_point = 11;
-    if (has_left_point()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->left_point());
-    }
-
-    // optional .Proto_msg.Point3 right_point = 12;
-    if (has_right_point()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->right_point());
     }
 
     // optional float distance = 13;
@@ -2326,6 +2696,8 @@ int Obstacle::ByteSize() const {
       total_size += 1 + 4;
     }
 
+  }
+  if (_has_bits_[16 / 32] & 16711680u) {
     // optional float yaw = 14;
     if (has_yaw()) {
       total_size += 1 + 4;
@@ -2344,8 +2716,6 @@ int Obstacle::ByteSize() const {
         ::google::protobuf::internal::WireFormatLite::EnumSize(this->type());
     }
 
-  }
-  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     // optional float type_confidence = 17;
     if (has_type_confidence()) {
       total_size += 2 + 4;
@@ -2369,44 +2739,16 @@ int Obstacle::ByteSize() const {
           this->tracker_id());
     }
 
-    // optional .Proto_msg.Point3 velocity = 22;
-    if (has_velocity()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->velocity());
-    }
-
     // optional float velocity_uncertainty = 24;
     if (has_velocity_uncertainty()) {
       total_size += 2 + 4;
     }
 
   }
-  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
-    // optional .Proto_msg.Point3 ave_velocity = 25;
-    if (has_ave_velocity()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->ave_velocity());
-    }
-
-    // optional .Proto_msg.Point3 acceleration = 26;
-    if (has_acceleration()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->acceleration());
-    }
-
+  if (_has_bits_[24 / 32] & 4278190080u) {
     // optional float acceleration_uncertainty = 28;
     if (has_acceleration_uncertainty()) {
       total_size += 2 + 4;
-    }
-
-    // optional .Proto_msg.Point3 ave_acceleration = 29;
-    if (has_ave_acceleration()) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->ave_acceleration());
     }
 
     // optional float angle_velocity = 30;
@@ -2424,8 +2766,6 @@ int Obstacle::ByteSize() const {
       total_size += 2 + 4;
     }
 
-  }
-  if (_has_bits_[32 / 32] & (0xffu << (32 % 32))) {
     // optional float ave_angle_velocity = 33;
     if (has_ave_angle_velocity()) {
       total_size += 2 + 4;
@@ -2436,289 +2776,1413 @@ int Obstacle::ByteSize() const {
       total_size += 2 + 4;
     }
 
-    // optional float tracker_quality = 35;
-    if (has_tracker_quality()) {
-      total_size += 2 + 4;
-    }
-
     // optional double tracking_time = 36;
     if (has_tracking_time()) {
       total_size += 2 + 8;
     }
 
-  }
-  // repeated .Proto_msg.Point3 polygon = 8;
-  total_size += 1 * this->polygon_size();
-  for (int i = 0; i < this->polygon_size(); i++) {
-    total_size +=
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        this->polygon(i));
-  }
+    // optional float tracker_quality = 35;
+    if (has_tracker_quality()) {
+      total_size += 2 + 4;
+    }
 
-  // repeated float latent_types = 18;
-  {
-    int data_size = 0;
-    data_size = 4 * this->latent_types_size();
-    total_size += 2 * this->latent_types_size() + data_size;
   }
-
-  // repeated float velocity_cov = 23;
-  {
-    int data_size = 0;
-    data_size = 4 * this->velocity_cov_size();
-    total_size += 2 * this->velocity_cov_size() + data_size;
-  }
-
-  // repeated float acceleration_cov = 27;
-  {
-    int data_size = 0;
-    data_size = 4 * this->acceleration_cov_size();
-    total_size += 2 * this->acceleration_cov_size() + data_size;
-  }
-
-  if (!unknown_fields().empty()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
-  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void Obstacle::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(generalized_merge_from_start:Proto_msg.Obstacle)
+  GOOGLE_DCHECK_NE(&from, this);
   const Obstacle* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const Obstacle*>(
-      &from);
+      ::google::protobuf::internal::DynamicCastToGenerated<const Obstacle>(
+          &from);
   if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Proto_msg.Obstacle)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Proto_msg.Obstacle)
     MergeFrom(*source);
   }
 }
 
 void Obstacle::MergeFrom(const Obstacle& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(class_specific_merge_from_start:Proto_msg.Obstacle)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   polygon_.MergeFrom(from.polygon_);
   latent_types_.MergeFrom(from.latent_types_);
   velocity_cov_.MergeFrom(from.velocity_cov_);
   acceleration_cov_.MergeFrom(from.acceleration_cov_);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_timestamp()) {
-      set_timestamp(from.timestamp());
-    }
-    if (from.has_device_code()) {
-      set_device_code(from.device_code());
-    }
-    if (from.has_id()) {
-      set_id(from.id());
-    }
-    if (from.has_anchor()) {
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 255u) {
+    if (cached_has_bits & 0x00000001u) {
       mutable_anchor()->::Proto_msg::Point3::MergeFrom(from.anchor());
     }
-    if (from.has_geo_center()) {
+    if (cached_has_bits & 0x00000002u) {
       mutable_geo_center()->::Proto_msg::Point3::MergeFrom(from.geo_center());
     }
-    if (from.has_geo_size()) {
+    if (cached_has_bits & 0x00000004u) {
       mutable_geo_size()->::Proto_msg::Point3::MergeFrom(from.geo_size());
     }
-    if (from.has_geo_direction()) {
+    if (cached_has_bits & 0x00000008u) {
       mutable_geo_direction()->::Proto_msg::Point3::MergeFrom(from.geo_direction());
     }
-  }
-  if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
-    if (from.has_detect_confidence()) {
-      set_detect_confidence(from.detect_confidence());
-    }
-    if (from.has_nearest_point()) {
+    if (cached_has_bits & 0x00000010u) {
       mutable_nearest_point()->::Proto_msg::Point3::MergeFrom(from.nearest_point());
     }
-    if (from.has_left_point()) {
+    if (cached_has_bits & 0x00000020u) {
       mutable_left_point()->::Proto_msg::Point3::MergeFrom(from.left_point());
     }
-    if (from.has_right_point()) {
+    if (cached_has_bits & 0x00000040u) {
       mutable_right_point()->::Proto_msg::Point3::MergeFrom(from.right_point());
     }
-    if (from.has_distance()) {
-      set_distance(from.distance());
-    }
-    if (from.has_yaw()) {
-      set_yaw(from.yaw());
-    }
-    if (from.has_point_num()) {
-      set_point_num(from.point_num());
-    }
-    if (from.has_type()) {
-      set_type(from.type());
-    }
-  }
-  if (from._has_bits_[16 / 32] & (0xffu << (16 % 32))) {
-    if (from.has_type_confidence()) {
-      set_type_confidence(from.type_confidence());
-    }
-    if (from.has_motion_state()) {
-      set_motion_state(from.motion_state());
-    }
-    if (from.has_is_track_converged()) {
-      set_is_track_converged(from.is_track_converged());
-    }
-    if (from.has_tracker_id()) {
-      set_tracker_id(from.tracker_id());
-    }
-    if (from.has_velocity()) {
+    if (cached_has_bits & 0x00000080u) {
       mutable_velocity()->::Proto_msg::Point3::MergeFrom(from.velocity());
     }
-    if (from.has_velocity_uncertainty()) {
-      set_velocity_uncertainty(from.velocity_uncertainty());
-    }
   }
-  if (from._has_bits_[24 / 32] & (0xffu << (24 % 32))) {
-    if (from.has_ave_velocity()) {
+  if (cached_has_bits & 65280u) {
+    if (cached_has_bits & 0x00000100u) {
       mutable_ave_velocity()->::Proto_msg::Point3::MergeFrom(from.ave_velocity());
     }
-    if (from.has_acceleration()) {
+    if (cached_has_bits & 0x00000200u) {
       mutable_acceleration()->::Proto_msg::Point3::MergeFrom(from.acceleration());
     }
-    if (from.has_acceleration_uncertainty()) {
-      set_acceleration_uncertainty(from.acceleration_uncertainty());
-    }
-    if (from.has_ave_acceleration()) {
+    if (cached_has_bits & 0x00000400u) {
       mutable_ave_acceleration()->::Proto_msg::Point3::MergeFrom(from.ave_acceleration());
     }
-    if (from.has_angle_velocity()) {
-      set_angle_velocity(from.angle_velocity());
+    if (cached_has_bits & 0x00000800u) {
+      timestamp_ = from.timestamp_;
     }
-    if (from.has_angle_velocity_cov()) {
-      set_angle_velocity_cov(from.angle_velocity_cov());
+    if (cached_has_bits & 0x00001000u) {
+      device_code_ = from.device_code_;
     }
-    if (from.has_angle_velocity_uncertainty()) {
-      set_angle_velocity_uncertainty(from.angle_velocity_uncertainty());
+    if (cached_has_bits & 0x00002000u) {
+      id_ = from.id_;
     }
+    if (cached_has_bits & 0x00004000u) {
+      detect_confidence_ = from.detect_confidence_;
+    }
+    if (cached_has_bits & 0x00008000u) {
+      distance_ = from.distance_;
+    }
+    _has_bits_[0] |= cached_has_bits;
   }
-  if (from._has_bits_[32 / 32] & (0xffu << (32 % 32))) {
-    if (from.has_ave_angle_velocity()) {
-      set_ave_angle_velocity(from.ave_angle_velocity());
+  if (cached_has_bits & 16711680u) {
+    if (cached_has_bits & 0x00010000u) {
+      yaw_ = from.yaw_;
     }
-    if (from.has_asso_quality()) {
-      set_asso_quality(from.asso_quality());
+    if (cached_has_bits & 0x00020000u) {
+      point_num_ = from.point_num_;
     }
-    if (from.has_tracker_quality()) {
-      set_tracker_quality(from.tracker_quality());
+    if (cached_has_bits & 0x00040000u) {
+      type_ = from.type_;
     }
-    if (from.has_tracking_time()) {
-      set_tracking_time(from.tracking_time());
+    if (cached_has_bits & 0x00080000u) {
+      type_confidence_ = from.type_confidence_;
     }
+    if (cached_has_bits & 0x00100000u) {
+      motion_state_ = from.motion_state_;
+    }
+    if (cached_has_bits & 0x00200000u) {
+      is_track_converged_ = from.is_track_converged_;
+    }
+    if (cached_has_bits & 0x00400000u) {
+      tracker_id_ = from.tracker_id_;
+    }
+    if (cached_has_bits & 0x00800000u) {
+      velocity_uncertainty_ = from.velocity_uncertainty_;
+    }
+    _has_bits_[0] |= cached_has_bits;
   }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+  if (cached_has_bits & 4278190080u) {
+    if (cached_has_bits & 0x01000000u) {
+      acceleration_uncertainty_ = from.acceleration_uncertainty_;
+    }
+    if (cached_has_bits & 0x02000000u) {
+      angle_velocity_ = from.angle_velocity_;
+    }
+    if (cached_has_bits & 0x04000000u) {
+      angle_velocity_cov_ = from.angle_velocity_cov_;
+    }
+    if (cached_has_bits & 0x08000000u) {
+      angle_velocity_uncertainty_ = from.angle_velocity_uncertainty_;
+    }
+    if (cached_has_bits & 0x10000000u) {
+      ave_angle_velocity_ = from.ave_angle_velocity_;
+    }
+    if (cached_has_bits & 0x20000000u) {
+      asso_quality_ = from.asso_quality_;
+    }
+    if (cached_has_bits & 0x40000000u) {
+      tracking_time_ = from.tracking_time_;
+    }
+    if (cached_has_bits & 0x80000000u) {
+      tracker_quality_ = from.tracker_quality_;
+    }
+    _has_bits_[0] |= cached_has_bits;
+  }
 }
 
 void Obstacle::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Proto_msg.Obstacle)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void Obstacle::CopyFrom(const Obstacle& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Proto_msg.Obstacle)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 bool Obstacle::IsInitialized() const {
-
   return true;
 }
 
 void Obstacle::Swap(Obstacle* other) {
-  if (other != this) {
-    std::swap(timestamp_, other->timestamp_);
-    std::swap(device_code_, other->device_code_);
-    std::swap(id_, other->id_);
-    std::swap(anchor_, other->anchor_);
-    std::swap(geo_center_, other->geo_center_);
-    std::swap(geo_size_, other->geo_size_);
-    std::swap(geo_direction_, other->geo_direction_);
-    polygon_.Swap(&other->polygon_);
-    std::swap(detect_confidence_, other->detect_confidence_);
-    std::swap(nearest_point_, other->nearest_point_);
-    std::swap(left_point_, other->left_point_);
-    std::swap(right_point_, other->right_point_);
-    std::swap(distance_, other->distance_);
-    std::swap(yaw_, other->yaw_);
-    std::swap(point_num_, other->point_num_);
-    std::swap(type_, other->type_);
-    std::swap(type_confidence_, other->type_confidence_);
-    latent_types_.Swap(&other->latent_types_);
-    std::swap(motion_state_, other->motion_state_);
-    std::swap(is_track_converged_, other->is_track_converged_);
-    std::swap(tracker_id_, other->tracker_id_);
-    std::swap(velocity_, other->velocity_);
-    velocity_cov_.Swap(&other->velocity_cov_);
-    std::swap(velocity_uncertainty_, other->velocity_uncertainty_);
-    std::swap(ave_velocity_, other->ave_velocity_);
-    std::swap(acceleration_, other->acceleration_);
-    acceleration_cov_.Swap(&other->acceleration_cov_);
-    std::swap(acceleration_uncertainty_, other->acceleration_uncertainty_);
-    std::swap(ave_acceleration_, other->ave_acceleration_);
-    std::swap(angle_velocity_, other->angle_velocity_);
-    std::swap(angle_velocity_cov_, other->angle_velocity_cov_);
-    std::swap(angle_velocity_uncertainty_, other->angle_velocity_uncertainty_);
-    std::swap(ave_angle_velocity_, other->ave_angle_velocity_);
-    std::swap(asso_quality_, other->asso_quality_);
-    std::swap(tracker_quality_, other->tracker_quality_);
-    std::swap(tracking_time_, other->tracking_time_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    std::swap(_has_bits_[1], other->_has_bits_[1]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Obstacle::InternalSwap(Obstacle* other) {
+  using std::swap;
+  polygon_.InternalSwap(&other->polygon_);
+  latent_types_.InternalSwap(&other->latent_types_);
+  velocity_cov_.InternalSwap(&other->velocity_cov_);
+  acceleration_cov_.InternalSwap(&other->acceleration_cov_);
+  swap(anchor_, other->anchor_);
+  swap(geo_center_, other->geo_center_);
+  swap(geo_size_, other->geo_size_);
+  swap(geo_direction_, other->geo_direction_);
+  swap(nearest_point_, other->nearest_point_);
+  swap(left_point_, other->left_point_);
+  swap(right_point_, other->right_point_);
+  swap(velocity_, other->velocity_);
+  swap(ave_velocity_, other->ave_velocity_);
+  swap(acceleration_, other->acceleration_);
+  swap(ave_acceleration_, other->ave_acceleration_);
+  swap(timestamp_, other->timestamp_);
+  swap(device_code_, other->device_code_);
+  swap(id_, other->id_);
+  swap(detect_confidence_, other->detect_confidence_);
+  swap(distance_, other->distance_);
+  swap(yaw_, other->yaw_);
+  swap(point_num_, other->point_num_);
+  swap(type_, other->type_);
+  swap(type_confidence_, other->type_confidence_);
+  swap(motion_state_, other->motion_state_);
+  swap(is_track_converged_, other->is_track_converged_);
+  swap(tracker_id_, other->tracker_id_);
+  swap(velocity_uncertainty_, other->velocity_uncertainty_);
+  swap(acceleration_uncertainty_, other->acceleration_uncertainty_);
+  swap(angle_velocity_, other->angle_velocity_);
+  swap(angle_velocity_cov_, other->angle_velocity_cov_);
+  swap(angle_velocity_uncertainty_, other->angle_velocity_uncertainty_);
+  swap(ave_angle_velocity_, other->ave_angle_velocity_);
+  swap(asso_quality_, other->asso_quality_);
+  swap(tracking_time_, other->tracking_time_);
+  swap(tracker_quality_, other->tracker_quality_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Obstacle::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = Obstacle_descriptor_;
-  metadata.reflection = Obstacle_reflection_;
-  return metadata;
+  protobuf_Proto_5fmsg_2ePercept_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2ePercept_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// Obstacle
+
+// optional double timestamp = 1;
+bool Obstacle::has_timestamp() const {
+  return (_has_bits_[0] & 0x00000800u) != 0;
+}
+void Obstacle::set_has_timestamp() {
+  _has_bits_[0] |= 0x00000800u;
+}
+void Obstacle::clear_has_timestamp() {
+  _has_bits_[0] &= ~0x00000800u;
+}
+void Obstacle::clear_timestamp() {
+  timestamp_ = 0;
+  clear_has_timestamp();
+}
+double Obstacle::timestamp() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.timestamp)
+  return timestamp_;
+}
+void Obstacle::set_timestamp(double value) {
+  set_has_timestamp();
+  timestamp_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.timestamp)
+}
+
+// optional uint32 device_code = 2;
+bool Obstacle::has_device_code() const {
+  return (_has_bits_[0] & 0x00001000u) != 0;
+}
+void Obstacle::set_has_device_code() {
+  _has_bits_[0] |= 0x00001000u;
+}
+void Obstacle::clear_has_device_code() {
+  _has_bits_[0] &= ~0x00001000u;
+}
+void Obstacle::clear_device_code() {
+  device_code_ = 0u;
+  clear_has_device_code();
+}
+::google::protobuf::uint32 Obstacle::device_code() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.device_code)
+  return device_code_;
+}
+void Obstacle::set_device_code(::google::protobuf::uint32 value) {
+  set_has_device_code();
+  device_code_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.device_code)
+}
+
+// optional int32 id = 3;
+bool Obstacle::has_id() const {
+  return (_has_bits_[0] & 0x00002000u) != 0;
+}
+void Obstacle::set_has_id() {
+  _has_bits_[0] |= 0x00002000u;
+}
+void Obstacle::clear_has_id() {
+  _has_bits_[0] &= ~0x00002000u;
+}
+void Obstacle::clear_id() {
+  id_ = 0;
+  clear_has_id();
+}
+::google::protobuf::int32 Obstacle::id() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.id)
+  return id_;
+}
+void Obstacle::set_id(::google::protobuf::int32 value) {
+  set_has_id();
+  id_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.id)
+}
+
+// optional .Proto_msg.Point3 anchor = 4;
+bool Obstacle::has_anchor() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void Obstacle::set_has_anchor() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void Obstacle::clear_has_anchor() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void Obstacle::clear_anchor() {
+  if (anchor_ != NULL) anchor_->::Proto_msg::Point3::Clear();
+  clear_has_anchor();
+}
+const ::Proto_msg::Point3& Obstacle::anchor() const {
+  const ::Proto_msg::Point3* p = anchor_;
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.anchor)
+  return p != NULL ? *p : *reinterpret_cast<const ::Proto_msg::Point3*>(
+      &::Proto_msg::_Point3_default_instance_);
+}
+::Proto_msg::Point3* Obstacle::mutable_anchor() {
+  set_has_anchor();
+  if (anchor_ == NULL) {
+    anchor_ = new ::Proto_msg::Point3;
+  }
+  // @@protoc_insertion_point(field_mutable:Proto_msg.Obstacle.anchor)
+  return anchor_;
+}
+::Proto_msg::Point3* Obstacle::release_anchor() {
+  // @@protoc_insertion_point(field_release:Proto_msg.Obstacle.anchor)
+  clear_has_anchor();
+  ::Proto_msg::Point3* temp = anchor_;
+  anchor_ = NULL;
+  return temp;
+}
+void Obstacle::set_allocated_anchor(::Proto_msg::Point3* anchor) {
+  delete anchor_;
+  anchor_ = anchor;
+  if (anchor) {
+    set_has_anchor();
+  } else {
+    clear_has_anchor();
+  }
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.Obstacle.anchor)
+}
+
+// optional .Proto_msg.Point3 geo_center = 5;
+bool Obstacle::has_geo_center() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void Obstacle::set_has_geo_center() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void Obstacle::clear_has_geo_center() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void Obstacle::clear_geo_center() {
+  if (geo_center_ != NULL) geo_center_->::Proto_msg::Point3::Clear();
+  clear_has_geo_center();
+}
+const ::Proto_msg::Point3& Obstacle::geo_center() const {
+  const ::Proto_msg::Point3* p = geo_center_;
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.geo_center)
+  return p != NULL ? *p : *reinterpret_cast<const ::Proto_msg::Point3*>(
+      &::Proto_msg::_Point3_default_instance_);
+}
+::Proto_msg::Point3* Obstacle::mutable_geo_center() {
+  set_has_geo_center();
+  if (geo_center_ == NULL) {
+    geo_center_ = new ::Proto_msg::Point3;
+  }
+  // @@protoc_insertion_point(field_mutable:Proto_msg.Obstacle.geo_center)
+  return geo_center_;
+}
+::Proto_msg::Point3* Obstacle::release_geo_center() {
+  // @@protoc_insertion_point(field_release:Proto_msg.Obstacle.geo_center)
+  clear_has_geo_center();
+  ::Proto_msg::Point3* temp = geo_center_;
+  geo_center_ = NULL;
+  return temp;
+}
+void Obstacle::set_allocated_geo_center(::Proto_msg::Point3* geo_center) {
+  delete geo_center_;
+  geo_center_ = geo_center;
+  if (geo_center) {
+    set_has_geo_center();
+  } else {
+    clear_has_geo_center();
+  }
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.Obstacle.geo_center)
+}
+
+// optional .Proto_msg.Point3 geo_size = 6;
+bool Obstacle::has_geo_size() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void Obstacle::set_has_geo_size() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void Obstacle::clear_has_geo_size() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void Obstacle::clear_geo_size() {
+  if (geo_size_ != NULL) geo_size_->::Proto_msg::Point3::Clear();
+  clear_has_geo_size();
+}
+const ::Proto_msg::Point3& Obstacle::geo_size() const {
+  const ::Proto_msg::Point3* p = geo_size_;
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.geo_size)
+  return p != NULL ? *p : *reinterpret_cast<const ::Proto_msg::Point3*>(
+      &::Proto_msg::_Point3_default_instance_);
+}
+::Proto_msg::Point3* Obstacle::mutable_geo_size() {
+  set_has_geo_size();
+  if (geo_size_ == NULL) {
+    geo_size_ = new ::Proto_msg::Point3;
+  }
+  // @@protoc_insertion_point(field_mutable:Proto_msg.Obstacle.geo_size)
+  return geo_size_;
+}
+::Proto_msg::Point3* Obstacle::release_geo_size() {
+  // @@protoc_insertion_point(field_release:Proto_msg.Obstacle.geo_size)
+  clear_has_geo_size();
+  ::Proto_msg::Point3* temp = geo_size_;
+  geo_size_ = NULL;
+  return temp;
+}
+void Obstacle::set_allocated_geo_size(::Proto_msg::Point3* geo_size) {
+  delete geo_size_;
+  geo_size_ = geo_size;
+  if (geo_size) {
+    set_has_geo_size();
+  } else {
+    clear_has_geo_size();
+  }
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.Obstacle.geo_size)
+}
+
+// optional .Proto_msg.Point3 geo_direction = 7;
+bool Obstacle::has_geo_direction() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+void Obstacle::set_has_geo_direction() {
+  _has_bits_[0] |= 0x00000008u;
+}
+void Obstacle::clear_has_geo_direction() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+void Obstacle::clear_geo_direction() {
+  if (geo_direction_ != NULL) geo_direction_->::Proto_msg::Point3::Clear();
+  clear_has_geo_direction();
+}
+const ::Proto_msg::Point3& Obstacle::geo_direction() const {
+  const ::Proto_msg::Point3* p = geo_direction_;
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.geo_direction)
+  return p != NULL ? *p : *reinterpret_cast<const ::Proto_msg::Point3*>(
+      &::Proto_msg::_Point3_default_instance_);
+}
+::Proto_msg::Point3* Obstacle::mutable_geo_direction() {
+  set_has_geo_direction();
+  if (geo_direction_ == NULL) {
+    geo_direction_ = new ::Proto_msg::Point3;
+  }
+  // @@protoc_insertion_point(field_mutable:Proto_msg.Obstacle.geo_direction)
+  return geo_direction_;
+}
+::Proto_msg::Point3* Obstacle::release_geo_direction() {
+  // @@protoc_insertion_point(field_release:Proto_msg.Obstacle.geo_direction)
+  clear_has_geo_direction();
+  ::Proto_msg::Point3* temp = geo_direction_;
+  geo_direction_ = NULL;
+  return temp;
+}
+void Obstacle::set_allocated_geo_direction(::Proto_msg::Point3* geo_direction) {
+  delete geo_direction_;
+  geo_direction_ = geo_direction;
+  if (geo_direction) {
+    set_has_geo_direction();
+  } else {
+    clear_has_geo_direction();
+  }
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.Obstacle.geo_direction)
+}
+
+// repeated .Proto_msg.Point3 polygon = 8;
+int Obstacle::polygon_size() const {
+  return polygon_.size();
+}
+void Obstacle::clear_polygon() {
+  polygon_.Clear();
+}
+const ::Proto_msg::Point3& Obstacle::polygon(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.polygon)
+  return polygon_.Get(index);
+}
+::Proto_msg::Point3* Obstacle::mutable_polygon(int index) {
+  // @@protoc_insertion_point(field_mutable:Proto_msg.Obstacle.polygon)
+  return polygon_.Mutable(index);
+}
+::Proto_msg::Point3* Obstacle::add_polygon() {
+  // @@protoc_insertion_point(field_add:Proto_msg.Obstacle.polygon)
+  return polygon_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::Proto_msg::Point3 >*
+Obstacle::mutable_polygon() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.Obstacle.polygon)
+  return &polygon_;
+}
+const ::google::protobuf::RepeatedPtrField< ::Proto_msg::Point3 >&
+Obstacle::polygon() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.Obstacle.polygon)
+  return polygon_;
+}
+
+// optional float detect_confidence = 9;
+bool Obstacle::has_detect_confidence() const {
+  return (_has_bits_[0] & 0x00004000u) != 0;
+}
+void Obstacle::set_has_detect_confidence() {
+  _has_bits_[0] |= 0x00004000u;
+}
+void Obstacle::clear_has_detect_confidence() {
+  _has_bits_[0] &= ~0x00004000u;
+}
+void Obstacle::clear_detect_confidence() {
+  detect_confidence_ = 0;
+  clear_has_detect_confidence();
+}
+float Obstacle::detect_confidence() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.detect_confidence)
+  return detect_confidence_;
+}
+void Obstacle::set_detect_confidence(float value) {
+  set_has_detect_confidence();
+  detect_confidence_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.detect_confidence)
+}
+
+// optional .Proto_msg.Point3 nearest_point = 10;
+bool Obstacle::has_nearest_point() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+void Obstacle::set_has_nearest_point() {
+  _has_bits_[0] |= 0x00000010u;
+}
+void Obstacle::clear_has_nearest_point() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+void Obstacle::clear_nearest_point() {
+  if (nearest_point_ != NULL) nearest_point_->::Proto_msg::Point3::Clear();
+  clear_has_nearest_point();
+}
+const ::Proto_msg::Point3& Obstacle::nearest_point() const {
+  const ::Proto_msg::Point3* p = nearest_point_;
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.nearest_point)
+  return p != NULL ? *p : *reinterpret_cast<const ::Proto_msg::Point3*>(
+      &::Proto_msg::_Point3_default_instance_);
+}
+::Proto_msg::Point3* Obstacle::mutable_nearest_point() {
+  set_has_nearest_point();
+  if (nearest_point_ == NULL) {
+    nearest_point_ = new ::Proto_msg::Point3;
+  }
+  // @@protoc_insertion_point(field_mutable:Proto_msg.Obstacle.nearest_point)
+  return nearest_point_;
+}
+::Proto_msg::Point3* Obstacle::release_nearest_point() {
+  // @@protoc_insertion_point(field_release:Proto_msg.Obstacle.nearest_point)
+  clear_has_nearest_point();
+  ::Proto_msg::Point3* temp = nearest_point_;
+  nearest_point_ = NULL;
+  return temp;
+}
+void Obstacle::set_allocated_nearest_point(::Proto_msg::Point3* nearest_point) {
+  delete nearest_point_;
+  nearest_point_ = nearest_point;
+  if (nearest_point) {
+    set_has_nearest_point();
+  } else {
+    clear_has_nearest_point();
+  }
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.Obstacle.nearest_point)
+}
+
+// optional .Proto_msg.Point3 left_point = 11;
+bool Obstacle::has_left_point() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
+}
+void Obstacle::set_has_left_point() {
+  _has_bits_[0] |= 0x00000020u;
+}
+void Obstacle::clear_has_left_point() {
+  _has_bits_[0] &= ~0x00000020u;
+}
+void Obstacle::clear_left_point() {
+  if (left_point_ != NULL) left_point_->::Proto_msg::Point3::Clear();
+  clear_has_left_point();
+}
+const ::Proto_msg::Point3& Obstacle::left_point() const {
+  const ::Proto_msg::Point3* p = left_point_;
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.left_point)
+  return p != NULL ? *p : *reinterpret_cast<const ::Proto_msg::Point3*>(
+      &::Proto_msg::_Point3_default_instance_);
+}
+::Proto_msg::Point3* Obstacle::mutable_left_point() {
+  set_has_left_point();
+  if (left_point_ == NULL) {
+    left_point_ = new ::Proto_msg::Point3;
+  }
+  // @@protoc_insertion_point(field_mutable:Proto_msg.Obstacle.left_point)
+  return left_point_;
+}
+::Proto_msg::Point3* Obstacle::release_left_point() {
+  // @@protoc_insertion_point(field_release:Proto_msg.Obstacle.left_point)
+  clear_has_left_point();
+  ::Proto_msg::Point3* temp = left_point_;
+  left_point_ = NULL;
+  return temp;
+}
+void Obstacle::set_allocated_left_point(::Proto_msg::Point3* left_point) {
+  delete left_point_;
+  left_point_ = left_point;
+  if (left_point) {
+    set_has_left_point();
+  } else {
+    clear_has_left_point();
+  }
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.Obstacle.left_point)
+}
+
+// optional .Proto_msg.Point3 right_point = 12;
+bool Obstacle::has_right_point() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
+}
+void Obstacle::set_has_right_point() {
+  _has_bits_[0] |= 0x00000040u;
+}
+void Obstacle::clear_has_right_point() {
+  _has_bits_[0] &= ~0x00000040u;
+}
+void Obstacle::clear_right_point() {
+  if (right_point_ != NULL) right_point_->::Proto_msg::Point3::Clear();
+  clear_has_right_point();
+}
+const ::Proto_msg::Point3& Obstacle::right_point() const {
+  const ::Proto_msg::Point3* p = right_point_;
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.right_point)
+  return p != NULL ? *p : *reinterpret_cast<const ::Proto_msg::Point3*>(
+      &::Proto_msg::_Point3_default_instance_);
+}
+::Proto_msg::Point3* Obstacle::mutable_right_point() {
+  set_has_right_point();
+  if (right_point_ == NULL) {
+    right_point_ = new ::Proto_msg::Point3;
+  }
+  // @@protoc_insertion_point(field_mutable:Proto_msg.Obstacle.right_point)
+  return right_point_;
+}
+::Proto_msg::Point3* Obstacle::release_right_point() {
+  // @@protoc_insertion_point(field_release:Proto_msg.Obstacle.right_point)
+  clear_has_right_point();
+  ::Proto_msg::Point3* temp = right_point_;
+  right_point_ = NULL;
+  return temp;
+}
+void Obstacle::set_allocated_right_point(::Proto_msg::Point3* right_point) {
+  delete right_point_;
+  right_point_ = right_point;
+  if (right_point) {
+    set_has_right_point();
+  } else {
+    clear_has_right_point();
+  }
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.Obstacle.right_point)
+}
+
+// optional float distance = 13;
+bool Obstacle::has_distance() const {
+  return (_has_bits_[0] & 0x00008000u) != 0;
+}
+void Obstacle::set_has_distance() {
+  _has_bits_[0] |= 0x00008000u;
+}
+void Obstacle::clear_has_distance() {
+  _has_bits_[0] &= ~0x00008000u;
+}
+void Obstacle::clear_distance() {
+  distance_ = 0;
+  clear_has_distance();
+}
+float Obstacle::distance() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.distance)
+  return distance_;
+}
+void Obstacle::set_distance(float value) {
+  set_has_distance();
+  distance_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.distance)
+}
+
+// optional float yaw = 14;
+bool Obstacle::has_yaw() const {
+  return (_has_bits_[0] & 0x00010000u) != 0;
+}
+void Obstacle::set_has_yaw() {
+  _has_bits_[0] |= 0x00010000u;
+}
+void Obstacle::clear_has_yaw() {
+  _has_bits_[0] &= ~0x00010000u;
+}
+void Obstacle::clear_yaw() {
+  yaw_ = 0;
+  clear_has_yaw();
+}
+float Obstacle::yaw() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.yaw)
+  return yaw_;
+}
+void Obstacle::set_yaw(float value) {
+  set_has_yaw();
+  yaw_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.yaw)
+}
+
+// optional int32 point_num = 15;
+bool Obstacle::has_point_num() const {
+  return (_has_bits_[0] & 0x00020000u) != 0;
+}
+void Obstacle::set_has_point_num() {
+  _has_bits_[0] |= 0x00020000u;
+}
+void Obstacle::clear_has_point_num() {
+  _has_bits_[0] &= ~0x00020000u;
+}
+void Obstacle::clear_point_num() {
+  point_num_ = 0;
+  clear_has_point_num();
+}
+::google::protobuf::int32 Obstacle::point_num() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.point_num)
+  return point_num_;
+}
+void Obstacle::set_point_num(::google::protobuf::int32 value) {
+  set_has_point_num();
+  point_num_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.point_num)
+}
+
+// optional .Proto_msg.Obstacle.Type type = 16;
+bool Obstacle::has_type() const {
+  return (_has_bits_[0] & 0x00040000u) != 0;
+}
+void Obstacle::set_has_type() {
+  _has_bits_[0] |= 0x00040000u;
+}
+void Obstacle::clear_has_type() {
+  _has_bits_[0] &= ~0x00040000u;
+}
+void Obstacle::clear_type() {
+  type_ = 0;
+  clear_has_type();
+}
+::Proto_msg::Obstacle_Type Obstacle::type() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.type)
+  return static_cast< ::Proto_msg::Obstacle_Type >(type_);
+}
+void Obstacle::set_type(::Proto_msg::Obstacle_Type value) {
+  assert(::Proto_msg::Obstacle_Type_IsValid(value));
+  set_has_type();
+  type_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.type)
+}
+
+// optional float type_confidence = 17;
+bool Obstacle::has_type_confidence() const {
+  return (_has_bits_[0] & 0x00080000u) != 0;
+}
+void Obstacle::set_has_type_confidence() {
+  _has_bits_[0] |= 0x00080000u;
+}
+void Obstacle::clear_has_type_confidence() {
+  _has_bits_[0] &= ~0x00080000u;
+}
+void Obstacle::clear_type_confidence() {
+  type_confidence_ = 0;
+  clear_has_type_confidence();
+}
+float Obstacle::type_confidence() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.type_confidence)
+  return type_confidence_;
+}
+void Obstacle::set_type_confidence(float value) {
+  set_has_type_confidence();
+  type_confidence_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.type_confidence)
+}
+
+// repeated float latent_types = 18;
+int Obstacle::latent_types_size() const {
+  return latent_types_.size();
+}
+void Obstacle::clear_latent_types() {
+  latent_types_.Clear();
+}
+float Obstacle::latent_types(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.latent_types)
+  return latent_types_.Get(index);
+}
+void Obstacle::set_latent_types(int index, float value) {
+  latent_types_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.latent_types)
+}
+void Obstacle::add_latent_types(float value) {
+  latent_types_.Add(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.Obstacle.latent_types)
+}
+const ::google::protobuf::RepeatedField< float >&
+Obstacle::latent_types() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.Obstacle.latent_types)
+  return latent_types_;
+}
+::google::protobuf::RepeatedField< float >*
+Obstacle::mutable_latent_types() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.Obstacle.latent_types)
+  return &latent_types_;
+}
+
+// optional .Proto_msg.Obstacle.MotionType motion_state = 19;
+bool Obstacle::has_motion_state() const {
+  return (_has_bits_[0] & 0x00100000u) != 0;
+}
+void Obstacle::set_has_motion_state() {
+  _has_bits_[0] |= 0x00100000u;
+}
+void Obstacle::clear_has_motion_state() {
+  _has_bits_[0] &= ~0x00100000u;
+}
+void Obstacle::clear_motion_state() {
+  motion_state_ = 0;
+  clear_has_motion_state();
+}
+::Proto_msg::Obstacle_MotionType Obstacle::motion_state() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.motion_state)
+  return static_cast< ::Proto_msg::Obstacle_MotionType >(motion_state_);
+}
+void Obstacle::set_motion_state(::Proto_msg::Obstacle_MotionType value) {
+  assert(::Proto_msg::Obstacle_MotionType_IsValid(value));
+  set_has_motion_state();
+  motion_state_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.motion_state)
+}
+
+// optional bool is_track_converged = 20;
+bool Obstacle::has_is_track_converged() const {
+  return (_has_bits_[0] & 0x00200000u) != 0;
+}
+void Obstacle::set_has_is_track_converged() {
+  _has_bits_[0] |= 0x00200000u;
+}
+void Obstacle::clear_has_is_track_converged() {
+  _has_bits_[0] &= ~0x00200000u;
+}
+void Obstacle::clear_is_track_converged() {
+  is_track_converged_ = false;
+  clear_has_is_track_converged();
+}
+bool Obstacle::is_track_converged() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.is_track_converged)
+  return is_track_converged_;
+}
+void Obstacle::set_is_track_converged(bool value) {
+  set_has_is_track_converged();
+  is_track_converged_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.is_track_converged)
+}
+
+// optional int32 tracker_id = 21;
+bool Obstacle::has_tracker_id() const {
+  return (_has_bits_[0] & 0x00400000u) != 0;
+}
+void Obstacle::set_has_tracker_id() {
+  _has_bits_[0] |= 0x00400000u;
+}
+void Obstacle::clear_has_tracker_id() {
+  _has_bits_[0] &= ~0x00400000u;
+}
+void Obstacle::clear_tracker_id() {
+  tracker_id_ = 0;
+  clear_has_tracker_id();
+}
+::google::protobuf::int32 Obstacle::tracker_id() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.tracker_id)
+  return tracker_id_;
+}
+void Obstacle::set_tracker_id(::google::protobuf::int32 value) {
+  set_has_tracker_id();
+  tracker_id_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.tracker_id)
+}
+
+// optional .Proto_msg.Point3 velocity = 22;
+bool Obstacle::has_velocity() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
+}
+void Obstacle::set_has_velocity() {
+  _has_bits_[0] |= 0x00000080u;
+}
+void Obstacle::clear_has_velocity() {
+  _has_bits_[0] &= ~0x00000080u;
+}
+void Obstacle::clear_velocity() {
+  if (velocity_ != NULL) velocity_->::Proto_msg::Point3::Clear();
+  clear_has_velocity();
+}
+const ::Proto_msg::Point3& Obstacle::velocity() const {
+  const ::Proto_msg::Point3* p = velocity_;
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.velocity)
+  return p != NULL ? *p : *reinterpret_cast<const ::Proto_msg::Point3*>(
+      &::Proto_msg::_Point3_default_instance_);
+}
+::Proto_msg::Point3* Obstacle::mutable_velocity() {
+  set_has_velocity();
+  if (velocity_ == NULL) {
+    velocity_ = new ::Proto_msg::Point3;
+  }
+  // @@protoc_insertion_point(field_mutable:Proto_msg.Obstacle.velocity)
+  return velocity_;
+}
+::Proto_msg::Point3* Obstacle::release_velocity() {
+  // @@protoc_insertion_point(field_release:Proto_msg.Obstacle.velocity)
+  clear_has_velocity();
+  ::Proto_msg::Point3* temp = velocity_;
+  velocity_ = NULL;
+  return temp;
+}
+void Obstacle::set_allocated_velocity(::Proto_msg::Point3* velocity) {
+  delete velocity_;
+  velocity_ = velocity;
+  if (velocity) {
+    set_has_velocity();
+  } else {
+    clear_has_velocity();
+  }
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.Obstacle.velocity)
+}
+
+// repeated float velocity_cov = 23;
+int Obstacle::velocity_cov_size() const {
+  return velocity_cov_.size();
+}
+void Obstacle::clear_velocity_cov() {
+  velocity_cov_.Clear();
+}
+float Obstacle::velocity_cov(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.velocity_cov)
+  return velocity_cov_.Get(index);
+}
+void Obstacle::set_velocity_cov(int index, float value) {
+  velocity_cov_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.velocity_cov)
+}
+void Obstacle::add_velocity_cov(float value) {
+  velocity_cov_.Add(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.Obstacle.velocity_cov)
+}
+const ::google::protobuf::RepeatedField< float >&
+Obstacle::velocity_cov() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.Obstacle.velocity_cov)
+  return velocity_cov_;
+}
+::google::protobuf::RepeatedField< float >*
+Obstacle::mutable_velocity_cov() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.Obstacle.velocity_cov)
+  return &velocity_cov_;
+}
+
+// optional float velocity_uncertainty = 24;
+bool Obstacle::has_velocity_uncertainty() const {
+  return (_has_bits_[0] & 0x00800000u) != 0;
+}
+void Obstacle::set_has_velocity_uncertainty() {
+  _has_bits_[0] |= 0x00800000u;
+}
+void Obstacle::clear_has_velocity_uncertainty() {
+  _has_bits_[0] &= ~0x00800000u;
+}
+void Obstacle::clear_velocity_uncertainty() {
+  velocity_uncertainty_ = 0;
+  clear_has_velocity_uncertainty();
+}
+float Obstacle::velocity_uncertainty() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.velocity_uncertainty)
+  return velocity_uncertainty_;
+}
+void Obstacle::set_velocity_uncertainty(float value) {
+  set_has_velocity_uncertainty();
+  velocity_uncertainty_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.velocity_uncertainty)
+}
+
+// optional .Proto_msg.Point3 ave_velocity = 25;
+bool Obstacle::has_ave_velocity() const {
+  return (_has_bits_[0] & 0x00000100u) != 0;
+}
+void Obstacle::set_has_ave_velocity() {
+  _has_bits_[0] |= 0x00000100u;
+}
+void Obstacle::clear_has_ave_velocity() {
+  _has_bits_[0] &= ~0x00000100u;
+}
+void Obstacle::clear_ave_velocity() {
+  if (ave_velocity_ != NULL) ave_velocity_->::Proto_msg::Point3::Clear();
+  clear_has_ave_velocity();
+}
+const ::Proto_msg::Point3& Obstacle::ave_velocity() const {
+  const ::Proto_msg::Point3* p = ave_velocity_;
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.ave_velocity)
+  return p != NULL ? *p : *reinterpret_cast<const ::Proto_msg::Point3*>(
+      &::Proto_msg::_Point3_default_instance_);
+}
+::Proto_msg::Point3* Obstacle::mutable_ave_velocity() {
+  set_has_ave_velocity();
+  if (ave_velocity_ == NULL) {
+    ave_velocity_ = new ::Proto_msg::Point3;
+  }
+  // @@protoc_insertion_point(field_mutable:Proto_msg.Obstacle.ave_velocity)
+  return ave_velocity_;
+}
+::Proto_msg::Point3* Obstacle::release_ave_velocity() {
+  // @@protoc_insertion_point(field_release:Proto_msg.Obstacle.ave_velocity)
+  clear_has_ave_velocity();
+  ::Proto_msg::Point3* temp = ave_velocity_;
+  ave_velocity_ = NULL;
+  return temp;
+}
+void Obstacle::set_allocated_ave_velocity(::Proto_msg::Point3* ave_velocity) {
+  delete ave_velocity_;
+  ave_velocity_ = ave_velocity;
+  if (ave_velocity) {
+    set_has_ave_velocity();
+  } else {
+    clear_has_ave_velocity();
+  }
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.Obstacle.ave_velocity)
+}
+
+// optional .Proto_msg.Point3 acceleration = 26;
+bool Obstacle::has_acceleration() const {
+  return (_has_bits_[0] & 0x00000200u) != 0;
+}
+void Obstacle::set_has_acceleration() {
+  _has_bits_[0] |= 0x00000200u;
+}
+void Obstacle::clear_has_acceleration() {
+  _has_bits_[0] &= ~0x00000200u;
+}
+void Obstacle::clear_acceleration() {
+  if (acceleration_ != NULL) acceleration_->::Proto_msg::Point3::Clear();
+  clear_has_acceleration();
+}
+const ::Proto_msg::Point3& Obstacle::acceleration() const {
+  const ::Proto_msg::Point3* p = acceleration_;
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.acceleration)
+  return p != NULL ? *p : *reinterpret_cast<const ::Proto_msg::Point3*>(
+      &::Proto_msg::_Point3_default_instance_);
+}
+::Proto_msg::Point3* Obstacle::mutable_acceleration() {
+  set_has_acceleration();
+  if (acceleration_ == NULL) {
+    acceleration_ = new ::Proto_msg::Point3;
+  }
+  // @@protoc_insertion_point(field_mutable:Proto_msg.Obstacle.acceleration)
+  return acceleration_;
+}
+::Proto_msg::Point3* Obstacle::release_acceleration() {
+  // @@protoc_insertion_point(field_release:Proto_msg.Obstacle.acceleration)
+  clear_has_acceleration();
+  ::Proto_msg::Point3* temp = acceleration_;
+  acceleration_ = NULL;
+  return temp;
+}
+void Obstacle::set_allocated_acceleration(::Proto_msg::Point3* acceleration) {
+  delete acceleration_;
+  acceleration_ = acceleration;
+  if (acceleration) {
+    set_has_acceleration();
+  } else {
+    clear_has_acceleration();
+  }
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.Obstacle.acceleration)
+}
+
+// repeated float acceleration_cov = 27;
+int Obstacle::acceleration_cov_size() const {
+  return acceleration_cov_.size();
+}
+void Obstacle::clear_acceleration_cov() {
+  acceleration_cov_.Clear();
+}
+float Obstacle::acceleration_cov(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.acceleration_cov)
+  return acceleration_cov_.Get(index);
+}
+void Obstacle::set_acceleration_cov(int index, float value) {
+  acceleration_cov_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.acceleration_cov)
+}
+void Obstacle::add_acceleration_cov(float value) {
+  acceleration_cov_.Add(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.Obstacle.acceleration_cov)
+}
+const ::google::protobuf::RepeatedField< float >&
+Obstacle::acceleration_cov() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.Obstacle.acceleration_cov)
+  return acceleration_cov_;
+}
+::google::protobuf::RepeatedField< float >*
+Obstacle::mutable_acceleration_cov() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.Obstacle.acceleration_cov)
+  return &acceleration_cov_;
+}
+
+// optional float acceleration_uncertainty = 28;
+bool Obstacle::has_acceleration_uncertainty() const {
+  return (_has_bits_[0] & 0x01000000u) != 0;
+}
+void Obstacle::set_has_acceleration_uncertainty() {
+  _has_bits_[0] |= 0x01000000u;
+}
+void Obstacle::clear_has_acceleration_uncertainty() {
+  _has_bits_[0] &= ~0x01000000u;
+}
+void Obstacle::clear_acceleration_uncertainty() {
+  acceleration_uncertainty_ = 0;
+  clear_has_acceleration_uncertainty();
+}
+float Obstacle::acceleration_uncertainty() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.acceleration_uncertainty)
+  return acceleration_uncertainty_;
+}
+void Obstacle::set_acceleration_uncertainty(float value) {
+  set_has_acceleration_uncertainty();
+  acceleration_uncertainty_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.acceleration_uncertainty)
+}
+
+// optional .Proto_msg.Point3 ave_acceleration = 29;
+bool Obstacle::has_ave_acceleration() const {
+  return (_has_bits_[0] & 0x00000400u) != 0;
+}
+void Obstacle::set_has_ave_acceleration() {
+  _has_bits_[0] |= 0x00000400u;
+}
+void Obstacle::clear_has_ave_acceleration() {
+  _has_bits_[0] &= ~0x00000400u;
+}
+void Obstacle::clear_ave_acceleration() {
+  if (ave_acceleration_ != NULL) ave_acceleration_->::Proto_msg::Point3::Clear();
+  clear_has_ave_acceleration();
+}
+const ::Proto_msg::Point3& Obstacle::ave_acceleration() const {
+  const ::Proto_msg::Point3* p = ave_acceleration_;
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.ave_acceleration)
+  return p != NULL ? *p : *reinterpret_cast<const ::Proto_msg::Point3*>(
+      &::Proto_msg::_Point3_default_instance_);
+}
+::Proto_msg::Point3* Obstacle::mutable_ave_acceleration() {
+  set_has_ave_acceleration();
+  if (ave_acceleration_ == NULL) {
+    ave_acceleration_ = new ::Proto_msg::Point3;
+  }
+  // @@protoc_insertion_point(field_mutable:Proto_msg.Obstacle.ave_acceleration)
+  return ave_acceleration_;
+}
+::Proto_msg::Point3* Obstacle::release_ave_acceleration() {
+  // @@protoc_insertion_point(field_release:Proto_msg.Obstacle.ave_acceleration)
+  clear_has_ave_acceleration();
+  ::Proto_msg::Point3* temp = ave_acceleration_;
+  ave_acceleration_ = NULL;
+  return temp;
+}
+void Obstacle::set_allocated_ave_acceleration(::Proto_msg::Point3* ave_acceleration) {
+  delete ave_acceleration_;
+  ave_acceleration_ = ave_acceleration;
+  if (ave_acceleration) {
+    set_has_ave_acceleration();
+  } else {
+    clear_has_ave_acceleration();
+  }
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.Obstacle.ave_acceleration)
+}
+
+// optional float angle_velocity = 30;
+bool Obstacle::has_angle_velocity() const {
+  return (_has_bits_[0] & 0x02000000u) != 0;
+}
+void Obstacle::set_has_angle_velocity() {
+  _has_bits_[0] |= 0x02000000u;
+}
+void Obstacle::clear_has_angle_velocity() {
+  _has_bits_[0] &= ~0x02000000u;
+}
+void Obstacle::clear_angle_velocity() {
+  angle_velocity_ = 0;
+  clear_has_angle_velocity();
+}
+float Obstacle::angle_velocity() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.angle_velocity)
+  return angle_velocity_;
+}
+void Obstacle::set_angle_velocity(float value) {
+  set_has_angle_velocity();
+  angle_velocity_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.angle_velocity)
+}
+
+// optional float angle_velocity_cov = 31;
+bool Obstacle::has_angle_velocity_cov() const {
+  return (_has_bits_[0] & 0x04000000u) != 0;
+}
+void Obstacle::set_has_angle_velocity_cov() {
+  _has_bits_[0] |= 0x04000000u;
+}
+void Obstacle::clear_has_angle_velocity_cov() {
+  _has_bits_[0] &= ~0x04000000u;
+}
+void Obstacle::clear_angle_velocity_cov() {
+  angle_velocity_cov_ = 0;
+  clear_has_angle_velocity_cov();
+}
+float Obstacle::angle_velocity_cov() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.angle_velocity_cov)
+  return angle_velocity_cov_;
+}
+void Obstacle::set_angle_velocity_cov(float value) {
+  set_has_angle_velocity_cov();
+  angle_velocity_cov_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.angle_velocity_cov)
+}
+
+// optional float angle_velocity_uncertainty = 32;
+bool Obstacle::has_angle_velocity_uncertainty() const {
+  return (_has_bits_[0] & 0x08000000u) != 0;
+}
+void Obstacle::set_has_angle_velocity_uncertainty() {
+  _has_bits_[0] |= 0x08000000u;
+}
+void Obstacle::clear_has_angle_velocity_uncertainty() {
+  _has_bits_[0] &= ~0x08000000u;
+}
+void Obstacle::clear_angle_velocity_uncertainty() {
+  angle_velocity_uncertainty_ = 0;
+  clear_has_angle_velocity_uncertainty();
+}
+float Obstacle::angle_velocity_uncertainty() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.angle_velocity_uncertainty)
+  return angle_velocity_uncertainty_;
+}
+void Obstacle::set_angle_velocity_uncertainty(float value) {
+  set_has_angle_velocity_uncertainty();
+  angle_velocity_uncertainty_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.angle_velocity_uncertainty)
+}
+
+// optional float ave_angle_velocity = 33;
+bool Obstacle::has_ave_angle_velocity() const {
+  return (_has_bits_[0] & 0x10000000u) != 0;
+}
+void Obstacle::set_has_ave_angle_velocity() {
+  _has_bits_[0] |= 0x10000000u;
+}
+void Obstacle::clear_has_ave_angle_velocity() {
+  _has_bits_[0] &= ~0x10000000u;
+}
+void Obstacle::clear_ave_angle_velocity() {
+  ave_angle_velocity_ = 0;
+  clear_has_ave_angle_velocity();
+}
+float Obstacle::ave_angle_velocity() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.ave_angle_velocity)
+  return ave_angle_velocity_;
+}
+void Obstacle::set_ave_angle_velocity(float value) {
+  set_has_ave_angle_velocity();
+  ave_angle_velocity_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.ave_angle_velocity)
+}
+
+// optional float asso_quality = 34;
+bool Obstacle::has_asso_quality() const {
+  return (_has_bits_[0] & 0x20000000u) != 0;
+}
+void Obstacle::set_has_asso_quality() {
+  _has_bits_[0] |= 0x20000000u;
+}
+void Obstacle::clear_has_asso_quality() {
+  _has_bits_[0] &= ~0x20000000u;
+}
+void Obstacle::clear_asso_quality() {
+  asso_quality_ = 0;
+  clear_has_asso_quality();
+}
+float Obstacle::asso_quality() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.asso_quality)
+  return asso_quality_;
+}
+void Obstacle::set_asso_quality(float value) {
+  set_has_asso_quality();
+  asso_quality_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.asso_quality)
+}
+
+// optional float tracker_quality = 35;
+bool Obstacle::has_tracker_quality() const {
+  return (_has_bits_[0] & 0x80000000u) != 0;
+}
+void Obstacle::set_has_tracker_quality() {
+  _has_bits_[0] |= 0x80000000u;
+}
+void Obstacle::clear_has_tracker_quality() {
+  _has_bits_[0] &= ~0x80000000u;
+}
+void Obstacle::clear_tracker_quality() {
+  tracker_quality_ = 0;
+  clear_has_tracker_quality();
+}
+float Obstacle::tracker_quality() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.tracker_quality)
+  return tracker_quality_;
+}
+void Obstacle::set_tracker_quality(float value) {
+  set_has_tracker_quality();
+  tracker_quality_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.tracker_quality)
+}
+
+// optional double tracking_time = 36;
+bool Obstacle::has_tracking_time() const {
+  return (_has_bits_[0] & 0x40000000u) != 0;
+}
+void Obstacle::set_has_tracking_time() {
+  _has_bits_[0] |= 0x40000000u;
+}
+void Obstacle::clear_has_tracking_time() {
+  _has_bits_[0] &= ~0x40000000u;
+}
+void Obstacle::clear_tracking_time() {
+  tracking_time_ = 0;
+  clear_has_tracking_time();
+}
+double Obstacle::tracking_time() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacle.tracking_time)
+  return tracking_time_;
+}
+void Obstacle::set_tracking_time(double value) {
+  set_has_tracking_time();
+  tracking_time_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacle.tracking_time)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int FreeSpaces::kTimestampFieldNumber;
 const int FreeSpaces::kSeqFieldNumber;
 const int FreeSpaces::kParentFrameIdFieldNumber;
 const int FreeSpaces::kFrameIdFieldNumber;
 const int FreeSpaces::kFreeSpacesFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 FreeSpaces::FreeSpaces()
-  : ::google::protobuf::Message() {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_Proto_5fmsg_2ePercept_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:Proto_msg.FreeSpaces)
 }
-
-void FreeSpaces::InitAsDefaultInstance() {
-}
-
 FreeSpaces::FreeSpaces(const FreeSpaces& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0),
+      freespaces_(from.freespaces_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  parent_frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_parent_frame_id()) {
+    parent_frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.parent_frame_id_);
+  }
+  frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_frame_id()) {
+    frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.frame_id_);
+  }
+  ::memcpy(&timestamp_, &from.timestamp_,
+    static_cast<size_t>(reinterpret_cast<char*>(&seq_) -
+    reinterpret_cast<char*>(&timestamp_)) + sizeof(seq_));
   // @@protoc_insertion_point(copy_constructor:Proto_msg.FreeSpaces)
 }
 
 void FreeSpaces::SharedCtor() {
-  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
-  timestamp_ = 0;
-  seq_ = 0u;
-  parent_frame_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  frame_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  parent_frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&timestamp_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&seq_) -
+      reinterpret_cast<char*>(&timestamp_)) + sizeof(seq_));
 }
 
 FreeSpaces::~FreeSpaces() {
@@ -2727,14 +4191,8 @@ FreeSpaces::~FreeSpaces() {
 }
 
 void FreeSpaces::SharedDtor() {
-  if (parent_frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete parent_frame_id_;
-  }
-  if (frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete frame_id_;
-  }
-  if (this != default_instance_) {
-  }
+  parent_frame_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  frame_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void FreeSpaces::SetCachedSize(int size) const {
@@ -2743,137 +4201,139 @@ void FreeSpaces::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* FreeSpaces::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return FreeSpaces_descriptor_;
+  protobuf_Proto_5fmsg_2ePercept_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2ePercept_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const FreeSpaces& FreeSpaces::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_Proto_5fmsg_2ePercept_2eproto();
-  return *default_instance_;
+  protobuf_Proto_5fmsg_2ePercept_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
 
-FreeSpaces* FreeSpaces::default_instance_ = NULL;
-
-FreeSpaces* FreeSpaces::New() const {
-  return new FreeSpaces;
+FreeSpaces* FreeSpaces::New(::google::protobuf::Arena* arena) const {
+  FreeSpaces* n = new FreeSpaces;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
 }
 
 void FreeSpaces::Clear() {
-  if (_has_bits_[0 / 32] & 15) {
-    timestamp_ = 0;
-    seq_ = 0u;
-    if (has_parent_frame_id()) {
-      if (parent_frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        parent_frame_id_->clear();
-      }
+// @@protoc_insertion_point(message_clear_start:Proto_msg.FreeSpaces)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  freespaces_.Clear();
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 3u) {
+    if (cached_has_bits & 0x00000001u) {
+      GOOGLE_DCHECK(!parent_frame_id_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*parent_frame_id_.UnsafeRawStringPointer())->clear();
     }
-    if (has_frame_id()) {
-      if (frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        frame_id_->clear();
-      }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(!frame_id_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*frame_id_.UnsafeRawStringPointer())->clear();
     }
   }
-  freespaces_.Clear();
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
+  if (cached_has_bits & 12u) {
+    ::memset(&timestamp_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&seq_) -
+        reinterpret_cast<char*>(&timestamp_)) + sizeof(seq_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
 }
 
 bool FreeSpaces::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:Proto_msg.FreeSpaces)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // optional double timestamp = 1;
       case 1: {
-        if (tag == 9) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
+          set_has_timestamp();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, &timestamp_)));
-          set_has_timestamp();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(16)) goto parse_seq;
         break;
       }
 
       // optional uint32 seq = 2;
       case 2: {
-        if (tag == 16) {
-         parse_seq:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+          set_has_seq();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  input, &seq_)));
-          set_has_seq();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_parent_frame_id;
         break;
       }
 
       // optional string parent_frame_id = 3;
       case 3: {
-        if (tag == 26) {
-         parse_parent_frame_id:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_parent_frame_id()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->parent_frame_id().data(), this->parent_frame_id().length(),
+            this->parent_frame_id().data(), static_cast<int>(this->parent_frame_id().length()),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "parent_frame_id");
+            "Proto_msg.FreeSpaces.parent_frame_id");
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(34)) goto parse_frame_id;
         break;
       }
 
       // optional string frame_id = 4;
       case 4: {
-        if (tag == 34) {
-         parse_frame_id:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_frame_id()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->frame_id().data(), this->frame_id().length(),
+            this->frame_id().data(), static_cast<int>(this->frame_id().length()),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "frame_id");
+            "Proto_msg.FreeSpaces.frame_id");
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(42)) goto parse_freeSpaces;
         break;
       }
 
       // repeated .Proto_msg.FreeSpace freeSpaces = 5;
       case 5: {
-        if (tag == 42) {
-         parse_freeSpaces:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_freespaces()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(42)) goto parse_freeSpaces;
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -2890,115 +4350,131 @@ failure:
 void FreeSpaces::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:Proto_msg.FreeSpaces)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional double timestamp = 1;
-  if (has_timestamp()) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->timestamp(), output);
   }
 
   // optional uint32 seq = 2;
-  if (has_seq()) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->seq(), output);
   }
 
   // optional string parent_frame_id = 3;
-  if (has_parent_frame_id()) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->parent_frame_id().data(), this->parent_frame_id().length(),
+      this->parent_frame_id().data(), static_cast<int>(this->parent_frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "parent_frame_id");
+      "Proto_msg.FreeSpaces.parent_frame_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->parent_frame_id(), output);
   }
 
   // optional string frame_id = 4;
-  if (has_frame_id()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->frame_id().data(), this->frame_id().length(),
+      this->frame_id().data(), static_cast<int>(this->frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "frame_id");
+      "Proto_msg.FreeSpaces.frame_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       4, this->frame_id(), output);
   }
 
   // repeated .Proto_msg.FreeSpace freeSpaces = 5;
-  for (int i = 0; i < this->freespaces_size(); i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->freespaces_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, this->freespaces(i), output);
+      5, this->freespaces(static_cast<int>(i)), output);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:Proto_msg.FreeSpaces)
 }
 
-::google::protobuf::uint8* FreeSpaces::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* FreeSpaces::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:Proto_msg.FreeSpaces)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional double timestamp = 1;
-  if (has_timestamp()) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->timestamp(), target);
   }
 
   // optional uint32 seq = 2;
-  if (has_seq()) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->seq(), target);
   }
 
   // optional string parent_frame_id = 3;
-  if (has_parent_frame_id()) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->parent_frame_id().data(), this->parent_frame_id().length(),
+      this->parent_frame_id().data(), static_cast<int>(this->parent_frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "parent_frame_id");
+      "Proto_msg.FreeSpaces.parent_frame_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         3, this->parent_frame_id(), target);
   }
 
   // optional string frame_id = 4;
-  if (has_frame_id()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->frame_id().data(), this->frame_id().length(),
+      this->frame_id().data(), static_cast<int>(this->frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "frame_id");
+      "Proto_msg.FreeSpaces.frame_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         4, this->frame_id(), target);
   }
 
   // repeated .Proto_msg.FreeSpace freeSpaces = 5;
-  for (int i = 0; i < this->freespaces_size(); i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->freespaces_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        5, this->freespaces(i), target);
+      InternalWriteMessageNoVirtualToArray(
+        5, this->freespaces(static_cast<int>(i)), deterministic, target);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Proto_msg.FreeSpaces)
   return target;
 }
 
-int FreeSpaces::ByteSize() const {
-  int total_size = 0;
+size_t FreeSpaces::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Proto_msg.FreeSpaces)
+  size_t total_size = 0;
 
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // optional double timestamp = 1;
-    if (has_timestamp()) {
-      total_size += 1 + 8;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  // repeated .Proto_msg.FreeSpace freeSpaces = 5;
+  {
+    unsigned int count = static_cast<unsigned int>(this->freespaces_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->freespaces(static_cast<int>(i)));
     }
+  }
 
-    // optional uint32 seq = 2;
-    if (has_seq()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->seq());
-    }
-
+  if (_has_bits_[0 / 32] & 15u) {
     // optional string parent_frame_id = 3;
     if (has_parent_frame_id()) {
       total_size += 1 +
@@ -3013,131 +4489,363 @@ int FreeSpaces::ByteSize() const {
           this->frame_id());
     }
 
-  }
-  // repeated .Proto_msg.FreeSpace freeSpaces = 5;
-  total_size += 1 * this->freespaces_size();
-  for (int i = 0; i < this->freespaces_size(); i++) {
-    total_size +=
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        this->freespaces(i));
-  }
+    // optional double timestamp = 1;
+    if (has_timestamp()) {
+      total_size += 1 + 8;
+    }
 
-  if (!unknown_fields().empty()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
+    // optional uint32 seq = 2;
+    if (has_seq()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->seq());
+    }
+
   }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void FreeSpaces::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(generalized_merge_from_start:Proto_msg.FreeSpaces)
+  GOOGLE_DCHECK_NE(&from, this);
   const FreeSpaces* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const FreeSpaces*>(
-      &from);
+      ::google::protobuf::internal::DynamicCastToGenerated<const FreeSpaces>(
+          &from);
   if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Proto_msg.FreeSpaces)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Proto_msg.FreeSpaces)
     MergeFrom(*source);
   }
 }
 
 void FreeSpaces::MergeFrom(const FreeSpaces& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(class_specific_merge_from_start:Proto_msg.FreeSpaces)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   freespaces_.MergeFrom(from.freespaces_);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_timestamp()) {
-      set_timestamp(from.timestamp());
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 15u) {
+    if (cached_has_bits & 0x00000001u) {
+      set_has_parent_frame_id();
+      parent_frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.parent_frame_id_);
     }
-    if (from.has_seq()) {
-      set_seq(from.seq());
+    if (cached_has_bits & 0x00000002u) {
+      set_has_frame_id();
+      frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.frame_id_);
     }
-    if (from.has_parent_frame_id()) {
-      set_parent_frame_id(from.parent_frame_id());
+    if (cached_has_bits & 0x00000004u) {
+      timestamp_ = from.timestamp_;
     }
-    if (from.has_frame_id()) {
-      set_frame_id(from.frame_id());
+    if (cached_has_bits & 0x00000008u) {
+      seq_ = from.seq_;
     }
+    _has_bits_[0] |= cached_has_bits;
   }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
 void FreeSpaces::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Proto_msg.FreeSpaces)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void FreeSpaces::CopyFrom(const FreeSpaces& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Proto_msg.FreeSpaces)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 bool FreeSpaces::IsInitialized() const {
-
   return true;
 }
 
 void FreeSpaces::Swap(FreeSpaces* other) {
-  if (other != this) {
-    std::swap(timestamp_, other->timestamp_);
-    std::swap(seq_, other->seq_);
-    std::swap(parent_frame_id_, other->parent_frame_id_);
-    std::swap(frame_id_, other->frame_id_);
-    freespaces_.Swap(&other->freespaces_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
+  if (other == this) return;
+  InternalSwap(other);
+}
+void FreeSpaces::InternalSwap(FreeSpaces* other) {
+  using std::swap;
+  freespaces_.InternalSwap(&other->freespaces_);
+  parent_frame_id_.Swap(&other->parent_frame_id_);
+  frame_id_.Swap(&other->frame_id_);
+  swap(timestamp_, other->timestamp_);
+  swap(seq_, other->seq_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata FreeSpaces::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = FreeSpaces_descriptor_;
-  metadata.reflection = FreeSpaces_reflection_;
-  return metadata;
+  protobuf_Proto_5fmsg_2ePercept_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2ePercept_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// FreeSpaces
+
+// optional double timestamp = 1;
+bool FreeSpaces::has_timestamp() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void FreeSpaces::set_has_timestamp() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void FreeSpaces::clear_has_timestamp() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void FreeSpaces::clear_timestamp() {
+  timestamp_ = 0;
+  clear_has_timestamp();
+}
+double FreeSpaces::timestamp() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.FreeSpaces.timestamp)
+  return timestamp_;
+}
+void FreeSpaces::set_timestamp(double value) {
+  set_has_timestamp();
+  timestamp_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.FreeSpaces.timestamp)
+}
+
+// optional uint32 seq = 2;
+bool FreeSpaces::has_seq() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+void FreeSpaces::set_has_seq() {
+  _has_bits_[0] |= 0x00000008u;
+}
+void FreeSpaces::clear_has_seq() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+void FreeSpaces::clear_seq() {
+  seq_ = 0u;
+  clear_has_seq();
+}
+::google::protobuf::uint32 FreeSpaces::seq() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.FreeSpaces.seq)
+  return seq_;
+}
+void FreeSpaces::set_seq(::google::protobuf::uint32 value) {
+  set_has_seq();
+  seq_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.FreeSpaces.seq)
+}
+
+// optional string parent_frame_id = 3;
+bool FreeSpaces::has_parent_frame_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void FreeSpaces::set_has_parent_frame_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void FreeSpaces::clear_has_parent_frame_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void FreeSpaces::clear_parent_frame_id() {
+  parent_frame_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_parent_frame_id();
+}
+const ::std::string& FreeSpaces::parent_frame_id() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.FreeSpaces.parent_frame_id)
+  return parent_frame_id_.GetNoArena();
+}
+void FreeSpaces::set_parent_frame_id(const ::std::string& value) {
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Proto_msg.FreeSpaces.parent_frame_id)
+}
+#if LANG_CXX11
+void FreeSpaces::set_parent_frame_id(::std::string&& value) {
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Proto_msg.FreeSpaces.parent_frame_id)
+}
+#endif
+void FreeSpaces::set_parent_frame_id(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Proto_msg.FreeSpaces.parent_frame_id)
+}
+void FreeSpaces::set_parent_frame_id(const char* value, size_t size) {
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Proto_msg.FreeSpaces.parent_frame_id)
+}
+::std::string* FreeSpaces::mutable_parent_frame_id() {
+  set_has_parent_frame_id();
+  // @@protoc_insertion_point(field_mutable:Proto_msg.FreeSpaces.parent_frame_id)
+  return parent_frame_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* FreeSpaces::release_parent_frame_id() {
+  // @@protoc_insertion_point(field_release:Proto_msg.FreeSpaces.parent_frame_id)
+  clear_has_parent_frame_id();
+  return parent_frame_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void FreeSpaces::set_allocated_parent_frame_id(::std::string* parent_frame_id) {
+  if (parent_frame_id != NULL) {
+    set_has_parent_frame_id();
+  } else {
+    clear_has_parent_frame_id();
+  }
+  parent_frame_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), parent_frame_id);
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.FreeSpaces.parent_frame_id)
+}
+
+// optional string frame_id = 4;
+bool FreeSpaces::has_frame_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void FreeSpaces::set_has_frame_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void FreeSpaces::clear_has_frame_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void FreeSpaces::clear_frame_id() {
+  frame_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_frame_id();
+}
+const ::std::string& FreeSpaces::frame_id() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.FreeSpaces.frame_id)
+  return frame_id_.GetNoArena();
+}
+void FreeSpaces::set_frame_id(const ::std::string& value) {
+  set_has_frame_id();
+  frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Proto_msg.FreeSpaces.frame_id)
+}
+#if LANG_CXX11
+void FreeSpaces::set_frame_id(::std::string&& value) {
+  set_has_frame_id();
+  frame_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Proto_msg.FreeSpaces.frame_id)
+}
+#endif
+void FreeSpaces::set_frame_id(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_frame_id();
+  frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Proto_msg.FreeSpaces.frame_id)
+}
+void FreeSpaces::set_frame_id(const char* value, size_t size) {
+  set_has_frame_id();
+  frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Proto_msg.FreeSpaces.frame_id)
+}
+::std::string* FreeSpaces::mutable_frame_id() {
+  set_has_frame_id();
+  // @@protoc_insertion_point(field_mutable:Proto_msg.FreeSpaces.frame_id)
+  return frame_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* FreeSpaces::release_frame_id() {
+  // @@protoc_insertion_point(field_release:Proto_msg.FreeSpaces.frame_id)
+  clear_has_frame_id();
+  return frame_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void FreeSpaces::set_allocated_frame_id(::std::string* frame_id) {
+  if (frame_id != NULL) {
+    set_has_frame_id();
+  } else {
+    clear_has_frame_id();
+  }
+  frame_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), frame_id);
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.FreeSpaces.frame_id)
+}
+
+// repeated .Proto_msg.FreeSpace freeSpaces = 5;
+int FreeSpaces::freespaces_size() const {
+  return freespaces_.size();
+}
+void FreeSpaces::clear_freespaces() {
+  freespaces_.Clear();
+}
+const ::Proto_msg::FreeSpace& FreeSpaces::freespaces(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.FreeSpaces.freeSpaces)
+  return freespaces_.Get(index);
+}
+::Proto_msg::FreeSpace* FreeSpaces::mutable_freespaces(int index) {
+  // @@protoc_insertion_point(field_mutable:Proto_msg.FreeSpaces.freeSpaces)
+  return freespaces_.Mutable(index);
+}
+::Proto_msg::FreeSpace* FreeSpaces::add_freespaces() {
+  // @@protoc_insertion_point(field_add:Proto_msg.FreeSpaces.freeSpaces)
+  return freespaces_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::Proto_msg::FreeSpace >*
+FreeSpaces::mutable_freespaces() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.FreeSpaces.freeSpaces)
+  return &freespaces_;
+}
+const ::google::protobuf::RepeatedPtrField< ::Proto_msg::FreeSpace >&
+FreeSpaces::freespaces() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.FreeSpaces.freeSpaces)
+  return freespaces_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Obstacles::kTimestampFieldNumber;
 const int Obstacles::kSeqFieldNumber;
 const int Obstacles::kParentFrameIdFieldNumber;
 const int Obstacles::kFrameIdFieldNumber;
 const int Obstacles::kObstaclesFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Obstacles::Obstacles()
-  : ::google::protobuf::Message() {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_Proto_5fmsg_2ePercept_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:Proto_msg.Obstacles)
 }
-
-void Obstacles::InitAsDefaultInstance() {
-}
-
 Obstacles::Obstacles(const Obstacles& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0),
+      obstacles_(from.obstacles_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  parent_frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_parent_frame_id()) {
+    parent_frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.parent_frame_id_);
+  }
+  frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_frame_id()) {
+    frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.frame_id_);
+  }
+  ::memcpy(&timestamp_, &from.timestamp_,
+    static_cast<size_t>(reinterpret_cast<char*>(&seq_) -
+    reinterpret_cast<char*>(&timestamp_)) + sizeof(seq_));
   // @@protoc_insertion_point(copy_constructor:Proto_msg.Obstacles)
 }
 
 void Obstacles::SharedCtor() {
-  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
-  timestamp_ = 0;
-  seq_ = 0u;
-  parent_frame_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  frame_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  parent_frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&timestamp_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&seq_) -
+      reinterpret_cast<char*>(&timestamp_)) + sizeof(seq_));
 }
 
 Obstacles::~Obstacles() {
@@ -3146,14 +4854,8 @@ Obstacles::~Obstacles() {
 }
 
 void Obstacles::SharedDtor() {
-  if (parent_frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete parent_frame_id_;
-  }
-  if (frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete frame_id_;
-  }
-  if (this != default_instance_) {
-  }
+  parent_frame_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  frame_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void Obstacles::SetCachedSize(int size) const {
@@ -3162,137 +4864,139 @@ void Obstacles::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* Obstacles::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return Obstacles_descriptor_;
+  protobuf_Proto_5fmsg_2ePercept_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2ePercept_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const Obstacles& Obstacles::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_Proto_5fmsg_2ePercept_2eproto();
-  return *default_instance_;
+  protobuf_Proto_5fmsg_2ePercept_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
 
-Obstacles* Obstacles::default_instance_ = NULL;
-
-Obstacles* Obstacles::New() const {
-  return new Obstacles;
+Obstacles* Obstacles::New(::google::protobuf::Arena* arena) const {
+  Obstacles* n = new Obstacles;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
 }
 
 void Obstacles::Clear() {
-  if (_has_bits_[0 / 32] & 15) {
-    timestamp_ = 0;
-    seq_ = 0u;
-    if (has_parent_frame_id()) {
-      if (parent_frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        parent_frame_id_->clear();
-      }
+// @@protoc_insertion_point(message_clear_start:Proto_msg.Obstacles)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  obstacles_.Clear();
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 3u) {
+    if (cached_has_bits & 0x00000001u) {
+      GOOGLE_DCHECK(!parent_frame_id_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*parent_frame_id_.UnsafeRawStringPointer())->clear();
     }
-    if (has_frame_id()) {
-      if (frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        frame_id_->clear();
-      }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(!frame_id_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*frame_id_.UnsafeRawStringPointer())->clear();
     }
   }
-  obstacles_.Clear();
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
+  if (cached_has_bits & 12u) {
+    ::memset(&timestamp_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&seq_) -
+        reinterpret_cast<char*>(&timestamp_)) + sizeof(seq_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
 }
 
 bool Obstacles::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:Proto_msg.Obstacles)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // optional double timestamp = 1;
       case 1: {
-        if (tag == 9) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
+          set_has_timestamp();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, &timestamp_)));
-          set_has_timestamp();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(16)) goto parse_seq;
         break;
       }
 
       // optional uint32 seq = 2;
       case 2: {
-        if (tag == 16) {
-         parse_seq:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+          set_has_seq();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  input, &seq_)));
-          set_has_seq();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_parent_frame_id;
         break;
       }
 
       // optional string parent_frame_id = 3;
       case 3: {
-        if (tag == 26) {
-         parse_parent_frame_id:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_parent_frame_id()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->parent_frame_id().data(), this->parent_frame_id().length(),
+            this->parent_frame_id().data(), static_cast<int>(this->parent_frame_id().length()),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "parent_frame_id");
+            "Proto_msg.Obstacles.parent_frame_id");
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(34)) goto parse_frame_id;
         break;
       }
 
       // optional string frame_id = 4;
       case 4: {
-        if (tag == 34) {
-         parse_frame_id:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_frame_id()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->frame_id().data(), this->frame_id().length(),
+            this->frame_id().data(), static_cast<int>(this->frame_id().length()),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "frame_id");
+            "Proto_msg.Obstacles.frame_id");
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(42)) goto parse_obstacles;
         break;
       }
 
       // repeated .Proto_msg.Obstacle obstacles = 5;
       case 5: {
-        if (tag == 42) {
-         parse_obstacles:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_obstacles()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(42)) goto parse_obstacles;
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -3309,115 +5013,131 @@ failure:
 void Obstacles::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:Proto_msg.Obstacles)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional double timestamp = 1;
-  if (has_timestamp()) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->timestamp(), output);
   }
 
   // optional uint32 seq = 2;
-  if (has_seq()) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->seq(), output);
   }
 
   // optional string parent_frame_id = 3;
-  if (has_parent_frame_id()) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->parent_frame_id().data(), this->parent_frame_id().length(),
+      this->parent_frame_id().data(), static_cast<int>(this->parent_frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "parent_frame_id");
+      "Proto_msg.Obstacles.parent_frame_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->parent_frame_id(), output);
   }
 
   // optional string frame_id = 4;
-  if (has_frame_id()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->frame_id().data(), this->frame_id().length(),
+      this->frame_id().data(), static_cast<int>(this->frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "frame_id");
+      "Proto_msg.Obstacles.frame_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       4, this->frame_id(), output);
   }
 
   // repeated .Proto_msg.Obstacle obstacles = 5;
-  for (int i = 0; i < this->obstacles_size(); i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->obstacles_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, this->obstacles(i), output);
+      5, this->obstacles(static_cast<int>(i)), output);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:Proto_msg.Obstacles)
 }
 
-::google::protobuf::uint8* Obstacles::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* Obstacles::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:Proto_msg.Obstacles)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional double timestamp = 1;
-  if (has_timestamp()) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->timestamp(), target);
   }
 
   // optional uint32 seq = 2;
-  if (has_seq()) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->seq(), target);
   }
 
   // optional string parent_frame_id = 3;
-  if (has_parent_frame_id()) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->parent_frame_id().data(), this->parent_frame_id().length(),
+      this->parent_frame_id().data(), static_cast<int>(this->parent_frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "parent_frame_id");
+      "Proto_msg.Obstacles.parent_frame_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         3, this->parent_frame_id(), target);
   }
 
   // optional string frame_id = 4;
-  if (has_frame_id()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->frame_id().data(), this->frame_id().length(),
+      this->frame_id().data(), static_cast<int>(this->frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "frame_id");
+      "Proto_msg.Obstacles.frame_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         4, this->frame_id(), target);
   }
 
   // repeated .Proto_msg.Obstacle obstacles = 5;
-  for (int i = 0; i < this->obstacles_size(); i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->obstacles_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        5, this->obstacles(i), target);
+      InternalWriteMessageNoVirtualToArray(
+        5, this->obstacles(static_cast<int>(i)), deterministic, target);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Proto_msg.Obstacles)
   return target;
 }
 
-int Obstacles::ByteSize() const {
-  int total_size = 0;
+size_t Obstacles::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Proto_msg.Obstacles)
+  size_t total_size = 0;
 
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // optional double timestamp = 1;
-    if (has_timestamp()) {
-      total_size += 1 + 8;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  // repeated .Proto_msg.Obstacle obstacles = 5;
+  {
+    unsigned int count = static_cast<unsigned int>(this->obstacles_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->obstacles(static_cast<int>(i)));
     }
+  }
 
-    // optional uint32 seq = 2;
-    if (has_seq()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->seq());
-    }
-
+  if (_has_bits_[0 / 32] & 15u) {
     // optional string parent_frame_id = 3;
     if (has_parent_frame_id()) {
       total_size += 1 +
@@ -3432,96 +5152,316 @@ int Obstacles::ByteSize() const {
           this->frame_id());
     }
 
-  }
-  // repeated .Proto_msg.Obstacle obstacles = 5;
-  total_size += 1 * this->obstacles_size();
-  for (int i = 0; i < this->obstacles_size(); i++) {
-    total_size +=
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        this->obstacles(i));
-  }
+    // optional double timestamp = 1;
+    if (has_timestamp()) {
+      total_size += 1 + 8;
+    }
 
-  if (!unknown_fields().empty()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
+    // optional uint32 seq = 2;
+    if (has_seq()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->seq());
+    }
+
   }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void Obstacles::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(generalized_merge_from_start:Proto_msg.Obstacles)
+  GOOGLE_DCHECK_NE(&from, this);
   const Obstacles* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const Obstacles*>(
-      &from);
+      ::google::protobuf::internal::DynamicCastToGenerated<const Obstacles>(
+          &from);
   if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Proto_msg.Obstacles)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Proto_msg.Obstacles)
     MergeFrom(*source);
   }
 }
 
 void Obstacles::MergeFrom(const Obstacles& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(class_specific_merge_from_start:Proto_msg.Obstacles)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   obstacles_.MergeFrom(from.obstacles_);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_timestamp()) {
-      set_timestamp(from.timestamp());
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 15u) {
+    if (cached_has_bits & 0x00000001u) {
+      set_has_parent_frame_id();
+      parent_frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.parent_frame_id_);
     }
-    if (from.has_seq()) {
-      set_seq(from.seq());
+    if (cached_has_bits & 0x00000002u) {
+      set_has_frame_id();
+      frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.frame_id_);
     }
-    if (from.has_parent_frame_id()) {
-      set_parent_frame_id(from.parent_frame_id());
+    if (cached_has_bits & 0x00000004u) {
+      timestamp_ = from.timestamp_;
     }
-    if (from.has_frame_id()) {
-      set_frame_id(from.frame_id());
+    if (cached_has_bits & 0x00000008u) {
+      seq_ = from.seq_;
     }
+    _has_bits_[0] |= cached_has_bits;
   }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
 void Obstacles::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Proto_msg.Obstacles)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void Obstacles::CopyFrom(const Obstacles& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Proto_msg.Obstacles)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 bool Obstacles::IsInitialized() const {
-
   return true;
 }
 
 void Obstacles::Swap(Obstacles* other) {
-  if (other != this) {
-    std::swap(timestamp_, other->timestamp_);
-    std::swap(seq_, other->seq_);
-    std::swap(parent_frame_id_, other->parent_frame_id_);
-    std::swap(frame_id_, other->frame_id_);
-    obstacles_.Swap(&other->obstacles_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Obstacles::InternalSwap(Obstacles* other) {
+  using std::swap;
+  obstacles_.InternalSwap(&other->obstacles_);
+  parent_frame_id_.Swap(&other->parent_frame_id_);
+  frame_id_.Swap(&other->frame_id_);
+  swap(timestamp_, other->timestamp_);
+  swap(seq_, other->seq_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Obstacles::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = Obstacles_descriptor_;
-  metadata.reflection = Obstacles_reflection_;
-  return metadata;
+  protobuf_Proto_5fmsg_2ePercept_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2ePercept_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// Obstacles
+
+// optional double timestamp = 1;
+bool Obstacles::has_timestamp() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void Obstacles::set_has_timestamp() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void Obstacles::clear_has_timestamp() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void Obstacles::clear_timestamp() {
+  timestamp_ = 0;
+  clear_has_timestamp();
+}
+double Obstacles::timestamp() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacles.timestamp)
+  return timestamp_;
+}
+void Obstacles::set_timestamp(double value) {
+  set_has_timestamp();
+  timestamp_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacles.timestamp)
+}
+
+// optional uint32 seq = 2;
+bool Obstacles::has_seq() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+void Obstacles::set_has_seq() {
+  _has_bits_[0] |= 0x00000008u;
+}
+void Obstacles::clear_has_seq() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+void Obstacles::clear_seq() {
+  seq_ = 0u;
+  clear_has_seq();
+}
+::google::protobuf::uint32 Obstacles::seq() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacles.seq)
+  return seq_;
+}
+void Obstacles::set_seq(::google::protobuf::uint32 value) {
+  set_has_seq();
+  seq_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacles.seq)
+}
+
+// optional string parent_frame_id = 3;
+bool Obstacles::has_parent_frame_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void Obstacles::set_has_parent_frame_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void Obstacles::clear_has_parent_frame_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void Obstacles::clear_parent_frame_id() {
+  parent_frame_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_parent_frame_id();
+}
+const ::std::string& Obstacles::parent_frame_id() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacles.parent_frame_id)
+  return parent_frame_id_.GetNoArena();
+}
+void Obstacles::set_parent_frame_id(const ::std::string& value) {
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacles.parent_frame_id)
+}
+#if LANG_CXX11
+void Obstacles::set_parent_frame_id(::std::string&& value) {
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Proto_msg.Obstacles.parent_frame_id)
+}
+#endif
+void Obstacles::set_parent_frame_id(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Proto_msg.Obstacles.parent_frame_id)
+}
+void Obstacles::set_parent_frame_id(const char* value, size_t size) {
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Proto_msg.Obstacles.parent_frame_id)
+}
+::std::string* Obstacles::mutable_parent_frame_id() {
+  set_has_parent_frame_id();
+  // @@protoc_insertion_point(field_mutable:Proto_msg.Obstacles.parent_frame_id)
+  return parent_frame_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* Obstacles::release_parent_frame_id() {
+  // @@protoc_insertion_point(field_release:Proto_msg.Obstacles.parent_frame_id)
+  clear_has_parent_frame_id();
+  return parent_frame_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void Obstacles::set_allocated_parent_frame_id(::std::string* parent_frame_id) {
+  if (parent_frame_id != NULL) {
+    set_has_parent_frame_id();
+  } else {
+    clear_has_parent_frame_id();
+  }
+  parent_frame_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), parent_frame_id);
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.Obstacles.parent_frame_id)
+}
+
+// optional string frame_id = 4;
+bool Obstacles::has_frame_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void Obstacles::set_has_frame_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void Obstacles::clear_has_frame_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void Obstacles::clear_frame_id() {
+  frame_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_frame_id();
+}
+const ::std::string& Obstacles::frame_id() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacles.frame_id)
+  return frame_id_.GetNoArena();
+}
+void Obstacles::set_frame_id(const ::std::string& value) {
+  set_has_frame_id();
+  frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Proto_msg.Obstacles.frame_id)
+}
+#if LANG_CXX11
+void Obstacles::set_frame_id(::std::string&& value) {
+  set_has_frame_id();
+  frame_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Proto_msg.Obstacles.frame_id)
+}
+#endif
+void Obstacles::set_frame_id(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_frame_id();
+  frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Proto_msg.Obstacles.frame_id)
+}
+void Obstacles::set_frame_id(const char* value, size_t size) {
+  set_has_frame_id();
+  frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Proto_msg.Obstacles.frame_id)
+}
+::std::string* Obstacles::mutable_frame_id() {
+  set_has_frame_id();
+  // @@protoc_insertion_point(field_mutable:Proto_msg.Obstacles.frame_id)
+  return frame_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* Obstacles::release_frame_id() {
+  // @@protoc_insertion_point(field_release:Proto_msg.Obstacles.frame_id)
+  clear_has_frame_id();
+  return frame_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void Obstacles::set_allocated_frame_id(::std::string* frame_id) {
+  if (frame_id != NULL) {
+    set_has_frame_id();
+  } else {
+    clear_has_frame_id();
+  }
+  frame_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), frame_id);
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.Obstacles.frame_id)
+}
+
+// repeated .Proto_msg.Obstacle obstacles = 5;
+int Obstacles::obstacles_size() const {
+  return obstacles_.size();
+}
+void Obstacles::clear_obstacles() {
+  obstacles_.Clear();
+}
+const ::Proto_msg::Obstacle& Obstacles::obstacles(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.Obstacles.obstacles)
+  return obstacles_.Get(index);
+}
+::Proto_msg::Obstacle* Obstacles::mutable_obstacles(int index) {
+  // @@protoc_insertion_point(field_mutable:Proto_msg.Obstacles.obstacles)
+  return obstacles_.Mutable(index);
+}
+::Proto_msg::Obstacle* Obstacles::add_obstacles() {
+  // @@protoc_insertion_point(field_add:Proto_msg.Obstacles.obstacles)
+  return obstacles_.Add();
+}
+::google::protobuf::RepeatedPtrField< ::Proto_msg::Obstacle >*
+Obstacles::mutable_obstacles() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.Obstacles.obstacles)
+  return &obstacles_;
+}
+const ::google::protobuf::RepeatedPtrField< ::Proto_msg::Obstacle >&
+Obstacles::obstacles() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.Obstacles.obstacles)
+  return obstacles_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // @@protoc_insertion_point(namespace_scope)
 

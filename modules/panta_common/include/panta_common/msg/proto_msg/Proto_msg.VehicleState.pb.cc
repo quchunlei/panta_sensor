@@ -7,6 +7,7 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
+#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/stubs/once.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/wire_format_lite_inl.h>
@@ -17,108 +18,154 @@
 // @@protoc_insertion_point(includes)
 
 namespace Proto_msg {
+class VehicleStateDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<VehicleState>
+     _instance;
+} _VehicleState_default_instance_;
+
+namespace protobuf_Proto_5fmsg_2eVehicleState_2eproto {
+
 
 namespace {
 
-const ::google::protobuf::Descriptor* VehicleState_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  VehicleState_reflection_ = NULL;
+::google::protobuf::Metadata file_level_metadata[1];
 
 }  // namespace
 
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
+};
 
-void protobuf_AssignDesc_Proto_5fmsg_2eVehicleState_2eproto() {
-  protobuf_AddDesc_Proto_5fmsg_2eVehicleState_2eproto();
-  const ::google::protobuf::FileDescriptor* file =
-    ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
-      "Proto_msg.VehicleState.proto");
-  GOOGLE_CHECK(file != NULL);
-  VehicleState_descriptor_ = file->message_type(0);
-  static const int VehicleState_offsets_[16] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, timestamp_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, seq_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, parent_frame_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, frame_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, status_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, origin_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, pos_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, pos_cov_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, orien_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, orien_cov_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, angular_vel_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, angular_vel_cov_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, linear_vel_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, linear_vel_cov_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, acc_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, acc_cov_),
-  };
-  VehicleState_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      VehicleState_descriptor_,
-      VehicleState::default_instance_,
-      VehicleState_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(VehicleState));
-}
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  ::google::protobuf::internal::AuxillaryParseTableField(),
+};
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+};
+
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, timestamp_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, seq_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, parent_frame_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, frame_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, status_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, origin_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, pos_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, pos_cov_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, orien_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, orien_cov_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, angular_vel_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, angular_vel_cov_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, linear_vel_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, linear_vel_cov_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, acc_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VehicleState, acc_cov_),
+  2,
+  3,
+  0,
+  1,
+  4,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+};
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, 21, sizeof(VehicleState)},
+};
+
+static ::google::protobuf::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::google::protobuf::Message*>(&_VehicleState_default_instance_),
+};
 
 namespace {
 
-GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
-inline void protobuf_AssignDescriptorsOnce() {
-  ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
-                 &protobuf_AssignDesc_Proto_5fmsg_2eVehicleState_2eproto);
+void protobuf_AssignDescriptors() {
+  AddDescriptors();
+  ::google::protobuf::MessageFactory* factory = NULL;
+  AssignDescriptors(
+      "Proto_msg.VehicleState.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      file_level_metadata, NULL, NULL);
 }
 
+void protobuf_AssignDescriptorsOnce() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
+}
+
+void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    VehicleState_descriptor_, &VehicleState::default_instance());
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
 }
 
 }  // namespace
-
-void protobuf_ShutdownFile_Proto_5fmsg_2eVehicleState_2eproto() {
-  delete VehicleState::default_instance_;
-  delete VehicleState_reflection_;
-}
-
-void protobuf_AddDesc_Proto_5fmsg_2eVehicleState_2eproto() {
-  static bool already_here = false;
-  if (already_here) return;
-  already_here = true;
+void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+  ::google::protobuf::internal::InitProtobufDefaults();
+  _VehicleState_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_VehicleState_default_instance_);}
+
+void InitDefaults() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
+}
+namespace {
+void AddDescriptorsImpl() {
+  InitDefaults();
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+      "\n\034Proto_msg.VehicleState.proto\022\tProto_ms"
+      "g\"\261\002\n\014VehicleState\022\021\n\ttimestamp\030\001 \001(\001\022\013\n"
+      "\003seq\030\002 \001(\r\022\027\n\017parent_frame_id\030\003 \001(\t\022\020\n\010f"
+      "rame_id\030\004 \001(\t\022\016\n\006status\030\005 \001(\r\022\016\n\006origin\030"
+      "\006 \003(\001\022\013\n\003pos\030\007 \003(\001\022\017\n\007pos_cov\030\010 \003(\001\022\r\n\005o"
+      "rien\030\t \003(\001\022\021\n\torien_cov\030\n \003(\001\022\023\n\013angular"
+      "_vel\030\013 \003(\001\022\027\n\017angular_vel_cov\030\014 \003(\001\022\022\n\nl"
+      "inear_vel\030\r \003(\001\022\026\n\016linear_vel_cov\030\016 \003(\001\022"
+      "\013\n\003acc\030\017 \003(\001\022\017\n\007acc_cov\030\020 \003(\001"
+  };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\034Proto_msg.VehicleState.proto\022\tProto_ms"
-    "g\"\261\002\n\014VehicleState\022\021\n\ttimestamp\030\001 \001(\001\022\013\n"
-    "\003seq\030\002 \001(\r\022\027\n\017parent_frame_id\030\003 \001(\t\022\020\n\010f"
-    "rame_id\030\004 \001(\t\022\016\n\006status\030\005 \001(\r\022\016\n\006origin\030"
-    "\006 \003(\001\022\013\n\003pos\030\007 \003(\001\022\017\n\007pos_cov\030\010 \003(\001\022\r\n\005o"
-    "rien\030\t \003(\001\022\021\n\torien_cov\030\n \003(\001\022\023\n\013angular"
-    "_vel\030\013 \003(\001\022\027\n\017angular_vel_cov\030\014 \003(\001\022\022\n\nl"
-    "inear_vel\030\r \003(\001\022\026\n\016linear_vel_cov\030\016 \003(\001\022"
-    "\013\n\003acc\030\017 \003(\001\022\017\n\007acc_cov\030\020 \003(\001", 349);
+      descriptor, 349);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Proto_msg.VehicleState.proto", &protobuf_RegisterTypes);
-  VehicleState::default_instance_ = new VehicleState();
-  VehicleState::default_instance_->InitAsDefaultInstance();
-  ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_Proto_5fmsg_2eVehicleState_2eproto);
 }
+} // anonymous namespace
 
-// Force AddDescriptors() to be called at static initialization time.
-struct StaticDescriptorInitializer_Proto_5fmsg_2eVehicleState_2eproto {
-  StaticDescriptorInitializer_Proto_5fmsg_2eVehicleState_2eproto() {
-    protobuf_AddDesc_Proto_5fmsg_2eVehicleState_2eproto();
+void AddDescriptors() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
+}
+// Force AddDescriptors() to be called at dynamic initialization time.
+struct StaticDescriptorInitializer {
+  StaticDescriptorInitializer() {
+    AddDescriptors();
   }
-} static_descriptor_initializer_Proto_5fmsg_2eVehicleState_2eproto_;
+} static_descriptor_initializer;
+
+}  // namespace protobuf_Proto_5fmsg_2eVehicleState_2eproto
+
 
 // ===================================================================
 
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int VehicleState::kTimestampFieldNumber;
 const int VehicleState::kSeqFieldNumber;
 const int VehicleState::kParentFrameIdFieldNumber;
@@ -135,33 +182,54 @@ const int VehicleState::kLinearVelFieldNumber;
 const int VehicleState::kLinearVelCovFieldNumber;
 const int VehicleState::kAccFieldNumber;
 const int VehicleState::kAccCovFieldNumber;
-#endif  // !_MSC_VER
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 VehicleState::VehicleState()
-  : ::google::protobuf::Message() {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_Proto_5fmsg_2eVehicleState_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:Proto_msg.VehicleState)
 }
-
-void VehicleState::InitAsDefaultInstance() {
-}
-
 VehicleState::VehicleState(const VehicleState& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0),
+      origin_(from.origin_),
+      pos_(from.pos_),
+      pos_cov_(from.pos_cov_),
+      orien_(from.orien_),
+      orien_cov_(from.orien_cov_),
+      angular_vel_(from.angular_vel_),
+      angular_vel_cov_(from.angular_vel_cov_),
+      linear_vel_(from.linear_vel_),
+      linear_vel_cov_(from.linear_vel_cov_),
+      acc_(from.acc_),
+      acc_cov_(from.acc_cov_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  parent_frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_parent_frame_id()) {
+    parent_frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.parent_frame_id_);
+  }
+  frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has_frame_id()) {
+    frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.frame_id_);
+  }
+  ::memcpy(&timestamp_, &from.timestamp_,
+    static_cast<size_t>(reinterpret_cast<char*>(&status_) -
+    reinterpret_cast<char*>(&timestamp_)) + sizeof(status_));
   // @@protoc_insertion_point(copy_constructor:Proto_msg.VehicleState)
 }
 
 void VehicleState::SharedCtor() {
-  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
-  timestamp_ = 0;
-  seq_ = 0u;
-  parent_frame_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  frame_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  status_ = 0u;
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  parent_frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&timestamp_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&status_) -
+      reinterpret_cast<char*>(&timestamp_)) + sizeof(status_));
 }
 
 VehicleState::~VehicleState() {
@@ -170,14 +238,8 @@ VehicleState::~VehicleState() {
 }
 
 void VehicleState::SharedDtor() {
-  if (parent_frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete parent_frame_id_;
-  }
-  if (frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete frame_id_;
-  }
-  if (this != default_instance_) {
-  }
+  parent_frame_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  frame_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void VehicleState::SetCachedSize(int size) const {
@@ -186,49 +248,28 @@ void VehicleState::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* VehicleState::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return VehicleState_descriptor_;
+  protobuf_Proto_5fmsg_2eVehicleState_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2eVehicleState_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const VehicleState& VehicleState::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_Proto_5fmsg_2eVehicleState_2eproto();
-  return *default_instance_;
+  protobuf_Proto_5fmsg_2eVehicleState_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
 
-VehicleState* VehicleState::default_instance_ = NULL;
-
-VehicleState* VehicleState::New() const {
-  return new VehicleState;
+VehicleState* VehicleState::New(::google::protobuf::Arena* arena) const {
+  VehicleState* n = new VehicleState;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
 }
 
 void VehicleState::Clear() {
-#define OFFSET_OF_FIELD_(f) (reinterpret_cast<char*>(      \
-  &reinterpret_cast<VehicleState*>(16)->f) - \
-   reinterpret_cast<char*>(16))
-
-#define ZR_(first, last) do {                              \
-    size_t f = OFFSET_OF_FIELD_(first);                    \
-    size_t n = OFFSET_OF_FIELD_(last) - f + sizeof(last);  \
-    ::memset(&first, 0, n);                                \
-  } while (0)
-
-  if (_has_bits_[0 / 32] & 31) {
-    ZR_(seq_, status_);
-    timestamp_ = 0;
-    if (has_parent_frame_id()) {
-      if (parent_frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        parent_frame_id_->clear();
-      }
-    }
-    if (has_frame_id()) {
-      if (frame_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        frame_id_->clear();
-      }
-    }
-  }
-
-#undef OFFSET_OF_FIELD_
-#undef ZR_
+// @@protoc_insertion_point(message_clear_start:Proto_msg.VehicleState)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   origin_.Clear();
   pos_.Clear();
@@ -241,316 +282,326 @@ void VehicleState::Clear() {
   linear_vel_cov_.Clear();
   acc_.Clear();
   acc_cov_.Clear();
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 3u) {
+    if (cached_has_bits & 0x00000001u) {
+      GOOGLE_DCHECK(!parent_frame_id_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*parent_frame_id_.UnsafeRawStringPointer())->clear();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(!frame_id_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*frame_id_.UnsafeRawStringPointer())->clear();
+    }
+  }
+  if (cached_has_bits & 28u) {
+    ::memset(&timestamp_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&status_) -
+        reinterpret_cast<char*>(&timestamp_)) + sizeof(status_));
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
 }
 
 bool VehicleState::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:Proto_msg.VehicleState)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(16383);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // optional double timestamp = 1;
       case 1: {
-        if (tag == 9) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
+          set_has_timestamp();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, &timestamp_)));
-          set_has_timestamp();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(16)) goto parse_seq;
         break;
       }
 
       // optional uint32 seq = 2;
       case 2: {
-        if (tag == 16) {
-         parse_seq:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+          set_has_seq();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  input, &seq_)));
-          set_has_seq();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_parent_frame_id;
         break;
       }
 
       // optional string parent_frame_id = 3;
       case 3: {
-        if (tag == 26) {
-         parse_parent_frame_id:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_parent_frame_id()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->parent_frame_id().data(), this->parent_frame_id().length(),
+            this->parent_frame_id().data(), static_cast<int>(this->parent_frame_id().length()),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "parent_frame_id");
+            "Proto_msg.VehicleState.parent_frame_id");
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(34)) goto parse_frame_id;
         break;
       }
 
       // optional string frame_id = 4;
       case 4: {
-        if (tag == 34) {
-         parse_frame_id:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_frame_id()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->frame_id().data(), this->frame_id().length(),
+            this->frame_id().data(), static_cast<int>(this->frame_id().length()),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "frame_id");
+            "Proto_msg.VehicleState.frame_id");
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(40)) goto parse_status;
         break;
       }
 
       // optional uint32 status = 5;
       case 5: {
-        if (tag == 40) {
-         parse_status:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
+          set_has_status();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  input, &status_)));
-          set_has_status();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(49)) goto parse_origin;
         break;
       }
 
       // repeated double origin = 6;
       case 6: {
-        if (tag == 49) {
-         parse_origin:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(49u /* 49 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 49, input, this->mutable_origin())));
-        } else if (tag == 50) {
+                 1, 49u, input, this->mutable_origin())));
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, this->mutable_origin())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(49)) goto parse_origin;
-        if (input->ExpectTag(57)) goto parse_pos;
         break;
       }
 
       // repeated double pos = 7;
       case 7: {
-        if (tag == 57) {
-         parse_pos:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(57u /* 57 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 57, input, this->mutable_pos())));
-        } else if (tag == 58) {
+                 1, 57u, input, this->mutable_pos())));
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, this->mutable_pos())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(57)) goto parse_pos;
-        if (input->ExpectTag(65)) goto parse_pos_cov;
         break;
       }
 
       // repeated double pos_cov = 8;
       case 8: {
-        if (tag == 65) {
-         parse_pos_cov:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(65u /* 65 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 65, input, this->mutable_pos_cov())));
-        } else if (tag == 66) {
+                 1, 65u, input, this->mutable_pos_cov())));
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(66u /* 66 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, this->mutable_pos_cov())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(65)) goto parse_pos_cov;
-        if (input->ExpectTag(73)) goto parse_orien;
         break;
       }
 
       // repeated double orien = 9;
       case 9: {
-        if (tag == 73) {
-         parse_orien:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(73u /* 73 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 73, input, this->mutable_orien())));
-        } else if (tag == 74) {
+                 1, 73u, input, this->mutable_orien())));
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(74u /* 74 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, this->mutable_orien())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(73)) goto parse_orien;
-        if (input->ExpectTag(81)) goto parse_orien_cov;
         break;
       }
 
       // repeated double orien_cov = 10;
       case 10: {
-        if (tag == 81) {
-         parse_orien_cov:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(81u /* 81 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 81, input, this->mutable_orien_cov())));
-        } else if (tag == 82) {
+                 1, 81u, input, this->mutable_orien_cov())));
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(82u /* 82 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, this->mutable_orien_cov())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(81)) goto parse_orien_cov;
-        if (input->ExpectTag(89)) goto parse_angular_vel;
         break;
       }
 
       // repeated double angular_vel = 11;
       case 11: {
-        if (tag == 89) {
-         parse_angular_vel:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(89u /* 89 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 89, input, this->mutable_angular_vel())));
-        } else if (tag == 90) {
+                 1, 89u, input, this->mutable_angular_vel())));
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(90u /* 90 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, this->mutable_angular_vel())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(89)) goto parse_angular_vel;
-        if (input->ExpectTag(97)) goto parse_angular_vel_cov;
         break;
       }
 
       // repeated double angular_vel_cov = 12;
       case 12: {
-        if (tag == 97) {
-         parse_angular_vel_cov:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(97u /* 97 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 97, input, this->mutable_angular_vel_cov())));
-        } else if (tag == 98) {
+                 1, 97u, input, this->mutable_angular_vel_cov())));
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(98u /* 98 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, this->mutable_angular_vel_cov())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(97)) goto parse_angular_vel_cov;
-        if (input->ExpectTag(105)) goto parse_linear_vel;
         break;
       }
 
       // repeated double linear_vel = 13;
       case 13: {
-        if (tag == 105) {
-         parse_linear_vel:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(105u /* 105 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 105, input, this->mutable_linear_vel())));
-        } else if (tag == 106) {
+                 1, 105u, input, this->mutable_linear_vel())));
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(106u /* 106 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, this->mutable_linear_vel())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(105)) goto parse_linear_vel;
-        if (input->ExpectTag(113)) goto parse_linear_vel_cov;
         break;
       }
 
       // repeated double linear_vel_cov = 14;
       case 14: {
-        if (tag == 113) {
-         parse_linear_vel_cov:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(113u /* 113 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 113, input, this->mutable_linear_vel_cov())));
-        } else if (tag == 114) {
+                 1, 113u, input, this->mutable_linear_vel_cov())));
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(114u /* 114 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, this->mutable_linear_vel_cov())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(113)) goto parse_linear_vel_cov;
-        if (input->ExpectTag(121)) goto parse_acc;
         break;
       }
 
       // repeated double acc = 15;
       case 15: {
-        if (tag == 121) {
-         parse_acc:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(121u /* 121 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 121, input, this->mutable_acc())));
-        } else if (tag == 122) {
+                 1, 121u, input, this->mutable_acc())));
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(122u /* 122 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, this->mutable_acc())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(121)) goto parse_acc;
-        if (input->ExpectTag(129)) goto parse_acc_cov;
         break;
       }
 
       // repeated double acc_cov = 16;
       case 16: {
-        if (tag == 129) {
-         parse_acc_cov:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(129u /* 129 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 2, 129, input, this->mutable_acc_cov())));
-        } else if (tag == 130) {
+                 2, 129u, input, this->mutable_acc_cov())));
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(130u /* 130 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, this->mutable_acc_cov())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(129)) goto parse_acc_cov;
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -567,244 +618,324 @@ failure:
 void VehicleState::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:Proto_msg.VehicleState)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional double timestamp = 1;
-  if (has_timestamp()) {
+  if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->timestamp(), output);
   }
 
   // optional uint32 seq = 2;
-  if (has_seq()) {
+  if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->seq(), output);
   }
 
   // optional string parent_frame_id = 3;
-  if (has_parent_frame_id()) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->parent_frame_id().data(), this->parent_frame_id().length(),
+      this->parent_frame_id().data(), static_cast<int>(this->parent_frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "parent_frame_id");
+      "Proto_msg.VehicleState.parent_frame_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->parent_frame_id(), output);
   }
 
   // optional string frame_id = 4;
-  if (has_frame_id()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->frame_id().data(), this->frame_id().length(),
+      this->frame_id().data(), static_cast<int>(this->frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "frame_id");
+      "Proto_msg.VehicleState.frame_id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       4, this->frame_id(), output);
   }
 
   // optional uint32 status = 5;
-  if (has_status()) {
+  if (cached_has_bits & 0x00000010u) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(5, this->status(), output);
   }
 
   // repeated double origin = 6;
-  for (int i = 0; i < this->origin_size(); i++) {
+  for (int i = 0, n = this->origin_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       6, this->origin(i), output);
   }
 
   // repeated double pos = 7;
-  for (int i = 0; i < this->pos_size(); i++) {
+  for (int i = 0, n = this->pos_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       7, this->pos(i), output);
   }
 
   // repeated double pos_cov = 8;
-  for (int i = 0; i < this->pos_cov_size(); i++) {
+  for (int i = 0, n = this->pos_cov_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       8, this->pos_cov(i), output);
   }
 
   // repeated double orien = 9;
-  for (int i = 0; i < this->orien_size(); i++) {
+  for (int i = 0, n = this->orien_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       9, this->orien(i), output);
   }
 
   // repeated double orien_cov = 10;
-  for (int i = 0; i < this->orien_cov_size(); i++) {
+  for (int i = 0, n = this->orien_cov_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       10, this->orien_cov(i), output);
   }
 
   // repeated double angular_vel = 11;
-  for (int i = 0; i < this->angular_vel_size(); i++) {
+  for (int i = 0, n = this->angular_vel_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       11, this->angular_vel(i), output);
   }
 
   // repeated double angular_vel_cov = 12;
-  for (int i = 0; i < this->angular_vel_cov_size(); i++) {
+  for (int i = 0, n = this->angular_vel_cov_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       12, this->angular_vel_cov(i), output);
   }
 
   // repeated double linear_vel = 13;
-  for (int i = 0; i < this->linear_vel_size(); i++) {
+  for (int i = 0, n = this->linear_vel_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       13, this->linear_vel(i), output);
   }
 
   // repeated double linear_vel_cov = 14;
-  for (int i = 0; i < this->linear_vel_cov_size(); i++) {
+  for (int i = 0, n = this->linear_vel_cov_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       14, this->linear_vel_cov(i), output);
   }
 
   // repeated double acc = 15;
-  for (int i = 0; i < this->acc_size(); i++) {
+  for (int i = 0, n = this->acc_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       15, this->acc(i), output);
   }
 
   // repeated double acc_cov = 16;
-  for (int i = 0; i < this->acc_cov_size(); i++) {
+  for (int i = 0, n = this->acc_cov_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteDouble(
       16, this->acc_cov(i), output);
   }
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:Proto_msg.VehicleState)
 }
 
-::google::protobuf::uint8* VehicleState::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* VehicleState::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:Proto_msg.VehicleState)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
   // optional double timestamp = 1;
-  if (has_timestamp()) {
+  if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->timestamp(), target);
   }
 
   // optional uint32 seq = 2;
-  if (has_seq()) {
+  if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->seq(), target);
   }
 
   // optional string parent_frame_id = 3;
-  if (has_parent_frame_id()) {
+  if (cached_has_bits & 0x00000001u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->parent_frame_id().data(), this->parent_frame_id().length(),
+      this->parent_frame_id().data(), static_cast<int>(this->parent_frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "parent_frame_id");
+      "Proto_msg.VehicleState.parent_frame_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         3, this->parent_frame_id(), target);
   }
 
   // optional string frame_id = 4;
-  if (has_frame_id()) {
+  if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->frame_id().data(), this->frame_id().length(),
+      this->frame_id().data(), static_cast<int>(this->frame_id().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "frame_id");
+      "Proto_msg.VehicleState.frame_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         4, this->frame_id(), target);
   }
 
   // optional uint32 status = 5;
-  if (has_status()) {
+  if (cached_has_bits & 0x00000010u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(5, this->status(), target);
   }
 
   // repeated double origin = 6;
-  for (int i = 0; i < this->origin_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleToArray(6, this->origin(i), target);
-  }
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteDoubleToArray(6, this->origin_, target);
 
   // repeated double pos = 7;
-  for (int i = 0; i < this->pos_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleToArray(7, this->pos(i), target);
-  }
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteDoubleToArray(7, this->pos_, target);
 
   // repeated double pos_cov = 8;
-  for (int i = 0; i < this->pos_cov_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleToArray(8, this->pos_cov(i), target);
-  }
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteDoubleToArray(8, this->pos_cov_, target);
 
   // repeated double orien = 9;
-  for (int i = 0; i < this->orien_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleToArray(9, this->orien(i), target);
-  }
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteDoubleToArray(9, this->orien_, target);
 
   // repeated double orien_cov = 10;
-  for (int i = 0; i < this->orien_cov_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleToArray(10, this->orien_cov(i), target);
-  }
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteDoubleToArray(10, this->orien_cov_, target);
 
   // repeated double angular_vel = 11;
-  for (int i = 0; i < this->angular_vel_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleToArray(11, this->angular_vel(i), target);
-  }
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteDoubleToArray(11, this->angular_vel_, target);
 
   // repeated double angular_vel_cov = 12;
-  for (int i = 0; i < this->angular_vel_cov_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleToArray(12, this->angular_vel_cov(i), target);
-  }
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteDoubleToArray(12, this->angular_vel_cov_, target);
 
   // repeated double linear_vel = 13;
-  for (int i = 0; i < this->linear_vel_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleToArray(13, this->linear_vel(i), target);
-  }
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteDoubleToArray(13, this->linear_vel_, target);
 
   // repeated double linear_vel_cov = 14;
-  for (int i = 0; i < this->linear_vel_cov_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleToArray(14, this->linear_vel_cov(i), target);
-  }
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteDoubleToArray(14, this->linear_vel_cov_, target);
 
   // repeated double acc = 15;
-  for (int i = 0; i < this->acc_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleToArray(15, this->acc(i), target);
-  }
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteDoubleToArray(15, this->acc_, target);
 
   // repeated double acc_cov = 16;
-  for (int i = 0; i < this->acc_cov_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleToArray(16, this->acc_cov(i), target);
-  }
+  target = ::google::protobuf::internal::WireFormatLite::
+    WriteDoubleToArray(16, this->acc_cov_, target);
 
-  if (!unknown_fields().empty()) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:Proto_msg.VehicleState)
   return target;
 }
 
-int VehicleState::ByteSize() const {
-  int total_size = 0;
+size_t VehicleState::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Proto_msg.VehicleState)
+  size_t total_size = 0;
 
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // optional double timestamp = 1;
-    if (has_timestamp()) {
-      total_size += 1 + 8;
-    }
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  // repeated double origin = 6;
+  {
+    unsigned int count = static_cast<unsigned int>(this->origin_size());
+    size_t data_size = 8UL * count;
+    total_size += 1 *
+                  ::google::protobuf::internal::FromIntSize(this->origin_size());
+    total_size += data_size;
+  }
 
-    // optional uint32 seq = 2;
-    if (has_seq()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->seq());
-    }
+  // repeated double pos = 7;
+  {
+    unsigned int count = static_cast<unsigned int>(this->pos_size());
+    size_t data_size = 8UL * count;
+    total_size += 1 *
+                  ::google::protobuf::internal::FromIntSize(this->pos_size());
+    total_size += data_size;
+  }
 
+  // repeated double pos_cov = 8;
+  {
+    unsigned int count = static_cast<unsigned int>(this->pos_cov_size());
+    size_t data_size = 8UL * count;
+    total_size += 1 *
+                  ::google::protobuf::internal::FromIntSize(this->pos_cov_size());
+    total_size += data_size;
+  }
+
+  // repeated double orien = 9;
+  {
+    unsigned int count = static_cast<unsigned int>(this->orien_size());
+    size_t data_size = 8UL * count;
+    total_size += 1 *
+                  ::google::protobuf::internal::FromIntSize(this->orien_size());
+    total_size += data_size;
+  }
+
+  // repeated double orien_cov = 10;
+  {
+    unsigned int count = static_cast<unsigned int>(this->orien_cov_size());
+    size_t data_size = 8UL * count;
+    total_size += 1 *
+                  ::google::protobuf::internal::FromIntSize(this->orien_cov_size());
+    total_size += data_size;
+  }
+
+  // repeated double angular_vel = 11;
+  {
+    unsigned int count = static_cast<unsigned int>(this->angular_vel_size());
+    size_t data_size = 8UL * count;
+    total_size += 1 *
+                  ::google::protobuf::internal::FromIntSize(this->angular_vel_size());
+    total_size += data_size;
+  }
+
+  // repeated double angular_vel_cov = 12;
+  {
+    unsigned int count = static_cast<unsigned int>(this->angular_vel_cov_size());
+    size_t data_size = 8UL * count;
+    total_size += 1 *
+                  ::google::protobuf::internal::FromIntSize(this->angular_vel_cov_size());
+    total_size += data_size;
+  }
+
+  // repeated double linear_vel = 13;
+  {
+    unsigned int count = static_cast<unsigned int>(this->linear_vel_size());
+    size_t data_size = 8UL * count;
+    total_size += 1 *
+                  ::google::protobuf::internal::FromIntSize(this->linear_vel_size());
+    total_size += data_size;
+  }
+
+  // repeated double linear_vel_cov = 14;
+  {
+    unsigned int count = static_cast<unsigned int>(this->linear_vel_cov_size());
+    size_t data_size = 8UL * count;
+    total_size += 1 *
+                  ::google::protobuf::internal::FromIntSize(this->linear_vel_cov_size());
+    total_size += data_size;
+  }
+
+  // repeated double acc = 15;
+  {
+    unsigned int count = static_cast<unsigned int>(this->acc_size());
+    size_t data_size = 8UL * count;
+    total_size += 1 *
+                  ::google::protobuf::internal::FromIntSize(this->acc_size());
+    total_size += data_size;
+  }
+
+  // repeated double acc_cov = 16;
+  {
+    unsigned int count = static_cast<unsigned int>(this->acc_cov_size());
+    size_t data_size = 8UL * count;
+    total_size += 2 *
+                  ::google::protobuf::internal::FromIntSize(this->acc_cov_size());
+    total_size += data_size;
+  }
+
+  if (_has_bits_[0 / 32] & 31u) {
     // optional string parent_frame_id = 3;
     if (has_parent_frame_id()) {
       total_size += 1 +
@@ -819,6 +950,18 @@ int VehicleState::ByteSize() const {
           this->frame_id());
     }
 
+    // optional double timestamp = 1;
+    if (has_timestamp()) {
+      total_size += 1 + 8;
+    }
+
+    // optional uint32 seq = 2;
+    if (has_seq()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->seq());
+    }
+
     // optional uint32 status = 5;
     if (has_status()) {
       total_size += 1 +
@@ -827,108 +970,35 @@ int VehicleState::ByteSize() const {
     }
 
   }
-  // repeated double origin = 6;
-  {
-    int data_size = 0;
-    data_size = 8 * this->origin_size();
-    total_size += 1 * this->origin_size() + data_size;
-  }
-
-  // repeated double pos = 7;
-  {
-    int data_size = 0;
-    data_size = 8 * this->pos_size();
-    total_size += 1 * this->pos_size() + data_size;
-  }
-
-  // repeated double pos_cov = 8;
-  {
-    int data_size = 0;
-    data_size = 8 * this->pos_cov_size();
-    total_size += 1 * this->pos_cov_size() + data_size;
-  }
-
-  // repeated double orien = 9;
-  {
-    int data_size = 0;
-    data_size = 8 * this->orien_size();
-    total_size += 1 * this->orien_size() + data_size;
-  }
-
-  // repeated double orien_cov = 10;
-  {
-    int data_size = 0;
-    data_size = 8 * this->orien_cov_size();
-    total_size += 1 * this->orien_cov_size() + data_size;
-  }
-
-  // repeated double angular_vel = 11;
-  {
-    int data_size = 0;
-    data_size = 8 * this->angular_vel_size();
-    total_size += 1 * this->angular_vel_size() + data_size;
-  }
-
-  // repeated double angular_vel_cov = 12;
-  {
-    int data_size = 0;
-    data_size = 8 * this->angular_vel_cov_size();
-    total_size += 1 * this->angular_vel_cov_size() + data_size;
-  }
-
-  // repeated double linear_vel = 13;
-  {
-    int data_size = 0;
-    data_size = 8 * this->linear_vel_size();
-    total_size += 1 * this->linear_vel_size() + data_size;
-  }
-
-  // repeated double linear_vel_cov = 14;
-  {
-    int data_size = 0;
-    data_size = 8 * this->linear_vel_cov_size();
-    total_size += 1 * this->linear_vel_cov_size() + data_size;
-  }
-
-  // repeated double acc = 15;
-  {
-    int data_size = 0;
-    data_size = 8 * this->acc_size();
-    total_size += 1 * this->acc_size() + data_size;
-  }
-
-  // repeated double acc_cov = 16;
-  {
-    int data_size = 0;
-    data_size = 8 * this->acc_cov_size();
-    total_size += 2 * this->acc_cov_size() + data_size;
-  }
-
-  if (!unknown_fields().empty()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
-  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void VehicleState::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(generalized_merge_from_start:Proto_msg.VehicleState)
+  GOOGLE_DCHECK_NE(&from, this);
   const VehicleState* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const VehicleState*>(
-      &from);
+      ::google::protobuf::internal::DynamicCastToGenerated<const VehicleState>(
+          &from);
   if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Proto_msg.VehicleState)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Proto_msg.VehicleState)
     MergeFrom(*source);
   }
 }
 
 void VehicleState::MergeFrom(const VehicleState& from) {
-  GOOGLE_CHECK_NE(&from, this);
+// @@protoc_insertion_point(class_specific_merge_from_start:Proto_msg.VehicleState)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   origin_.MergeFrom(from.origin_);
   pos_.MergeFrom(from.pos_);
   pos_cov_.MergeFrom(from.pos_cov_);
@@ -940,75 +1010,611 @@ void VehicleState::MergeFrom(const VehicleState& from) {
   linear_vel_cov_.MergeFrom(from.linear_vel_cov_);
   acc_.MergeFrom(from.acc_);
   acc_cov_.MergeFrom(from.acc_cov_);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_timestamp()) {
-      set_timestamp(from.timestamp());
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 31u) {
+    if (cached_has_bits & 0x00000001u) {
+      set_has_parent_frame_id();
+      parent_frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.parent_frame_id_);
     }
-    if (from.has_seq()) {
-      set_seq(from.seq());
+    if (cached_has_bits & 0x00000002u) {
+      set_has_frame_id();
+      frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.frame_id_);
     }
-    if (from.has_parent_frame_id()) {
-      set_parent_frame_id(from.parent_frame_id());
+    if (cached_has_bits & 0x00000004u) {
+      timestamp_ = from.timestamp_;
     }
-    if (from.has_frame_id()) {
-      set_frame_id(from.frame_id());
+    if (cached_has_bits & 0x00000008u) {
+      seq_ = from.seq_;
     }
-    if (from.has_status()) {
-      set_status(from.status());
+    if (cached_has_bits & 0x00000010u) {
+      status_ = from.status_;
     }
+    _has_bits_[0] |= cached_has_bits;
   }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
 void VehicleState::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Proto_msg.VehicleState)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void VehicleState::CopyFrom(const VehicleState& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Proto_msg.VehicleState)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 bool VehicleState::IsInitialized() const {
-
   return true;
 }
 
 void VehicleState::Swap(VehicleState* other) {
-  if (other != this) {
-    std::swap(timestamp_, other->timestamp_);
-    std::swap(seq_, other->seq_);
-    std::swap(parent_frame_id_, other->parent_frame_id_);
-    std::swap(frame_id_, other->frame_id_);
-    std::swap(status_, other->status_);
-    origin_.Swap(&other->origin_);
-    pos_.Swap(&other->pos_);
-    pos_cov_.Swap(&other->pos_cov_);
-    orien_.Swap(&other->orien_);
-    orien_cov_.Swap(&other->orien_cov_);
-    angular_vel_.Swap(&other->angular_vel_);
-    angular_vel_cov_.Swap(&other->angular_vel_cov_);
-    linear_vel_.Swap(&other->linear_vel_);
-    linear_vel_cov_.Swap(&other->linear_vel_cov_);
-    acc_.Swap(&other->acc_);
-    acc_cov_.Swap(&other->acc_cov_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
+  if (other == this) return;
+  InternalSwap(other);
+}
+void VehicleState::InternalSwap(VehicleState* other) {
+  using std::swap;
+  origin_.InternalSwap(&other->origin_);
+  pos_.InternalSwap(&other->pos_);
+  pos_cov_.InternalSwap(&other->pos_cov_);
+  orien_.InternalSwap(&other->orien_);
+  orien_cov_.InternalSwap(&other->orien_cov_);
+  angular_vel_.InternalSwap(&other->angular_vel_);
+  angular_vel_cov_.InternalSwap(&other->angular_vel_cov_);
+  linear_vel_.InternalSwap(&other->linear_vel_);
+  linear_vel_cov_.InternalSwap(&other->linear_vel_cov_);
+  acc_.InternalSwap(&other->acc_);
+  acc_cov_.InternalSwap(&other->acc_cov_);
+  parent_frame_id_.Swap(&other->parent_frame_id_);
+  frame_id_.Swap(&other->frame_id_);
+  swap(timestamp_, other->timestamp_);
+  swap(seq_, other->seq_);
+  swap(status_, other->status_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata VehicleState::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = VehicleState_descriptor_;
-  metadata.reflection = VehicleState_reflection_;
-  return metadata;
+  protobuf_Proto_5fmsg_2eVehicleState_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_Proto_5fmsg_2eVehicleState_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// VehicleState
+
+// optional double timestamp = 1;
+bool VehicleState::has_timestamp() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+void VehicleState::set_has_timestamp() {
+  _has_bits_[0] |= 0x00000004u;
+}
+void VehicleState::clear_has_timestamp() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+void VehicleState::clear_timestamp() {
+  timestamp_ = 0;
+  clear_has_timestamp();
+}
+double VehicleState::timestamp() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.VehicleState.timestamp)
+  return timestamp_;
+}
+void VehicleState::set_timestamp(double value) {
+  set_has_timestamp();
+  timestamp_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.VehicleState.timestamp)
+}
+
+// optional uint32 seq = 2;
+bool VehicleState::has_seq() const {
+  return (_has_bits_[0] & 0x00000008u) != 0;
+}
+void VehicleState::set_has_seq() {
+  _has_bits_[0] |= 0x00000008u;
+}
+void VehicleState::clear_has_seq() {
+  _has_bits_[0] &= ~0x00000008u;
+}
+void VehicleState::clear_seq() {
+  seq_ = 0u;
+  clear_has_seq();
+}
+::google::protobuf::uint32 VehicleState::seq() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.VehicleState.seq)
+  return seq_;
+}
+void VehicleState::set_seq(::google::protobuf::uint32 value) {
+  set_has_seq();
+  seq_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.VehicleState.seq)
+}
+
+// optional string parent_frame_id = 3;
+bool VehicleState::has_parent_frame_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void VehicleState::set_has_parent_frame_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void VehicleState::clear_has_parent_frame_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void VehicleState::clear_parent_frame_id() {
+  parent_frame_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_parent_frame_id();
+}
+const ::std::string& VehicleState::parent_frame_id() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.VehicleState.parent_frame_id)
+  return parent_frame_id_.GetNoArena();
+}
+void VehicleState::set_parent_frame_id(const ::std::string& value) {
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Proto_msg.VehicleState.parent_frame_id)
+}
+#if LANG_CXX11
+void VehicleState::set_parent_frame_id(::std::string&& value) {
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Proto_msg.VehicleState.parent_frame_id)
+}
+#endif
+void VehicleState::set_parent_frame_id(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Proto_msg.VehicleState.parent_frame_id)
+}
+void VehicleState::set_parent_frame_id(const char* value, size_t size) {
+  set_has_parent_frame_id();
+  parent_frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Proto_msg.VehicleState.parent_frame_id)
+}
+::std::string* VehicleState::mutable_parent_frame_id() {
+  set_has_parent_frame_id();
+  // @@protoc_insertion_point(field_mutable:Proto_msg.VehicleState.parent_frame_id)
+  return parent_frame_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* VehicleState::release_parent_frame_id() {
+  // @@protoc_insertion_point(field_release:Proto_msg.VehicleState.parent_frame_id)
+  clear_has_parent_frame_id();
+  return parent_frame_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void VehicleState::set_allocated_parent_frame_id(::std::string* parent_frame_id) {
+  if (parent_frame_id != NULL) {
+    set_has_parent_frame_id();
+  } else {
+    clear_has_parent_frame_id();
+  }
+  parent_frame_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), parent_frame_id);
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.VehicleState.parent_frame_id)
+}
+
+// optional string frame_id = 4;
+bool VehicleState::has_frame_id() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void VehicleState::set_has_frame_id() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void VehicleState::clear_has_frame_id() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void VehicleState::clear_frame_id() {
+  frame_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has_frame_id();
+}
+const ::std::string& VehicleState::frame_id() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.VehicleState.frame_id)
+  return frame_id_.GetNoArena();
+}
+void VehicleState::set_frame_id(const ::std::string& value) {
+  set_has_frame_id();
+  frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Proto_msg.VehicleState.frame_id)
+}
+#if LANG_CXX11
+void VehicleState::set_frame_id(::std::string&& value) {
+  set_has_frame_id();
+  frame_id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Proto_msg.VehicleState.frame_id)
+}
+#endif
+void VehicleState::set_frame_id(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  set_has_frame_id();
+  frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Proto_msg.VehicleState.frame_id)
+}
+void VehicleState::set_frame_id(const char* value, size_t size) {
+  set_has_frame_id();
+  frame_id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Proto_msg.VehicleState.frame_id)
+}
+::std::string* VehicleState::mutable_frame_id() {
+  set_has_frame_id();
+  // @@protoc_insertion_point(field_mutable:Proto_msg.VehicleState.frame_id)
+  return frame_id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* VehicleState::release_frame_id() {
+  // @@protoc_insertion_point(field_release:Proto_msg.VehicleState.frame_id)
+  clear_has_frame_id();
+  return frame_id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void VehicleState::set_allocated_frame_id(::std::string* frame_id) {
+  if (frame_id != NULL) {
+    set_has_frame_id();
+  } else {
+    clear_has_frame_id();
+  }
+  frame_id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), frame_id);
+  // @@protoc_insertion_point(field_set_allocated:Proto_msg.VehicleState.frame_id)
+}
+
+// optional uint32 status = 5;
+bool VehicleState::has_status() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+void VehicleState::set_has_status() {
+  _has_bits_[0] |= 0x00000010u;
+}
+void VehicleState::clear_has_status() {
+  _has_bits_[0] &= ~0x00000010u;
+}
+void VehicleState::clear_status() {
+  status_ = 0u;
+  clear_has_status();
+}
+::google::protobuf::uint32 VehicleState::status() const {
+  // @@protoc_insertion_point(field_get:Proto_msg.VehicleState.status)
+  return status_;
+}
+void VehicleState::set_status(::google::protobuf::uint32 value) {
+  set_has_status();
+  status_ = value;
+  // @@protoc_insertion_point(field_set:Proto_msg.VehicleState.status)
+}
+
+// repeated double origin = 6;
+int VehicleState::origin_size() const {
+  return origin_.size();
+}
+void VehicleState::clear_origin() {
+  origin_.Clear();
+}
+double VehicleState::origin(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.VehicleState.origin)
+  return origin_.Get(index);
+}
+void VehicleState::set_origin(int index, double value) {
+  origin_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Proto_msg.VehicleState.origin)
+}
+void VehicleState::add_origin(double value) {
+  origin_.Add(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.VehicleState.origin)
+}
+const ::google::protobuf::RepeatedField< double >&
+VehicleState::origin() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.VehicleState.origin)
+  return origin_;
+}
+::google::protobuf::RepeatedField< double >*
+VehicleState::mutable_origin() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.VehicleState.origin)
+  return &origin_;
+}
+
+// repeated double pos = 7;
+int VehicleState::pos_size() const {
+  return pos_.size();
+}
+void VehicleState::clear_pos() {
+  pos_.Clear();
+}
+double VehicleState::pos(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.VehicleState.pos)
+  return pos_.Get(index);
+}
+void VehicleState::set_pos(int index, double value) {
+  pos_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Proto_msg.VehicleState.pos)
+}
+void VehicleState::add_pos(double value) {
+  pos_.Add(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.VehicleState.pos)
+}
+const ::google::protobuf::RepeatedField< double >&
+VehicleState::pos() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.VehicleState.pos)
+  return pos_;
+}
+::google::protobuf::RepeatedField< double >*
+VehicleState::mutable_pos() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.VehicleState.pos)
+  return &pos_;
+}
+
+// repeated double pos_cov = 8;
+int VehicleState::pos_cov_size() const {
+  return pos_cov_.size();
+}
+void VehicleState::clear_pos_cov() {
+  pos_cov_.Clear();
+}
+double VehicleState::pos_cov(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.VehicleState.pos_cov)
+  return pos_cov_.Get(index);
+}
+void VehicleState::set_pos_cov(int index, double value) {
+  pos_cov_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Proto_msg.VehicleState.pos_cov)
+}
+void VehicleState::add_pos_cov(double value) {
+  pos_cov_.Add(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.VehicleState.pos_cov)
+}
+const ::google::protobuf::RepeatedField< double >&
+VehicleState::pos_cov() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.VehicleState.pos_cov)
+  return pos_cov_;
+}
+::google::protobuf::RepeatedField< double >*
+VehicleState::mutable_pos_cov() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.VehicleState.pos_cov)
+  return &pos_cov_;
+}
+
+// repeated double orien = 9;
+int VehicleState::orien_size() const {
+  return orien_.size();
+}
+void VehicleState::clear_orien() {
+  orien_.Clear();
+}
+double VehicleState::orien(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.VehicleState.orien)
+  return orien_.Get(index);
+}
+void VehicleState::set_orien(int index, double value) {
+  orien_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Proto_msg.VehicleState.orien)
+}
+void VehicleState::add_orien(double value) {
+  orien_.Add(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.VehicleState.orien)
+}
+const ::google::protobuf::RepeatedField< double >&
+VehicleState::orien() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.VehicleState.orien)
+  return orien_;
+}
+::google::protobuf::RepeatedField< double >*
+VehicleState::mutable_orien() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.VehicleState.orien)
+  return &orien_;
+}
+
+// repeated double orien_cov = 10;
+int VehicleState::orien_cov_size() const {
+  return orien_cov_.size();
+}
+void VehicleState::clear_orien_cov() {
+  orien_cov_.Clear();
+}
+double VehicleState::orien_cov(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.VehicleState.orien_cov)
+  return orien_cov_.Get(index);
+}
+void VehicleState::set_orien_cov(int index, double value) {
+  orien_cov_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Proto_msg.VehicleState.orien_cov)
+}
+void VehicleState::add_orien_cov(double value) {
+  orien_cov_.Add(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.VehicleState.orien_cov)
+}
+const ::google::protobuf::RepeatedField< double >&
+VehicleState::orien_cov() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.VehicleState.orien_cov)
+  return orien_cov_;
+}
+::google::protobuf::RepeatedField< double >*
+VehicleState::mutable_orien_cov() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.VehicleState.orien_cov)
+  return &orien_cov_;
+}
+
+// repeated double angular_vel = 11;
+int VehicleState::angular_vel_size() const {
+  return angular_vel_.size();
+}
+void VehicleState::clear_angular_vel() {
+  angular_vel_.Clear();
+}
+double VehicleState::angular_vel(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.VehicleState.angular_vel)
+  return angular_vel_.Get(index);
+}
+void VehicleState::set_angular_vel(int index, double value) {
+  angular_vel_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Proto_msg.VehicleState.angular_vel)
+}
+void VehicleState::add_angular_vel(double value) {
+  angular_vel_.Add(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.VehicleState.angular_vel)
+}
+const ::google::protobuf::RepeatedField< double >&
+VehicleState::angular_vel() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.VehicleState.angular_vel)
+  return angular_vel_;
+}
+::google::protobuf::RepeatedField< double >*
+VehicleState::mutable_angular_vel() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.VehicleState.angular_vel)
+  return &angular_vel_;
+}
+
+// repeated double angular_vel_cov = 12;
+int VehicleState::angular_vel_cov_size() const {
+  return angular_vel_cov_.size();
+}
+void VehicleState::clear_angular_vel_cov() {
+  angular_vel_cov_.Clear();
+}
+double VehicleState::angular_vel_cov(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.VehicleState.angular_vel_cov)
+  return angular_vel_cov_.Get(index);
+}
+void VehicleState::set_angular_vel_cov(int index, double value) {
+  angular_vel_cov_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Proto_msg.VehicleState.angular_vel_cov)
+}
+void VehicleState::add_angular_vel_cov(double value) {
+  angular_vel_cov_.Add(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.VehicleState.angular_vel_cov)
+}
+const ::google::protobuf::RepeatedField< double >&
+VehicleState::angular_vel_cov() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.VehicleState.angular_vel_cov)
+  return angular_vel_cov_;
+}
+::google::protobuf::RepeatedField< double >*
+VehicleState::mutable_angular_vel_cov() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.VehicleState.angular_vel_cov)
+  return &angular_vel_cov_;
+}
+
+// repeated double linear_vel = 13;
+int VehicleState::linear_vel_size() const {
+  return linear_vel_.size();
+}
+void VehicleState::clear_linear_vel() {
+  linear_vel_.Clear();
+}
+double VehicleState::linear_vel(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.VehicleState.linear_vel)
+  return linear_vel_.Get(index);
+}
+void VehicleState::set_linear_vel(int index, double value) {
+  linear_vel_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Proto_msg.VehicleState.linear_vel)
+}
+void VehicleState::add_linear_vel(double value) {
+  linear_vel_.Add(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.VehicleState.linear_vel)
+}
+const ::google::protobuf::RepeatedField< double >&
+VehicleState::linear_vel() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.VehicleState.linear_vel)
+  return linear_vel_;
+}
+::google::protobuf::RepeatedField< double >*
+VehicleState::mutable_linear_vel() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.VehicleState.linear_vel)
+  return &linear_vel_;
+}
+
+// repeated double linear_vel_cov = 14;
+int VehicleState::linear_vel_cov_size() const {
+  return linear_vel_cov_.size();
+}
+void VehicleState::clear_linear_vel_cov() {
+  linear_vel_cov_.Clear();
+}
+double VehicleState::linear_vel_cov(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.VehicleState.linear_vel_cov)
+  return linear_vel_cov_.Get(index);
+}
+void VehicleState::set_linear_vel_cov(int index, double value) {
+  linear_vel_cov_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Proto_msg.VehicleState.linear_vel_cov)
+}
+void VehicleState::add_linear_vel_cov(double value) {
+  linear_vel_cov_.Add(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.VehicleState.linear_vel_cov)
+}
+const ::google::protobuf::RepeatedField< double >&
+VehicleState::linear_vel_cov() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.VehicleState.linear_vel_cov)
+  return linear_vel_cov_;
+}
+::google::protobuf::RepeatedField< double >*
+VehicleState::mutable_linear_vel_cov() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.VehicleState.linear_vel_cov)
+  return &linear_vel_cov_;
+}
+
+// repeated double acc = 15;
+int VehicleState::acc_size() const {
+  return acc_.size();
+}
+void VehicleState::clear_acc() {
+  acc_.Clear();
+}
+double VehicleState::acc(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.VehicleState.acc)
+  return acc_.Get(index);
+}
+void VehicleState::set_acc(int index, double value) {
+  acc_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Proto_msg.VehicleState.acc)
+}
+void VehicleState::add_acc(double value) {
+  acc_.Add(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.VehicleState.acc)
+}
+const ::google::protobuf::RepeatedField< double >&
+VehicleState::acc() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.VehicleState.acc)
+  return acc_;
+}
+::google::protobuf::RepeatedField< double >*
+VehicleState::mutable_acc() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.VehicleState.acc)
+  return &acc_;
+}
+
+// repeated double acc_cov = 16;
+int VehicleState::acc_cov_size() const {
+  return acc_cov_.size();
+}
+void VehicleState::clear_acc_cov() {
+  acc_cov_.Clear();
+}
+double VehicleState::acc_cov(int index) const {
+  // @@protoc_insertion_point(field_get:Proto_msg.VehicleState.acc_cov)
+  return acc_cov_.Get(index);
+}
+void VehicleState::set_acc_cov(int index, double value) {
+  acc_cov_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Proto_msg.VehicleState.acc_cov)
+}
+void VehicleState::add_acc_cov(double value) {
+  acc_cov_.Add(value);
+  // @@protoc_insertion_point(field_add:Proto_msg.VehicleState.acc_cov)
+}
+const ::google::protobuf::RepeatedField< double >&
+VehicleState::acc_cov() const {
+  // @@protoc_insertion_point(field_list:Proto_msg.VehicleState.acc_cov)
+  return acc_cov_;
+}
+::google::protobuf::RepeatedField< double >*
+VehicleState::mutable_acc_cov() {
+  // @@protoc_insertion_point(field_mutable_list:Proto_msg.VehicleState.acc_cov)
+  return &acc_cov_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // @@protoc_insertion_point(namespace_scope)
 

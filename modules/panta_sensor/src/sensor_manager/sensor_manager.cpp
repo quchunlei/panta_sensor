@@ -574,6 +574,10 @@ R* SensorManager::construct(const std::string& device_type, const std::string& f
   {
     ret = localConstruct<R, ImuHWT605>(api_request);
   }
+  else if (device_type == "DY551")
+  {
+    ret = localConstruct<R, ImuDY551>(api_request);
+  }
   else if (device_type == "XWG13668")
   {
     ret = localConstruct<R, InsXWG13668>(api_request);

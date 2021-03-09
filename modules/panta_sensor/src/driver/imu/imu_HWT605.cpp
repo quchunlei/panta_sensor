@@ -40,7 +40,6 @@ void ImuHWT605::prepareMsg()
 
   decode_msg(count, buf_rec);
 
-  yj9_data_ = yj9_data_;
   imu_seq_++;
   ImuMsg imu_msg;
   imu_msg.orien[0] = yj9_data_.eular_angle_.roll / 180.0 * M_PI;
@@ -144,7 +143,7 @@ void ImuHWT605::analysis(std::vector<uint8_t> buf_)
       yj9_data_.time_.month = buf_[3];
       yj9_data_.time_.day = buf_[4];
       yj9_data_.time_.hour = buf_[5];
-      yj9_data_.time_.miniute = buf_[6];
+      yj9_data_.time_.minute = buf_[6];
       yj9_data_.time_.sec = buf_[7];
       break;
     }

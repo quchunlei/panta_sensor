@@ -7,7 +7,7 @@ project(panta_sdk)
 add_subdirectory(modules/panta_common)
 add_subdirectory(modules/rs_lidar)
 add_subdirectory(modules/panta_sensor)
-add_subdirectory(modules/panta_preprocessing)
+# add_subdirectory(modules/panta_preprocessing)
 
 include(CheckSymbolExists)
 #========================
@@ -96,10 +96,12 @@ add_executable(panta_sdk_demo
               src/panta_sdk_demo_node.cpp
             src/panta_sdk_demo.cpp
             )
-add_dependencies(panta_sdk_demo panta_sensormanager panta_preprocessing)
+# add_dependencies(panta_sdk_demo panta_sensormanager panta_preprocessing)
+add_dependencies(panta_sdk_demo panta_sensormanager)
+
 target_link_libraries(panta_sdk_demo
                     panta_sensormanager
-                    panta_preprocessing       
+                    # panta_preprocessing       
                     ${roscpp_LIBRARIES}
                     ${PROTOBUF_LIBRARY}
                     ${tf_LIBRARIES}   

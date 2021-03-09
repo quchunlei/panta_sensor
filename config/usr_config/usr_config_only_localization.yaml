@@ -97,7 +97,7 @@ sensor:
       proto_recv_port: 60011
   gnss:
     common:
-      msg_source: 1           #0--not use Gnss, 1--message come from sensor driver, 2--message come from ROS,3--message come from protobuf(UDP)
+      msg_source: 0           #0--not use Gnss, 1--message come from sensor driver, 2--message come from ROS,3--message come from protobuf(UDP)
       send_msg_ros: true     #if true, the original Gnss message will be sent out through ROS
       send_msg_proto: false   #if true, the original Gnss message will be sent out through Proto
     ros:

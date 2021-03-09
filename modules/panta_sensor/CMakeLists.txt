@@ -106,6 +106,7 @@ add_library(rs_imu SHARED
           src/driver/imu/imu_base.cpp
           src/driver/imu/imu_TL740D.cpp
           src/driver/imu/imu_HWT605.cpp
+          src/driver/imu/imu_DY551.cpp
            )
 add_dependencies(rs_imu rs_serial rs_yaml)
 target_link_libraries(rs_imu 
